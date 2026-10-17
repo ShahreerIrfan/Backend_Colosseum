@@ -1,0 +1,2900 @@
+{
+  "manifest": {
+    "packageVersion": "1.0.0",
+    "totalFloors": 12,
+    "totalViewpoints": 51,
+    "totalLandmarks": 5,
+    "supportedLanguages": [
+      "en",
+      "it",
+      "es",
+      "fr",
+      "de",
+      "pt",
+      "ja",
+      "ko"
+    ]
+  },
+  "parkConfig": {
+    "configKey": "archaeological_park_colosseum",
+    "centerCoordinates": {
+      "latitude": 41.89021,
+      "longitude": 12.492231
+    },
+    "boundaryRadiusMeters": 600.0,
+    "proximityThresholds": {
+      "colosseum": 120.0,
+      "romanForum": 100.0,
+      "archConstantine": 70.0,
+      "ludusMagnus": 80.0,
+      "templeVenusRome": 80.0
+    }
+  },
+  "landmarks": [
+    {
+      "code": "colosseum",
+      "name": "Colosseum (Flavian Amphitheatre)",
+      "description": "The iconic elliptical amphitheatre in the centre of Rome, the largest ever built.",
+      "assetPath": "assets/floor_map/floor_level_1.svg",
+      "center": {
+        "latitude": 41.89021,
+        "longitude": 12.492231
+      },
+      "dimensions": {
+        "widthMeters": 190.0,
+        "heightMeters": 155.0
+      },
+      "calibration": {
+        "rotationDegrees": -20.0,
+        "anchorX": 0.5,
+        "anchorY": 0.5
+      },
+      "display": {
+        "zIndex": 10,
+        "minZoom": 13.0,
+        "maxZoom": 21.0
+      },
+      "marker": {
+        "colorHex": "#DD1110",
+        "category": "Amphitheatre",
+        "iconName": "stadium_rounded",
+        "labelOffsetY": 0
+      },
+      "isPublished": true
+    },
+    {
+      "code": "arch_of_constantine",
+      "name": "Arch of Constantine",
+      "description": "Triumphal arch celebrating Emperor Constantine I's victory at the Battle of Milvian Bridge.",
+      "assetPath": "assets/logo/Arch of Constantine.png",
+      "center": {
+        "latitude": 41.889762,
+        "longitude": 12.490667
+      },
+      "dimensions": {
+        "widthMeters": 25.7,
+        "heightMeters": 21.0
+      },
+      "calibration": {
+        "rotationDegrees": -35.0,
+        "anchorX": 0.5,
+        "anchorY": 0.5
+      },
+      "display": {
+        "zIndex": 8,
+        "minZoom": 13.0,
+        "maxZoom": 21.0
+      },
+      "marker": {
+        "colorHex": "#FF8F00",
+        "category": "Triumphal Arch",
+        "iconName": "foundation_rounded",
+        "labelOffsetY": 28
+      },
+      "isPublished": true
+    },
+    {
+      "code": "ludus_magnus",
+      "name": "Ludus Magnus",
+      "description": "The largest gladiatorial training arena and barracks in Rome, connected to Colosseum by tunnel.",
+      "assetPath": "assets/logo/Ludus Magnus.png",
+      "center": {
+        "latitude": 41.88995,
+        "longitude": 12.49505
+      },
+      "dimensions": {
+        "widthMeters": 75.0,
+        "heightMeters": 60.0
+      },
+      "calibration": {
+        "rotationDegrees": -15.0,
+        "anchorX": 0.5,
+        "anchorY": 0.5
+      },
+      "display": {
+        "zIndex": 7,
+        "minZoom": 13.0,
+        "maxZoom": 21.0
+      },
+      "marker": {
+        "colorHex": "#1E88E5",
+        "category": "Gladiator School",
+        "iconName": "fitness_center_rounded",
+        "labelOffsetY": 14
+      },
+      "isPublished": true
+    },
+    {
+      "code": "roman_forum",
+      "name": "Roman Forum",
+      "description": "The vibrant civic, political, religious and commercial hub of ancient Rome along the Via Sacra.",
+      "assetPath": "assets/logo/Roman Forum.png",
+      "center": {
+        "latitude": 41.89205,
+        "longitude": 12.4866
+      },
+      "dimensions": {
+        "widthMeters": 250.0,
+        "heightMeters": 170.0
+      },
+      "calibration": {
+        "rotationDegrees": -45.0,
+        "anchorX": 0.5,
+        "anchorY": 0.5
+      },
+      "display": {
+        "zIndex": 6,
+        "minZoom": 13.0,
+        "maxZoom": 21.0
+      },
+      "marker": {
+        "colorHex": "#2E7D32",
+        "category": "Forum",
+        "iconName": "account_balance_rounded",
+        "labelOffsetY": -6
+      },
+      "isPublished": true
+    },
+    {
+      "code": "temple_venus_rome",
+      "name": "Temple of Venus and Rome",
+      "description": "The largest known temple in ancient Rome, dedicated to Venus Felix and Roma Aeterna.",
+      "assetPath": "assets/logo/Temple of Venus and Rome.png",
+      "center": {
+        "latitude": 41.89083,
+        "longitude": 12.48972
+      },
+      "dimensions": {
+        "widthMeters": 145.0,
+        "heightMeters": 100.0
+      },
+      "calibration": {
+        "rotationDegrees": -30.0,
+        "anchorX": 0.5,
+        "anchorY": 0.5
+      },
+      "display": {
+        "zIndex": 7,
+        "minZoom": 13.0,
+        "maxZoom": 21.0
+      },
+      "marker": {
+        "colorHex": "#8E24AA",
+        "category": "Ancient Temple",
+        "iconName": "temple_buddhist_rounded",
+        "labelOffsetY": -22
+      },
+      "isPublished": true
+    }
+  ],
+  "floors": [
+    {
+      "floorId": "floor_underground",
+      "landmarkCode": "colosseum",
+      "levelIndex": -1,
+      "displayName": "Underground (Hypogeum)",
+      "shortName": "Underground",
+      "floorNumberLabel": "U",
+      "semanticLabel": "Underground Hypogeum, current floor",
+      "calibration": {
+        "centerCoordinates": {
+          "latitude": 41.89021,
+          "longitude": 12.492231
+        },
+        "defaultZoom": 18.6,
+        "mapNorthOffsetDegrees": -20.0
+      },
+      "mapAsset": {
+        "assetId": "floor_underground",
+        "url": "",
+        "cloudinaryPublicId": ""
+      },
+      "isAccessibleForTier": [
+        "full_access"
+      ],
+      "isPublished": true
+    },
+    {
+      "floorId": "floor_1",
+      "landmarkCode": "colosseum",
+      "levelIndex": 1,
+      "displayName": "Level 1",
+      "shortName": "Level 1",
+      "floorNumberLabel": "1",
+      "semanticLabel": "Level 1, current floor",
+      "calibration": {
+        "centerCoordinates": {
+          "latitude": 41.89021,
+          "longitude": 12.492231
+        },
+        "defaultZoom": 18.6,
+        "mapNorthOffsetDegrees": -20.0
+      },
+      "mapAsset": {
+        "assetId": "floor_1",
+        "url": "",
+        "cloudinaryPublicId": ""
+      },
+      "isAccessibleForTier": [
+        "arena_priority",
+        "full_access"
+      ],
+      "isPublished": true
+    },
+    {
+      "floorId": "floor_2",
+      "landmarkCode": "colosseum",
+      "levelIndex": 2,
+      "displayName": "Level 2",
+      "shortName": "Level 2",
+      "floorNumberLabel": "2",
+      "semanticLabel": "Level 2, current floor",
+      "calibration": {
+        "centerCoordinates": {
+          "latitude": 41.89021,
+          "longitude": 12.492231
+        },
+        "defaultZoom": 18.6,
+        "mapNorthOffsetDegrees": -20.0
+      },
+      "mapAsset": {
+        "assetId": "floor_2",
+        "url": "",
+        "cloudinaryPublicId": ""
+      },
+      "isAccessibleForTier": [
+        "general",
+        "arena_priority",
+        "full_access"
+      ],
+      "isPublished": true
+    },
+    {
+      "floorId": "floor_3",
+      "landmarkCode": "colosseum",
+      "levelIndex": 3,
+      "displayName": "Level 3",
+      "shortName": "Level 3",
+      "floorNumberLabel": "3",
+      "semanticLabel": "Level 3, current floor",
+      "calibration": {
+        "centerCoordinates": {
+          "latitude": 41.89021,
+          "longitude": 12.492231
+        },
+        "defaultZoom": 18.6,
+        "mapNorthOffsetDegrees": -20.0
+      },
+      "mapAsset": {
+        "assetId": "floor_3",
+        "url": "",
+        "cloudinaryPublicId": ""
+      },
+      "isAccessibleForTier": [
+        "full_access"
+      ],
+      "isPublished": true
+    },
+    {
+      "floorId": "arch_ground",
+      "landmarkCode": "arch_of_constantine",
+      "levelIndex": 1,
+      "displayName": "Plaza & Constantinian Reliefs",
+      "shortName": "Ground",
+      "floorNumberLabel": "1",
+      "semanticLabel": "Arch of Constantine Ground Plaza, current floor",
+      "calibration": {
+        "centerCoordinates": {
+          "latitude": 41.889762,
+          "longitude": 12.490667
+        },
+        "defaultZoom": 19.5,
+        "mapNorthOffsetDegrees": 0.0
+      },
+      "mapAsset": {
+        "assetId": "arch_ground",
+        "url": "",
+        "cloudinaryPublicId": ""
+      },
+      "isAccessibleForTier": [
+        "general",
+        "arena_priority",
+        "full_access"
+      ],
+      "isPublished": true
+    },
+    {
+      "floorId": "arch_attic",
+      "landmarkCode": "arch_of_constantine",
+      "levelIndex": 2,
+      "displayName": "Attic & Upper Terrace",
+      "shortName": "Attic",
+      "floorNumberLabel": "2",
+      "semanticLabel": "Arch of Constantine Attic Terrace, current floor",
+      "calibration": {
+        "centerCoordinates": {
+          "latitude": 41.889762,
+          "longitude": 12.490667
+        },
+        "defaultZoom": 19.5,
+        "mapNorthOffsetDegrees": 0.0
+      },
+      "mapAsset": {
+        "assetId": "arch_attic",
+        "url": "",
+        "cloudinaryPublicId": ""
+      },
+      "isAccessibleForTier": [
+        "full_access"
+      ],
+      "isPublished": true
+    },
+    {
+      "floorId": "ludus_arena",
+      "landmarkCode": "ludus_magnus",
+      "levelIndex": 1,
+      "displayName": "Gladiator Arena & Cavea",
+      "shortName": "Arena",
+      "floorNumberLabel": "1",
+      "semanticLabel": "Ludus Magnus Training Arena, current floor",
+      "calibration": {
+        "centerCoordinates": {
+          "latitude": 41.88995,
+          "longitude": 12.49505
+        },
+        "defaultZoom": 19.4,
+        "mapNorthOffsetDegrees": 0.0
+      },
+      "mapAsset": {
+        "assetId": "ludus_arena",
+        "url": "",
+        "cloudinaryPublicId": ""
+      },
+      "isAccessibleForTier": [
+        "arena_priority",
+        "full_access"
+      ],
+      "isPublished": true
+    },
+    {
+      "floorId": "ludus_tunnel",
+      "landmarkCode": "ludus_magnus",
+      "levelIndex": 2,
+      "displayName": "Subterranean Tunnel to Colosseum",
+      "shortName": "Tunnel",
+      "floorNumberLabel": "2",
+      "semanticLabel": "Ludus Magnus Subterranean Tunnel, current floor",
+      "calibration": {
+        "centerCoordinates": {
+          "latitude": 41.88995,
+          "longitude": 12.49505
+        },
+        "defaultZoom": 19.4,
+        "mapNorthOffsetDegrees": 0.0
+      },
+      "mapAsset": {
+        "assetId": "ludus_tunnel",
+        "url": "",
+        "cloudinaryPublicId": ""
+      },
+      "isAccessibleForTier": [
+        "full_access"
+      ],
+      "isPublished": true
+    },
+    {
+      "floorId": "temple_east",
+      "landmarkCode": "temple_venus_rome",
+      "levelIndex": 1,
+      "displayName": "Venus Cella & East Terrace",
+      "shortName": "East (Venus)",
+      "floorNumberLabel": "1",
+      "semanticLabel": "Temple of Venus and Rome East Cella, current floor",
+      "calibration": {
+        "centerCoordinates": {
+          "latitude": 41.8908,
+          "longitude": 12.4902
+        },
+        "defaultZoom": 19.0,
+        "mapNorthOffsetDegrees": 0.0
+      },
+      "mapAsset": {
+        "assetId": "temple_east",
+        "url": "",
+        "cloudinaryPublicId": ""
+      },
+      "isAccessibleForTier": [
+        "general",
+        "arena_priority",
+        "full_access"
+      ],
+      "isPublished": true
+    },
+    {
+      "floorId": "temple_west",
+      "landmarkCode": "temple_venus_rome",
+      "levelIndex": 2,
+      "displayName": "Roma Cella & Forum Belvedere",
+      "shortName": "West (Roma)",
+      "floorNumberLabel": "2",
+      "semanticLabel": "Temple of Venus and Rome West Cella, current floor",
+      "calibration": {
+        "centerCoordinates": {
+          "latitude": 41.89088,
+          "longitude": 12.4892
+        },
+        "defaultZoom": 19.0,
+        "mapNorthOffsetDegrees": 0.0
+      },
+      "mapAsset": {
+        "assetId": "temple_west",
+        "url": "",
+        "cloudinaryPublicId": ""
+      },
+      "isAccessibleForTier": [
+        "general",
+        "arena_priority",
+        "full_access"
+      ],
+      "isPublished": true
+    },
+    {
+      "floorId": "forum_via_sacra",
+      "landmarkCode": "roman_forum",
+      "levelIndex": 1,
+      "displayName": "Via Sacra & Triumphal Way",
+      "shortName": "Via Sacra",
+      "floorNumberLabel": "1",
+      "semanticLabel": "Roman Forum Via Sacra, current floor",
+      "calibration": {
+        "centerCoordinates": {
+          "latitude": 41.8914,
+          "longitude": 12.4874
+        },
+        "defaultZoom": 18.2,
+        "mapNorthOffsetDegrees": 0.0
+      },
+      "mapAsset": {
+        "assetId": "forum_via_sacra",
+        "url": "",
+        "cloudinaryPublicId": ""
+      },
+      "isAccessibleForTier": [
+        "general",
+        "arena_priority",
+        "full_access"
+      ],
+      "isPublished": true
+    },
+    {
+      "floorId": "forum_senate_rostra",
+      "landmarkCode": "roman_forum",
+      "levelIndex": 2,
+      "displayName": "Senate, Curia & The Rostra",
+      "shortName": "Curia & Rostra",
+      "floorNumberLabel": "2",
+      "semanticLabel": "Roman Forum Curia and Rostra, current floor",
+      "calibration": {
+        "centerCoordinates": {
+          "latitude": 41.8924,
+          "longitude": 12.4849
+        },
+        "defaultZoom": 18.5,
+        "mapNorthOffsetDegrees": 0.0
+      },
+      "mapAsset": {
+        "assetId": "forum_senate_rostra",
+        "url": "",
+        "cloudinaryPublicId": ""
+      },
+      "isAccessibleForTier": [
+        "general",
+        "arena_priority",
+        "full_access"
+      ],
+      "isPublished": true
+    }
+  ],
+  "viewpoints": [
+    {
+      "id": "vp_100",
+      "floorId": "floor_underground",
+      "order": 100,
+      "normalizedX": 0.8,
+      "normalizedY": 0.5,
+      "latitude": 41.89025,
+      "longitude": 12.49282,
+      "triggerRadiusMeters": 4.0,
+      "targetGazeHeadingDegrees": null,
+      "title": "Spectacles in the Colosseum Arena Floor. The Superstars",
+      "description": "Spectacles in the Colosseum Arena Floor. The Superstars",
+      "audioUrl": "",
+      "audioDuration": "4 min 30s",
+      "imageAsset": "assets/images/vp_100_arena_spectacles.jpg",
+      "minimumTierRequired": "full_access"
+    },
+    {
+      "id": "vp_101",
+      "floorId": "floor_underground",
+      "order": 101,
+      "normalizedX": 0.88,
+      "normalizedY": 0.38,
+      "latitude": 41.89032,
+      "longitude": 12.49305,
+      "triggerRadiusMeters": 4.0,
+      "targetGazeHeadingDegrees": null,
+      "title": "Access to the Underground Levels: East & West Ramps, Ludus Magnus Tunnels & Fosso Labicano Ditch",
+      "description": "Access to the Underground Levels: East & West Ramps, Ludus Magnus Tunnels & Fosso Labicano Ditch",
+      "audioUrl": "",
+      "audioDuration": "5 min 15s",
+      "imageAsset": "assets/images/vp_101_ludus_magnus_tunnel.jpg",
+      "minimumTierRequired": "full_access"
+    },
+    {
+      "id": "vp_102",
+      "floorId": "floor_underground",
+      "order": 102,
+      "normalizedX": 0.68,
+      "normalizedY": 0.3,
+      "latitude": 41.89045,
+      "longitude": 12.49258,
+      "triggerRadiusMeters": 4.0,
+      "targetGazeHeadingDegrees": null,
+      "title": "General Introduction to the Underground Levels & Different Phases of Development",
+      "description": "General Introduction to the Underground Levels & Different Phases of Development",
+      "audioUrl": "",
+      "audioDuration": "4 min 45s",
+      "imageAsset": "assets/images/vp_102_hypogeum_phases.jpg",
+      "minimumTierRequired": "full_access"
+    },
+    {
+      "id": "vp_103",
+      "floorId": "floor_underground",
+      "order": 103,
+      "normalizedX": 0.48,
+      "normalizedY": 0.22,
+      "latitude": 41.89052,
+      "longitude": 12.49215,
+      "triggerRadiusMeters": 4.0,
+      "targetGazeHeadingDegrees": null,
+      "title": "The Hoists: The Flavian Phase with Large Perimetral Lifts",
+      "description": "The Hoists: The Flavian Phase with Large Perimetral Lifts",
+      "audioUrl": "",
+      "audioDuration": "5 min 40s",
+      "imageAsset": "assets/images/vp_103_flavian_hoists.jpg",
+      "minimumTierRequired": "full_access"
+    },
+    {
+      "id": "vp_104",
+      "floorId": "floor_underground",
+      "order": 104,
+      "normalizedX": 0.48,
+      "normalizedY": 0.5,
+      "latitude": 41.89021,
+      "longitude": 12.49223,
+      "triggerRadiusMeters": 4.0,
+      "targetGazeHeadingDegrees": null,
+      "title": "Corridor H: Large Ramps and the Four Galleries to the North, South, East & West",
+      "description": "Corridor H: Large Ramps and the Four Galleries to the North, South, East & West",
+      "audioUrl": "",
+      "audioDuration": "4 min 50s",
+      "imageAsset": "assets/images/vp_104_corridor_h.jpg",
+      "minimumTierRequired": "full_access"
+    },
+    {
+      "id": "vp_105",
+      "floorId": "floor_underground",
+      "order": 105,
+      "normalizedX": 0.5,
+      "normalizedY": 0.72,
+      "latitude": 41.88998,
+      "longitude": 12.49232,
+      "triggerRadiusMeters": 4.0,
+      "targetGazeHeadingDegrees": null,
+      "title": "The Hoists After the Fire of 217 CE",
+      "description": "The Hoists After the Fire of 217 CE",
+      "audioUrl": "",
+      "audioDuration": "5 min 10s",
+      "imageAsset": "assets/images/vp_105_severan_hoists.jpg",
+      "minimumTierRequired": "full_access"
+    },
+    {
+      "id": "vp_106",
+      "floorId": "floor_underground",
+      "order": 106,
+      "normalizedX": 0.24,
+      "normalizedY": 0.5,
+      "latitude": 41.89018,
+      "longitude": 12.49155,
+      "triggerRadiusMeters": 4.0,
+      "targetGazeHeadingDegrees": null,
+      "title": "Archaeological Excavations and Restorations in the 19th & 20th Centuries",
+      "description": "Archaeological Excavations and Restorations in the 19th & 20th Centuries",
+      "audioUrl": "",
+      "audioDuration": "5 min 30s",
+      "imageAsset": "assets/images/vp_106_excavations_restorations.jpg",
+      "minimumTierRequired": "full_access"
+    },
+    {
+      "id": "vp_200",
+      "floorId": "floor_1",
+      "order": 200,
+      "normalizedX": 0.5,
+      "normalizedY": 0.16,
+      "latitude": 41.89021,
+      "longitude": 12.492231,
+      "triggerRadiusMeters": 4.0,
+      "targetGazeHeadingDegrees": null,
+      "title": "Northern Imperial Entrance & Arch 38",
+      "description": "Northern Imperial Entrance & Arch 38",
+      "audioUrl": "",
+      "audioDuration": "3 min 45s",
+      "imageAsset": "assets/images/vp_200.jpg",
+      "minimumTierRequired": "arena_priority"
+    },
+    {
+      "id": "vp_201",
+      "floorId": "floor_1",
+      "order": 201,
+      "normalizedX": 0.72,
+      "normalizedY": 0.22,
+      "latitude": 41.89021,
+      "longitude": 12.492231,
+      "triggerRadiusMeters": 4.0,
+      "targetGazeHeadingDegrees": null,
+      "title": "Entrance Arches & Roman Crowd-Control System",
+      "description": "Entrance Arches & Roman Crowd-Control System",
+      "audioUrl": "",
+      "audioDuration": "3 min 30s",
+      "imageAsset": "assets/images/vp_201.jpg",
+      "minimumTierRequired": "arena_priority"
+    },
+    {
+      "id": "vp_202",
+      "floorId": "floor_1",
+      "order": 202,
+      "normalizedX": 0.86,
+      "normalizedY": 0.44,
+      "latitude": 41.89021,
+      "longitude": 12.492231,
+      "triggerRadiusMeters": 4.0,
+      "targetGazeHeadingDegrees": null,
+      "title": "Vomitoria & Circulation Passages",
+      "description": "Vomitoria & Circulation Passages",
+      "audioUrl": "",
+      "audioDuration": "3 min 15s",
+      "imageAsset": "assets/images/vp_202.jpg",
+      "minimumTierRequired": "arena_priority"
+    },
+    {
+      "id": "vp_203",
+      "floorId": "floor_1",
+      "order": 203,
+      "normalizedX": 0.74,
+      "normalizedY": 0.5,
+      "latitude": 41.89021,
+      "longitude": 12.492231,
+      "triggerRadiusMeters": 4.0,
+      "targetGazeHeadingDegrees": null,
+      "title": "Arena & Hypogeum Overview",
+      "description": "Arena & Hypogeum Overview",
+      "audioUrl": "",
+      "audioDuration": "4 min 10s",
+      "imageAsset": "assets/images/vp_203.jpg",
+      "minimumTierRequired": "arena_priority"
+    },
+    {
+      "id": "vp_204",
+      "floorId": "floor_1",
+      "order": 204,
+      "normalizedX": 0.64,
+      "normalizedY": 0.6,
+      "latitude": 41.89021,
+      "longitude": 12.492231,
+      "triggerRadiusMeters": 4.0,
+      "targetGazeHeadingDegrees": null,
+      "title": "Senatorial Seating \u2014 Loca",
+      "description": "Senatorial Seating \u2014 Loca",
+      "audioUrl": "",
+      "audioDuration": "3 min 50s",
+      "imageAsset": "assets/images/vp_204.jpg",
+      "minimumTierRequired": "arena_priority"
+    },
+    {
+      "id": "vp_205",
+      "floorId": "floor_1",
+      "order": 205,
+      "normalizedX": 0.5,
+      "normalizedY": 0.68,
+      "latitude": 41.89021,
+      "longitude": 12.492231,
+      "triggerRadiusMeters": 4.0,
+      "targetGazeHeadingDegrees": null,
+      "title": "Imperial Box / Pulvinar",
+      "description": "Imperial Box / Pulvinar",
+      "audioUrl": "",
+      "audioDuration": "4 min 20s",
+      "imageAsset": "assets/images/vp_205.jpg",
+      "minimumTierRequired": "arena_priority"
+    },
+    {
+      "id": "vp_206",
+      "floorId": "floor_1",
+      "order": 206,
+      "normalizedX": 0.38,
+      "normalizedY": 0.64,
+      "latitude": 41.89021,
+      "longitude": 12.492231,
+      "triggerRadiusMeters": 4.0,
+      "targetGazeHeadingDegrees": null,
+      "title": "Maenianum Primum \u2014 Knights\\",
+      "description": "Maenianum Primum \u2014 Knights\\",
+      "audioUrl": "",
+      "audioDuration": "3 min 20s",
+      "imageAsset": "assets/images/vp_206.jpg",
+      "minimumTierRequired": "arena_priority"
+    },
+    {
+      "id": "vp_207",
+      "floorId": "floor_1",
+      "order": 207,
+      "normalizedX": 0.26,
+      "normalizedY": 0.5,
+      "latitude": 41.89021,
+      "longitude": 12.492231,
+      "triggerRadiusMeters": 4.0,
+      "targetGazeHeadingDegrees": null,
+      "title": "Cavea Social Hierarchy",
+      "description": "Cavea Social Hierarchy",
+      "audioUrl": "",
+      "audioDuration": "3 min 40s",
+      "imageAsset": "assets/images/vp_207.jpg",
+      "minimumTierRequired": "arena_priority"
+    },
+    {
+      "id": "vp_208",
+      "floorId": "floor_1",
+      "order": 208,
+      "normalizedX": 0.36,
+      "normalizedY": 0.32,
+      "latitude": 41.89021,
+      "longitude": 12.492231,
+      "triggerRadiusMeters": 4.0,
+      "targetGazeHeadingDegrees": null,
+      "title": "Arena Spectacles Viewpoint",
+      "description": "Arena Spectacles Viewpoint",
+      "audioUrl": "",
+      "audioDuration": "4 min 45s",
+      "imageAsset": "assets/images/vp_208.jpg",
+      "minimumTierRequired": "arena_priority"
+    },
+    {
+      "id": "vp_300",
+      "floorId": "floor_2",
+      "order": 300,
+      "normalizedX": 0.5,
+      "normalizedY": 0.24,
+      "latitude": 41.89021,
+      "longitude": 12.492231,
+      "triggerRadiusMeters": 4.0,
+      "targetGazeHeadingDegrees": null,
+      "title": "Second-Level Cavea Panorama",
+      "description": "Second-Level Cavea Panorama",
+      "audioUrl": "",
+      "audioDuration": "3 min 50s",
+      "imageAsset": "assets/images/vp_300.jpg",
+      "minimumTierRequired": "general"
+    },
+    {
+      "id": "vp_301",
+      "floorId": "floor_2",
+      "order": 301,
+      "normalizedX": 0.68,
+      "normalizedY": 0.3,
+      "latitude": 41.89021,
+      "longitude": 12.492231,
+      "triggerRadiusMeters": 4.0,
+      "targetGazeHeadingDegrees": null,
+      "title": "Maenianum Secundum",
+      "description": "Maenianum Secundum",
+      "audioUrl": "",
+      "audioDuration": "3 min 15s",
+      "imageAsset": "assets/images/vp_301.jpg",
+      "minimumTierRequired": "general"
+    },
+    {
+      "id": "vp_302",
+      "floorId": "floor_2",
+      "order": 302,
+      "normalizedX": 0.85,
+      "normalizedY": 0.5,
+      "latitude": 41.89021,
+      "longitude": 12.492231,
+      "triggerRadiusMeters": 4.0,
+      "targetGazeHeadingDegrees": null,
+      "title": "Panoramic Terrace & Archaeological Landscape",
+      "description": "Panoramic Terrace & Archaeological Landscape",
+      "audioUrl": "",
+      "audioDuration": "3 min 40s",
+      "imageAsset": "assets/images/vp_302.jpg",
+      "minimumTierRequired": "general"
+    },
+    {
+      "id": "vp_303",
+      "floorId": "floor_2",
+      "order": 303,
+      "normalizedX": 0.7,
+      "normalizedY": 0.68,
+      "latitude": 41.89021,
+      "longitude": 12.492231,
+      "triggerRadiusMeters": 4.0,
+      "targetGazeHeadingDegrees": null,
+      "title": "Colosseum Museum \u2014 Spectators & Seating",
+      "description": "Colosseum Museum \u2014 Spectators & Seating",
+      "audioUrl": "",
+      "audioDuration": "4 min 15s",
+      "imageAsset": "assets/images/vp_303.jpg",
+      "minimumTierRequired": "general"
+    },
+    {
+      "id": "vp_304",
+      "floorId": "floor_2",
+      "order": 304,
+      "normalizedX": 0.5,
+      "normalizedY": 0.76,
+      "latitude": 41.89021,
+      "longitude": 12.492231,
+      "triggerRadiusMeters": 4.0,
+      "targetGazeHeadingDegrees": null,
+      "title": "Colosseum Museum \u2014 Marble & Sculptural Decoration",
+      "description": "Colosseum Museum \u2014 Marble & Sculptural Decoration",
+      "audioUrl": "",
+      "audioDuration": "3 min 30s",
+      "imageAsset": "assets/images/vp_304.jpg",
+      "minimumTierRequired": "general"
+    },
+    {
+      "id": "vp_305",
+      "floorId": "floor_2",
+      "order": 305,
+      "normalizedX": 0.32,
+      "normalizedY": 0.66,
+      "latitude": 41.89021,
+      "longitude": 12.492231,
+      "triggerRadiusMeters": 4.0,
+      "targetGazeHeadingDegrees": null,
+      "title": "Colosseum Through the Middle Ages",
+      "description": "Colosseum Through the Middle Ages",
+      "audioUrl": "",
+      "audioDuration": "4 min 00s",
+      "imageAsset": "assets/images/vp_305.jpg",
+      "minimumTierRequired": "general"
+    },
+    {
+      "id": "vp_306",
+      "floorId": "floor_2",
+      "order": 306,
+      "normalizedX": 0.24,
+      "normalizedY": 0.48,
+      "latitude": 41.89021,
+      "longitude": 12.492231,
+      "triggerRadiusMeters": 4.0,
+      "targetGazeHeadingDegrees": null,
+      "title": "Lucangeli Model & Reconstruction",
+      "description": "Lucangeli Model & Reconstruction",
+      "audioUrl": "",
+      "audioDuration": "4 min 30s",
+      "imageAsset": "assets/images/vp_306.jpg",
+      "minimumTierRequired": "general"
+    },
+    {
+      "id": "vp_400",
+      "floorId": "floor_3",
+      "order": 400,
+      "normalizedX": 0.28,
+      "normalizedY": 0.36,
+      "latitude": 41.89021,
+      "longitude": 12.492231,
+      "triggerRadiusMeters": 4.0,
+      "targetGazeHeadingDegrees": null,
+      "title": "Intermediate Gallery \u2014 Approach to Level 3",
+      "description": "Intermediate Gallery \u2014 Approach to Level 3",
+      "audioUrl": "",
+      "audioDuration": "3 min 15s",
+      "imageAsset": "assets/images/vp_400.jpg",
+      "minimumTierRequired": "general"
+    },
+    {
+      "id": "vp_401",
+      "floorId": "floor_3",
+      "order": 401,
+      "normalizedX": 0.38,
+      "normalizedY": 0.22,
+      "latitude": 41.89021,
+      "longitude": 12.492231,
+      "triggerRadiusMeters": 4.0,
+      "targetGazeHeadingDegrees": null,
+      "title": "Roman Water Management System",
+      "description": "Roman Water Management System",
+      "audioUrl": "",
+      "audioDuration": "3 min 45s",
+      "imageAsset": "assets/images/vp_401.jpg",
+      "minimumTierRequired": "general"
+    },
+    {
+      "id": "vp_402",
+      "floorId": "floor_3",
+      "order": 402,
+      "normalizedX": 0.54,
+      "normalizedY": 0.18,
+      "latitude": 41.89021,
+      "longitude": 12.492231,
+      "triggerRadiusMeters": 4.0,
+      "targetGazeHeadingDegrees": null,
+      "title": "Tituli Picti \u2014 Ancient Red Inscriptions",
+      "description": "Tituli Picti \u2014 Ancient Red Inscriptions",
+      "audioUrl": "",
+      "audioDuration": "3 min 30s",
+      "imageAsset": "assets/images/vp_402.jpg",
+      "minimumTierRequired": "general"
+    },
+    {
+      "id": "vp_403",
+      "floorId": "floor_3",
+      "order": 403,
+      "normalizedX": 0.7,
+      "normalizedY": 0.28,
+      "latitude": 41.89021,
+      "longitude": 12.492231,
+      "triggerRadiusMeters": 4.0,
+      "targetGazeHeadingDegrees": null,
+      "title": "Third-Level Cavea / Upper Seating",
+      "description": "Third-Level Cavea / Upper Seating",
+      "audioUrl": "",
+      "audioDuration": "3 min 50s",
+      "imageAsset": "assets/images/vp_403.jpg",
+      "minimumTierRequired": "general"
+    },
+    {
+      "id": "vp_404",
+      "floorId": "floor_3",
+      "order": 404,
+      "normalizedX": 0.8,
+      "normalizedY": 0.44,
+      "latitude": 41.89021,
+      "longitude": 12.492231,
+      "triggerRadiusMeters": 4.0,
+      "targetGazeHeadingDegrees": null,
+      "title": "Upper Levels & Belvedere View",
+      "description": "Upper Levels & Belvedere View",
+      "audioUrl": "",
+      "audioDuration": "4 min 20s",
+      "imageAsset": "assets/images/vp_404.jpg",
+      "minimumTierRequired": "general"
+    },
+    {
+      "id": "vp_arch_200",
+      "floorId": "arch_ground",
+      "order": 200,
+      "normalizedX": 0.5,
+      "normalizedY": 0.82,
+      "latitude": 41.88965,
+      "longitude": 12.490667,
+      "triggerRadiusMeters": 4.0,
+      "targetGazeHeadingDegrees": null,
+      "title": "South Facade: The Battle of the Milvian Bridge & Siege of Verona",
+      "description": "South Facade: The Battle of the Milvian Bridge & Siege of Verona",
+      "audioUrl": "",
+      "audioDuration": "4 min 15s",
+      "imageAsset": "assets/images/vp_arch_200.jpg",
+      "minimumTierRequired": "general"
+    },
+    {
+      "id": "vp_arch_201",
+      "floorId": "arch_ground",
+      "order": 201,
+      "normalizedX": 0.5,
+      "normalizedY": 0.5,
+      "latitude": 41.889762,
+      "longitude": 12.490667,
+      "triggerRadiusMeters": 4.0,
+      "targetGazeHeadingDegrees": null,
+      "title": "The Central Fornix & Inscription: \"Instinctu Divinitatis\"",
+      "description": "The Central Fornix & Inscription: \"Instinctu Divinitatis\"",
+      "audioUrl": "",
+      "audioDuration": "3 min 50s",
+      "imageAsset": "assets/images/vp_arch_201.jpg",
+      "minimumTierRequired": "general"
+    },
+    {
+      "id": "vp_arch_202",
+      "floorId": "arch_ground",
+      "order": 202,
+      "normalizedX": 0.5,
+      "normalizedY": 0.18,
+      "latitude": 41.88987,
+      "longitude": 12.490667,
+      "triggerRadiusMeters": 4.0,
+      "targetGazeHeadingDegrees": null,
+      "title": "North Facade: Trajanic Dacian Prisoners & Marcus Aurelius Panels",
+      "description": "North Facade: Trajanic Dacian Prisoners & Marcus Aurelius Panels",
+      "audioUrl": "",
+      "audioDuration": "4 min 45s",
+      "imageAsset": "assets/images/vp_arch_202.jpg",
+      "minimumTierRequired": "general"
+    },
+    {
+      "id": "vp_arch_203",
+      "floorId": "arch_ground",
+      "order": 203,
+      "normalizedX": 0.15,
+      "normalizedY": 0.5,
+      "latitude": 41.889762,
+      "longitude": 12.49052,
+      "triggerRadiusMeters": 4.0,
+      "targetGazeHeadingDegrees": null,
+      "title": "Lateral Medallions: Hadrianic Hunts, Sol and Luna Chariots",
+      "description": "Lateral Medallions: Hadrianic Hunts, Sol and Luna Chariots",
+      "audioUrl": "",
+      "audioDuration": "3 min 20s",
+      "imageAsset": "assets/images/vp_arch_203.jpg",
+      "minimumTierRequired": "general"
+    },
+    {
+      "id": "vp_arch_204",
+      "floorId": "arch_attic",
+      "order": 204,
+      "normalizedX": 0.4,
+      "normalizedY": 0.5,
+      "latitude": 41.889762,
+      "longitude": 12.490667,
+      "triggerRadiusMeters": 4.0,
+      "targetGazeHeadingDegrees": null,
+      "title": "The Interior Stairway & Brick Vaulted Attic Chambers",
+      "description": "The Interior Stairway & Brick Vaulted Attic Chambers",
+      "audioUrl": "",
+      "audioDuration": "3 min 15s",
+      "imageAsset": "assets/images/vp_arch_204.jpg",
+      "minimumTierRequired": "full_access"
+    },
+    {
+      "id": "vp_arch_205",
+      "floorId": "arch_attic",
+      "order": 205,
+      "normalizedX": 0.65,
+      "normalizedY": 0.5,
+      "latitude": 41.8898,
+      "longitude": 12.49072,
+      "triggerRadiusMeters": 4.0,
+      "targetGazeHeadingDegrees": null,
+      "title": "Panoramic Vista: The Via Triumphalis & Palatine Flank",
+      "description": "Panoramic Vista: The Via Triumphalis & Palatine Flank",
+      "audioUrl": "",
+      "audioDuration": "3 min 40s",
+      "imageAsset": "assets/images/vp_arch_205.jpg",
+      "minimumTierRequired": "full_access"
+    },
+    {
+      "id": "vp_ludus_300",
+      "floorId": "ludus_arena",
+      "order": 300,
+      "normalizedX": 0.5,
+      "normalizedY": 0.5,
+      "latitude": 41.88995,
+      "longitude": 12.49505,
+      "triggerRadiusMeters": 4.0,
+      "targetGazeHeadingDegrees": null,
+      "title": "The Miniature Elliptical Practice Arena & Curved Cavea",
+      "description": "The Miniature Elliptical Practice Arena & Curved Cavea",
+      "audioUrl": "",
+      "audioDuration": "4 min 10s",
+      "imageAsset": "assets/images/vp_ludus_300.jpg",
+      "minimumTierRequired": "arena_priority"
+    },
+    {
+      "id": "vp_ludus_301",
+      "floorId": "ludus_arena",
+      "order": 301,
+      "normalizedX": 0.28,
+      "normalizedY": 0.35,
+      "latitude": 41.89008,
+      "longitude": 12.49475,
+      "triggerRadiusMeters": 4.0,
+      "targetGazeHeadingDegrees": null,
+      "title": "The Quadriporticus Arcades & Gladiator Cells (Cubicula)",
+      "description": "The Quadriporticus Arcades & Gladiator Cells (Cubicula)",
+      "audioUrl": "",
+      "audioDuration": "3 min 45s",
+      "imageAsset": "assets/images/vp_ludus_301.jpg",
+      "minimumTierRequired": "arena_priority"
+    },
+    {
+      "id": "vp_ludus_302",
+      "floorId": "ludus_arena",
+      "order": 302,
+      "normalizedX": 0.72,
+      "normalizedY": 0.65,
+      "latitude": 41.88982,
+      "longitude": 12.49525,
+      "triggerRadiusMeters": 4.0,
+      "targetGazeHeadingDegrees": null,
+      "title": "Imperial Domitianic Brickwork & Drainage Conduits",
+      "description": "Imperial Domitianic Brickwork & Drainage Conduits",
+      "audioUrl": "",
+      "audioDuration": "3 min 20s",
+      "imageAsset": "assets/images/vp_ludus_302.jpg",
+      "minimumTierRequired": "arena_priority"
+    },
+    {
+      "id": "vp_ludus_303",
+      "floorId": "ludus_tunnel",
+      "order": 303,
+      "normalizedX": 0.2,
+      "normalizedY": 0.5,
+      "latitude": 41.8899,
+      "longitude": 12.4945,
+      "triggerRadiusMeters": 4.0,
+      "targetGazeHeadingDegrees": null,
+      "title": "The Cryptoporticus Tunnel to the Colosseum Underground",
+      "description": "The Cryptoporticus Tunnel to the Colosseum Underground",
+      "audioUrl": "",
+      "audioDuration": "4 min 30s",
+      "imageAsset": "assets/images/vp_ludus_303.jpg",
+      "minimumTierRequired": "full_access"
+    },
+    {
+      "id": "vp_ludus_304",
+      "floorId": "ludus_tunnel",
+      "order": 304,
+      "normalizedX": 0.8,
+      "normalizedY": 0.5,
+      "latitude": 41.88992,
+      "longitude": 12.49535,
+      "triggerRadiusMeters": 4.0,
+      "targetGazeHeadingDegrees": null,
+      "title": "The Saniarium (Infirmary) & Spoliarium (Morgue) Wings",
+      "description": "The Saniarium (Infirmary) & Spoliarium (Morgue) Wings",
+      "audioUrl": "",
+      "audioDuration": "3 min 35s",
+      "imageAsset": "assets/images/vp_ludus_304.jpg",
+      "minimumTierRequired": "full_access"
+    },
+    {
+      "id": "vp_tvr_400",
+      "floorId": "temple_east",
+      "order": 400,
+      "normalizedX": 0.5,
+      "normalizedY": 0.5,
+      "latitude": 41.89083,
+      "longitude": 12.48995,
+      "triggerRadiusMeters": 4.0,
+      "targetGazeHeadingDegrees": null,
+      "title": "Hadrian\u2019s Gigantic Stylobate & Monolithic Colonnade",
+      "description": "Hadrian\u2019s Gigantic Stylobate & Monolithic Colonnade",
+      "audioUrl": "",
+      "audioDuration": "4 min 20s",
+      "imageAsset": "assets/images/vp_tvr_400.jpg",
+      "minimumTierRequired": "general"
+    },
+    {
+      "id": "vp_tvr_401",
+      "floorId": "temple_east",
+      "order": 401,
+      "normalizedX": 0.75,
+      "normalizedY": 0.5,
+      "latitude": 41.8908,
+      "longitude": 12.4904,
+      "triggerRadiusMeters": 4.0,
+      "targetGazeHeadingDegrees": null,
+      "title": "The Eastern Cella: Venus Felix & Mother of Rome",
+      "description": "The Eastern Cella: Venus Felix & Mother of Rome",
+      "audioUrl": "",
+      "audioDuration": "3 min 50s",
+      "imageAsset": "assets/images/vp_tvr_401.jpg",
+      "minimumTierRequired": "general"
+    },
+    {
+      "id": "vp_tvr_402",
+      "floorId": "temple_east",
+      "order": 402,
+      "normalizedX": 0.62,
+      "normalizedY": 0.35,
+      "latitude": 41.89076,
+      "longitude": 12.49018,
+      "triggerRadiusMeters": 4.0,
+      "targetGazeHeadingDegrees": null,
+      "title": "Maxentian Apse & Rhomboid Diamond Coffering",
+      "description": "Maxentian Apse & Rhomboid Diamond Coffering",
+      "audioUrl": "",
+      "audioDuration": "3 min 30s",
+      "imageAsset": "assets/images/vp_tvr_402.jpg",
+      "minimumTierRequired": "general"
+    },
+    {
+      "id": "vp_tvr_403",
+      "floorId": "temple_west",
+      "order": 403,
+      "normalizedX": 0.35,
+      "normalizedY": 0.5,
+      "latitude": 41.89085,
+      "longitude": 12.48935,
+      "triggerRadiusMeters": 4.0,
+      "targetGazeHeadingDegrees": null,
+      "title": "The Western Cella: Roma Aeterna & The Eternal City",
+      "description": "The Western Cella: Roma Aeterna & The Eternal City",
+      "audioUrl": "",
+      "audioDuration": "3 min 40s",
+      "imageAsset": "assets/images/vp_tvr_403.jpg",
+      "minimumTierRequired": "general"
+    },
+    {
+      "id": "vp_tvr_404",
+      "floorId": "temple_west",
+      "order": 404,
+      "normalizedX": 0.15,
+      "normalizedY": 0.5,
+      "latitude": 41.8909,
+      "longitude": 12.48895,
+      "triggerRadiusMeters": 4.0,
+      "targetGazeHeadingDegrees": null,
+      "title": "Forum Belvedere: Grand Overlook of Via Sacra & Titus",
+      "description": "Forum Belvedere: Grand Overlook of Via Sacra & Titus",
+      "audioUrl": "",
+      "audioDuration": "4 min 05s",
+      "imageAsset": "assets/images/vp_tvr_404.jpg",
+      "minimumTierRequired": "general"
+    },
+    {
+      "id": "vp_forum_500",
+      "floorId": "forum_via_sacra",
+      "order": 500,
+      "normalizedX": 0.85,
+      "normalizedY": 0.8,
+      "latitude": 41.89065,
+      "longitude": 12.4886,
+      "triggerRadiusMeters": 4.0,
+      "targetGazeHeadingDegrees": null,
+      "title": "The Arch of Titus & The Spoils of Jerusalem",
+      "description": "The Arch of Titus & The Spoils of Jerusalem",
+      "audioUrl": "",
+      "audioDuration": "4 min 50s",
+      "imageAsset": "assets/images/vp_forum_500.jpg",
+      "minimumTierRequired": "general"
+    },
+    {
+      "id": "vp_forum_501",
+      "floorId": "forum_via_sacra",
+      "order": 501,
+      "normalizedX": 0.7,
+      "normalizedY": 0.4,
+      "latitude": 41.8916,
+      "longitude": 12.48795,
+      "triggerRadiusMeters": 4.0,
+      "targetGazeHeadingDegrees": null,
+      "title": "The Basilica of Maxentius and Constantine",
+      "description": "The Basilica of Maxentius and Constantine",
+      "audioUrl": "",
+      "audioDuration": "4 min 15s",
+      "imageAsset": "assets/images/vp_forum_501.jpg",
+      "minimumTierRequired": "general"
+    },
+    {
+      "id": "vp_forum_502",
+      "floorId": "forum_via_sacra",
+      "order": 502,
+      "normalizedX": 0.45,
+      "normalizedY": 0.35,
+      "latitude": 41.89195,
+      "longitude": 12.4868,
+      "triggerRadiusMeters": 4.0,
+      "targetGazeHeadingDegrees": null,
+      "title": "Temple of Antoninus and Faustina (San Lorenzo in Miranda)",
+      "description": "Temple of Antoninus and Faustina (San Lorenzo in Miranda)",
+      "audioUrl": "",
+      "audioDuration": "3 min 40s",
+      "imageAsset": "assets/images/vp_forum_502.jpg",
+      "minimumTierRequired": "general"
+    },
+    {
+      "id": "vp_forum_503",
+      "floorId": "forum_via_sacra",
+      "order": 503,
+      "normalizedX": 0.35,
+      "normalizedY": 0.6,
+      "latitude": 41.89165,
+      "longitude": 12.48625,
+      "triggerRadiusMeters": 4.0,
+      "targetGazeHeadingDegrees": null,
+      "title": "Temple of Vesta & The House of the Vestal Virgins (Atrium Vestae)",
+      "description": "Temple of Vesta & The House of the Vestal Virgins (Atrium Vestae)",
+      "audioUrl": "",
+      "audioDuration": "4 min 30s",
+      "imageAsset": "assets/images/vp_forum_503.jpg",
+      "minimumTierRequired": "general"
+    },
+    {
+      "id": "vp_forum_504",
+      "floorId": "forum_senate_rostra",
+      "order": 504,
+      "normalizedX": 0.65,
+      "normalizedY": 0.25,
+      "latitude": 41.8927,
+      "longitude": 12.4853,
+      "triggerRadiusMeters": 4.0,
+      "targetGazeHeadingDegrees": null,
+      "title": "Curia Julia: The Roman Senate House",
+      "description": "Curia Julia: The Roman Senate House",
+      "audioUrl": "",
+      "audioDuration": "4 min 40s",
+      "imageAsset": "assets/images/vp_forum_504.jpg",
+      "minimumTierRequired": "general"
+    },
+    {
+      "id": "vp_forum_505",
+      "floorId": "forum_senate_rostra",
+      "order": 505,
+      "normalizedX": 0.42,
+      "normalizedY": 0.45,
+      "latitude": 41.8924,
+      "longitude": 12.4849,
+      "triggerRadiusMeters": 4.0,
+      "targetGazeHeadingDegrees": null,
+      "title": "The Rostra: The Imperial Speaker\u2019s Platform",
+      "description": "The Rostra: The Imperial Speaker\u2019s Platform",
+      "audioUrl": "",
+      "audioDuration": "4 min 10s",
+      "imageAsset": "assets/images/vp_forum_505.jpg",
+      "minimumTierRequired": "general"
+    },
+    {
+      "id": "vp_forum_506",
+      "floorId": "forum_senate_rostra",
+      "order": 506,
+      "normalizedX": 0.2,
+      "normalizedY": 0.6,
+      "latitude": 41.8922,
+      "longitude": 12.4845,
+      "triggerRadiusMeters": 4.0,
+      "targetGazeHeadingDegrees": null,
+      "title": "Temple of Saturn & The State Treasury (Aerarium)",
+      "description": "Temple of Saturn & The State Treasury (Aerarium)",
+      "audioUrl": "",
+      "audioDuration": "3 min 50s",
+      "imageAsset": "assets/images/vp_forum_506.jpg",
+      "minimumTierRequired": "general"
+    }
+  ],
+  "itineraries": [
+    {
+      "floorId": "floor_underground",
+      "fromId": "vp_100",
+      "toId": "vp_101",
+      "points": [
+        {
+          "x": 0.8,
+          "y": 0.5,
+          "dx": 0.8,
+          "dy": 0.5
+        },
+        {
+          "x": 0.83,
+          "y": 0.44,
+          "dx": 0.83,
+          "dy": 0.44
+        },
+        {
+          "x": 0.88,
+          "y": 0.38,
+          "dx": 0.88,
+          "dy": 0.38
+        }
+      ],
+      "distanceMeters": 15.0,
+      "walkingDurationSeconds": 25,
+      "instruction": "Walk from vp_100 to vp_101",
+      "isPublished": true
+    },
+    {
+      "floorId": "floor_underground",
+      "fromId": "vp_101",
+      "toId": "vp_102",
+      "points": [
+        {
+          "x": 0.88,
+          "y": 0.38,
+          "dx": 0.88,
+          "dy": 0.38
+        },
+        {
+          "x": 0.82,
+          "y": 0.32,
+          "dx": 0.82,
+          "dy": 0.32
+        },
+        {
+          "x": 0.75,
+          "y": 0.3,
+          "dx": 0.75,
+          "dy": 0.3
+        },
+        {
+          "x": 0.68,
+          "y": 0.3,
+          "dx": 0.68,
+          "dy": 0.3
+        }
+      ],
+      "distanceMeters": 15.0,
+      "walkingDurationSeconds": 25,
+      "instruction": "Walk from vp_101 to vp_102",
+      "isPublished": true
+    },
+    {
+      "floorId": "floor_underground",
+      "fromId": "vp_102",
+      "toId": "vp_103",
+      "points": [
+        {
+          "x": 0.68,
+          "y": 0.3,
+          "dx": 0.68,
+          "dy": 0.3
+        },
+        {
+          "x": 0.58,
+          "y": 0.24,
+          "dx": 0.58,
+          "dy": 0.24
+        },
+        {
+          "x": 0.48,
+          "y": 0.22,
+          "dx": 0.48,
+          "dy": 0.22
+        }
+      ],
+      "distanceMeters": 15.0,
+      "walkingDurationSeconds": 25,
+      "instruction": "Walk from vp_102 to vp_103",
+      "isPublished": true
+    },
+    {
+      "floorId": "floor_underground",
+      "fromId": "vp_103",
+      "toId": "vp_104",
+      "points": [
+        {
+          "x": 0.48,
+          "y": 0.22,
+          "dx": 0.48,
+          "dy": 0.22
+        },
+        {
+          "x": 0.48,
+          "y": 0.36,
+          "dx": 0.48,
+          "dy": 0.36
+        },
+        {
+          "x": 0.48,
+          "y": 0.5,
+          "dx": 0.48,
+          "dy": 0.5
+        }
+      ],
+      "distanceMeters": 15.0,
+      "walkingDurationSeconds": 25,
+      "instruction": "Walk from vp_103 to vp_104",
+      "isPublished": true
+    },
+    {
+      "floorId": "floor_underground",
+      "fromId": "vp_104",
+      "toId": "vp_105",
+      "points": [
+        {
+          "x": 0.48,
+          "y": 0.5,
+          "dx": 0.48,
+          "dy": 0.5
+        },
+        {
+          "x": 0.49,
+          "y": 0.61,
+          "dx": 0.49,
+          "dy": 0.61
+        },
+        {
+          "x": 0.5,
+          "y": 0.72,
+          "dx": 0.5,
+          "dy": 0.72
+        }
+      ],
+      "distanceMeters": 15.0,
+      "walkingDurationSeconds": 25,
+      "instruction": "Walk from vp_104 to vp_105",
+      "isPublished": true
+    },
+    {
+      "floorId": "floor_underground",
+      "fromId": "vp_105",
+      "toId": "vp_106",
+      "points": [
+        {
+          "x": 0.5,
+          "y": 0.72,
+          "dx": 0.5,
+          "dy": 0.72
+        },
+        {
+          "x": 0.4,
+          "y": 0.72,
+          "dx": 0.4,
+          "dy": 0.72
+        },
+        {
+          "x": 0.3,
+          "y": 0.64,
+          "dx": 0.3,
+          "dy": 0.64
+        },
+        {
+          "x": 0.24,
+          "y": 0.56,
+          "dx": 0.24,
+          "dy": 0.56
+        },
+        {
+          "x": 0.24,
+          "y": 0.5,
+          "dx": 0.24,
+          "dy": 0.5
+        }
+      ],
+      "distanceMeters": 15.0,
+      "walkingDurationSeconds": 25,
+      "instruction": "Walk from vp_105 to vp_106",
+      "isPublished": true
+    },
+    {
+      "floorId": "floor_1",
+      "fromId": "vp_200",
+      "toId": "vp_201",
+      "points": [
+        {
+          "x": 0.5,
+          "y": 0.16,
+          "dx": 0.5,
+          "dy": 0.16
+        },
+        {
+          "x": 0.6,
+          "y": 0.18,
+          "dx": 0.6,
+          "dy": 0.18
+        },
+        {
+          "x": 0.72,
+          "y": 0.22,
+          "dx": 0.72,
+          "dy": 0.22
+        }
+      ],
+      "distanceMeters": 15.0,
+      "walkingDurationSeconds": 25,
+      "instruction": "Walk from vp_200 to vp_201",
+      "isPublished": true
+    },
+    {
+      "floorId": "floor_1",
+      "fromId": "vp_201",
+      "toId": "vp_202",
+      "points": [
+        {
+          "x": 0.72,
+          "y": 0.22,
+          "dx": 0.72,
+          "dy": 0.22
+        },
+        {
+          "x": 0.8,
+          "y": 0.32,
+          "dx": 0.8,
+          "dy": 0.32
+        },
+        {
+          "x": 0.86,
+          "y": 0.44,
+          "dx": 0.86,
+          "dy": 0.44
+        }
+      ],
+      "distanceMeters": 15.0,
+      "walkingDurationSeconds": 25,
+      "instruction": "Walk from vp_201 to vp_202",
+      "isPublished": true
+    },
+    {
+      "floorId": "floor_1",
+      "fromId": "vp_202",
+      "toId": "vp_203",
+      "points": [
+        {
+          "x": 0.86,
+          "y": 0.44,
+          "dx": 0.86,
+          "dy": 0.44
+        },
+        {
+          "x": 0.8,
+          "y": 0.48,
+          "dx": 0.8,
+          "dy": 0.48
+        },
+        {
+          "x": 0.74,
+          "y": 0.5,
+          "dx": 0.74,
+          "dy": 0.5
+        }
+      ],
+      "distanceMeters": 15.0,
+      "walkingDurationSeconds": 25,
+      "instruction": "Walk from vp_202 to vp_203",
+      "isPublished": true
+    },
+    {
+      "floorId": "floor_1",
+      "fromId": "vp_203",
+      "toId": "vp_204",
+      "points": [
+        {
+          "x": 0.74,
+          "y": 0.5,
+          "dx": 0.74,
+          "dy": 0.5
+        },
+        {
+          "x": 0.7,
+          "y": 0.56,
+          "dx": 0.7,
+          "dy": 0.56
+        },
+        {
+          "x": 0.64,
+          "y": 0.6,
+          "dx": 0.64,
+          "dy": 0.6
+        }
+      ],
+      "distanceMeters": 15.0,
+      "walkingDurationSeconds": 25,
+      "instruction": "Walk from vp_203 to vp_204",
+      "isPublished": true
+    },
+    {
+      "floorId": "floor_1",
+      "fromId": "vp_204",
+      "toId": "vp_205",
+      "points": [
+        {
+          "x": 0.64,
+          "y": 0.6,
+          "dx": 0.64,
+          "dy": 0.6
+        },
+        {
+          "x": 0.58,
+          "y": 0.65,
+          "dx": 0.58,
+          "dy": 0.65
+        },
+        {
+          "x": 0.5,
+          "y": 0.68,
+          "dx": 0.5,
+          "dy": 0.68
+        }
+      ],
+      "distanceMeters": 15.0,
+      "walkingDurationSeconds": 25,
+      "instruction": "Walk from vp_204 to vp_205",
+      "isPublished": true
+    },
+    {
+      "floorId": "floor_1",
+      "fromId": "vp_205",
+      "toId": "vp_206",
+      "points": [
+        {
+          "x": 0.5,
+          "y": 0.68,
+          "dx": 0.5,
+          "dy": 0.68
+        },
+        {
+          "x": 0.44,
+          "y": 0.66,
+          "dx": 0.44,
+          "dy": 0.66
+        },
+        {
+          "x": 0.38,
+          "y": 0.64,
+          "dx": 0.38,
+          "dy": 0.64
+        }
+      ],
+      "distanceMeters": 15.0,
+      "walkingDurationSeconds": 25,
+      "instruction": "Walk from vp_205 to vp_206",
+      "isPublished": true
+    },
+    {
+      "floorId": "floor_1",
+      "fromId": "vp_206",
+      "toId": "vp_207",
+      "points": [
+        {
+          "x": 0.38,
+          "y": 0.64,
+          "dx": 0.38,
+          "dy": 0.64
+        },
+        {
+          "x": 0.31,
+          "y": 0.58,
+          "dx": 0.31,
+          "dy": 0.58
+        },
+        {
+          "x": 0.26,
+          "y": 0.5,
+          "dx": 0.26,
+          "dy": 0.5
+        }
+      ],
+      "distanceMeters": 15.0,
+      "walkingDurationSeconds": 25,
+      "instruction": "Walk from vp_206 to vp_207",
+      "isPublished": true
+    },
+    {
+      "floorId": "floor_1",
+      "fromId": "vp_207",
+      "toId": "vp_208",
+      "points": [
+        {
+          "x": 0.26,
+          "y": 0.5,
+          "dx": 0.26,
+          "dy": 0.5
+        },
+        {
+          "x": 0.3,
+          "y": 0.4,
+          "dx": 0.3,
+          "dy": 0.4
+        },
+        {
+          "x": 0.36,
+          "y": 0.32,
+          "dx": 0.36,
+          "dy": 0.32
+        }
+      ],
+      "distanceMeters": 15.0,
+      "walkingDurationSeconds": 25,
+      "instruction": "Walk from vp_207 to vp_208",
+      "isPublished": true
+    },
+    {
+      "floorId": "floor_2",
+      "fromId": "vp_300",
+      "toId": "vp_301",
+      "points": [
+        {
+          "x": 0.5,
+          "y": 0.24,
+          "dx": 0.5,
+          "dy": 0.24
+        },
+        {
+          "x": 0.6,
+          "y": 0.26,
+          "dx": 0.6,
+          "dy": 0.26
+        },
+        {
+          "x": 0.68,
+          "y": 0.3,
+          "dx": 0.68,
+          "dy": 0.3
+        }
+      ],
+      "distanceMeters": 15.0,
+      "walkingDurationSeconds": 25,
+      "instruction": "Walk from vp_300 to vp_301",
+      "isPublished": true
+    },
+    {
+      "floorId": "floor_2",
+      "fromId": "vp_301",
+      "toId": "vp_302",
+      "points": [
+        {
+          "x": 0.68,
+          "y": 0.3,
+          "dx": 0.68,
+          "dy": 0.3
+        },
+        {
+          "x": 0.78,
+          "y": 0.4,
+          "dx": 0.78,
+          "dy": 0.4
+        },
+        {
+          "x": 0.85,
+          "y": 0.5,
+          "dx": 0.85,
+          "dy": 0.5
+        }
+      ],
+      "distanceMeters": 15.0,
+      "walkingDurationSeconds": 25,
+      "instruction": "Walk from vp_301 to vp_302",
+      "isPublished": true
+    },
+    {
+      "floorId": "floor_2",
+      "fromId": "vp_302",
+      "toId": "vp_303",
+      "points": [
+        {
+          "x": 0.85,
+          "y": 0.5,
+          "dx": 0.85,
+          "dy": 0.5
+        },
+        {
+          "x": 0.78,
+          "y": 0.6,
+          "dx": 0.78,
+          "dy": 0.6
+        },
+        {
+          "x": 0.7,
+          "y": 0.68,
+          "dx": 0.7,
+          "dy": 0.68
+        }
+      ],
+      "distanceMeters": 15.0,
+      "walkingDurationSeconds": 25,
+      "instruction": "Walk from vp_302 to vp_303",
+      "isPublished": true
+    },
+    {
+      "floorId": "floor_2",
+      "fromId": "vp_303",
+      "toId": "vp_304",
+      "points": [
+        {
+          "x": 0.7,
+          "y": 0.68,
+          "dx": 0.7,
+          "dy": 0.68
+        },
+        {
+          "x": 0.6,
+          "y": 0.73,
+          "dx": 0.6,
+          "dy": 0.73
+        },
+        {
+          "x": 0.5,
+          "y": 0.76,
+          "dx": 0.5,
+          "dy": 0.76
+        }
+      ],
+      "distanceMeters": 15.0,
+      "walkingDurationSeconds": 25,
+      "instruction": "Walk from vp_303 to vp_304",
+      "isPublished": true
+    },
+    {
+      "floorId": "floor_2",
+      "fromId": "vp_304",
+      "toId": "vp_305",
+      "points": [
+        {
+          "x": 0.5,
+          "y": 0.76,
+          "dx": 0.5,
+          "dy": 0.76
+        },
+        {
+          "x": 0.4,
+          "y": 0.72,
+          "dx": 0.4,
+          "dy": 0.72
+        },
+        {
+          "x": 0.32,
+          "y": 0.66,
+          "dx": 0.32,
+          "dy": 0.66
+        }
+      ],
+      "distanceMeters": 15.0,
+      "walkingDurationSeconds": 25,
+      "instruction": "Walk from vp_304 to vp_305",
+      "isPublished": true
+    },
+    {
+      "floorId": "floor_2",
+      "fromId": "vp_305",
+      "toId": "vp_306",
+      "points": [
+        {
+          "x": 0.32,
+          "y": 0.66,
+          "dx": 0.32,
+          "dy": 0.66
+        },
+        {
+          "x": 0.26,
+          "y": 0.58,
+          "dx": 0.26,
+          "dy": 0.58
+        },
+        {
+          "x": 0.24,
+          "y": 0.48,
+          "dx": 0.24,
+          "dy": 0.48
+        }
+      ],
+      "distanceMeters": 15.0,
+      "walkingDurationSeconds": 25,
+      "instruction": "Walk from vp_305 to vp_306",
+      "isPublished": true
+    },
+    {
+      "floorId": "floor_3",
+      "fromId": "vp_400",
+      "toId": "vp_401",
+      "points": [
+        {
+          "x": 0.28,
+          "y": 0.36,
+          "dx": 0.28,
+          "dy": 0.36
+        },
+        {
+          "x": 0.32,
+          "y": 0.28,
+          "dx": 0.32,
+          "dy": 0.28
+        },
+        {
+          "x": 0.38,
+          "y": 0.22,
+          "dx": 0.38,
+          "dy": 0.22
+        }
+      ],
+      "distanceMeters": 15.0,
+      "walkingDurationSeconds": 25,
+      "instruction": "Walk from vp_400 to vp_401",
+      "isPublished": true
+    },
+    {
+      "floorId": "floor_3",
+      "fromId": "vp_401",
+      "toId": "vp_402",
+      "points": [
+        {
+          "x": 0.38,
+          "y": 0.22,
+          "dx": 0.38,
+          "dy": 0.22
+        },
+        {
+          "x": 0.46,
+          "y": 0.19,
+          "dx": 0.46,
+          "dy": 0.19
+        },
+        {
+          "x": 0.54,
+          "y": 0.18,
+          "dx": 0.54,
+          "dy": 0.18
+        }
+      ],
+      "distanceMeters": 15.0,
+      "walkingDurationSeconds": 25,
+      "instruction": "Walk from vp_401 to vp_402",
+      "isPublished": true
+    },
+    {
+      "floorId": "floor_3",
+      "fromId": "vp_402",
+      "toId": "vp_403",
+      "points": [
+        {
+          "x": 0.54,
+          "y": 0.18,
+          "dx": 0.54,
+          "dy": 0.18
+        },
+        {
+          "x": 0.62,
+          "y": 0.22,
+          "dx": 0.62,
+          "dy": 0.22
+        },
+        {
+          "x": 0.7,
+          "y": 0.28,
+          "dx": 0.7,
+          "dy": 0.28
+        }
+      ],
+      "distanceMeters": 15.0,
+      "walkingDurationSeconds": 25,
+      "instruction": "Walk from vp_402 to vp_403",
+      "isPublished": true
+    },
+    {
+      "floorId": "floor_3",
+      "fromId": "vp_403",
+      "toId": "vp_404",
+      "points": [
+        {
+          "x": 0.7,
+          "y": 0.28,
+          "dx": 0.7,
+          "dy": 0.28
+        },
+        {
+          "x": 0.76,
+          "y": 0.36,
+          "dx": 0.76,
+          "dy": 0.36
+        },
+        {
+          "x": 0.8,
+          "y": 0.44,
+          "dx": 0.8,
+          "dy": 0.44
+        }
+      ],
+      "distanceMeters": 15.0,
+      "walkingDurationSeconds": 25,
+      "instruction": "Walk from vp_403 to vp_404",
+      "isPublished": true
+    },
+    {
+      "floorId": "arch_ground",
+      "fromId": "vp_arch_200",
+      "toId": "vp_arch_201",
+      "points": [
+        {
+          "x": 0.5,
+          "y": 0.82,
+          "dx": 0.5,
+          "dy": 0.82
+        },
+        {
+          "x": 0.5,
+          "y": 0.65,
+          "dx": 0.5,
+          "dy": 0.65
+        },
+        {
+          "x": 0.5,
+          "y": 0.5,
+          "dx": 0.5,
+          "dy": 0.5
+        }
+      ],
+      "distanceMeters": 15.0,
+      "walkingDurationSeconds": 25,
+      "instruction": "Walk from vp_arch_200 to vp_arch_201",
+      "isPublished": true
+    },
+    {
+      "floorId": "arch_ground",
+      "fromId": "vp_arch_201",
+      "toId": "vp_arch_202",
+      "points": [
+        {
+          "x": 0.5,
+          "y": 0.5,
+          "dx": 0.5,
+          "dy": 0.5
+        },
+        {
+          "x": 0.5,
+          "y": 0.35,
+          "dx": 0.5,
+          "dy": 0.35
+        },
+        {
+          "x": 0.5,
+          "y": 0.18,
+          "dx": 0.5,
+          "dy": 0.18
+        }
+      ],
+      "distanceMeters": 15.0,
+      "walkingDurationSeconds": 25,
+      "instruction": "Walk from vp_arch_201 to vp_arch_202",
+      "isPublished": true
+    },
+    {
+      "floorId": "arch_ground",
+      "fromId": "vp_arch_202",
+      "toId": "vp_arch_203",
+      "points": [
+        {
+          "x": 0.5,
+          "y": 0.18,
+          "dx": 0.5,
+          "dy": 0.18
+        },
+        {
+          "x": 0.25,
+          "y": 0.25,
+          "dx": 0.25,
+          "dy": 0.25
+        },
+        {
+          "x": 0.15,
+          "y": 0.5,
+          "dx": 0.15,
+          "dy": 0.5
+        }
+      ],
+      "distanceMeters": 15.0,
+      "walkingDurationSeconds": 25,
+      "instruction": "Walk from vp_arch_202 to vp_arch_203",
+      "isPublished": true
+    },
+    {
+      "floorId": "arch_attic",
+      "fromId": "vp_arch_204",
+      "toId": "vp_arch_205",
+      "points": [
+        {
+          "x": 0.4,
+          "y": 0.5,
+          "dx": 0.4,
+          "dy": 0.5
+        },
+        {
+          "x": 0.52,
+          "y": 0.5,
+          "dx": 0.52,
+          "dy": 0.5
+        },
+        {
+          "x": 0.65,
+          "y": 0.5,
+          "dx": 0.65,
+          "dy": 0.5
+        }
+      ],
+      "distanceMeters": 15.0,
+      "walkingDurationSeconds": 25,
+      "instruction": "Walk from vp_arch_204 to vp_arch_205",
+      "isPublished": true
+    },
+    {
+      "floorId": "ludus_arena",
+      "fromId": "vp_ludus_300",
+      "toId": "vp_ludus_301",
+      "points": [
+        {
+          "x": 41.88995,
+          "y": 12.49505,
+          "dx": 41.88995,
+          "dy": 12.49505
+        },
+        {
+          "x": 41.89002,
+          "y": 12.49488,
+          "dx": 41.89002,
+          "dy": 12.49488
+        },
+        {
+          "x": 41.89008,
+          "y": 12.49475,
+          "dx": 41.89008,
+          "dy": 12.49475
+        }
+      ],
+      "distanceMeters": 15.0,
+      "walkingDurationSeconds": 25,
+      "instruction": "Walk from vp_ludus_300 to vp_ludus_301",
+      "isPublished": true
+    },
+    {
+      "floorId": "ludus_arena",
+      "fromId": "vp_ludus_301",
+      "toId": "vp_ludus_302",
+      "points": [
+        {
+          "x": 41.89008,
+          "y": 12.49475,
+          "dx": 41.89008,
+          "dy": 12.49475
+        },
+        {
+          "x": 41.88995,
+          "y": 12.49505,
+          "dx": 41.88995,
+          "dy": 12.49505
+        },
+        {
+          "x": 41.88982,
+          "y": 12.49525,
+          "dx": 41.88982,
+          "dy": 12.49525
+        }
+      ],
+      "distanceMeters": 15.0,
+      "walkingDurationSeconds": 25,
+      "instruction": "Walk from vp_ludus_301 to vp_ludus_302",
+      "isPublished": true
+    },
+    {
+      "floorId": "ludus_tunnel",
+      "fromId": "vp_ludus_303",
+      "toId": "vp_ludus_304",
+      "points": [
+        {
+          "x": 41.8899,
+          "y": 12.4945,
+          "dx": 41.8899,
+          "dy": 12.4945
+        },
+        {
+          "x": 41.88995,
+          "y": 12.49505,
+          "dx": 41.88995,
+          "dy": 12.49505
+        },
+        {
+          "x": 41.88992,
+          "y": 12.49535,
+          "dx": 41.88992,
+          "dy": 12.49535
+        }
+      ],
+      "distanceMeters": 15.0,
+      "walkingDurationSeconds": 25,
+      "instruction": "Walk from vp_ludus_303 to vp_ludus_304",
+      "isPublished": true
+    },
+    {
+      "floorId": "temple_east",
+      "fromId": "vp_tvr_400",
+      "toId": "vp_tvr_401",
+      "points": [
+        {
+          "x": 41.89083,
+          "y": 12.48995,
+          "dx": 41.89083,
+          "dy": 12.48995
+        },
+        {
+          "x": 41.890815,
+          "y": 12.49018,
+          "dx": 41.890815,
+          "dy": 12.49018
+        },
+        {
+          "x": 41.8908,
+          "y": 12.4904,
+          "dx": 41.8908,
+          "dy": 12.4904
+        }
+      ],
+      "distanceMeters": 15.0,
+      "walkingDurationSeconds": 25,
+      "instruction": "Walk from vp_tvr_400 to vp_tvr_401",
+      "isPublished": true
+    },
+    {
+      "floorId": "temple_east",
+      "fromId": "vp_tvr_401",
+      "toId": "vp_tvr_402",
+      "points": [
+        {
+          "x": 41.8908,
+          "y": 12.4904,
+          "dx": 41.8908,
+          "dy": 12.4904
+        },
+        {
+          "x": 41.89078,
+          "y": 12.49028,
+          "dx": 41.89078,
+          "dy": 12.49028
+        },
+        {
+          "x": 41.89076,
+          "y": 12.49018,
+          "dx": 41.89076,
+          "dy": 12.49018
+        }
+      ],
+      "distanceMeters": 15.0,
+      "walkingDurationSeconds": 25,
+      "instruction": "Walk from vp_tvr_401 to vp_tvr_402",
+      "isPublished": true
+    },
+    {
+      "floorId": "temple_west",
+      "fromId": "vp_tvr_403",
+      "toId": "vp_tvr_404",
+      "points": [
+        {
+          "x": 41.89085,
+          "y": 12.48935,
+          "dx": 41.89085,
+          "dy": 12.48935
+        },
+        {
+          "x": 41.890875,
+          "y": 12.48915,
+          "dx": 41.890875,
+          "dy": 12.48915
+        },
+        {
+          "x": 41.8909,
+          "y": 12.48895,
+          "dx": 41.8909,
+          "dy": 12.48895
+        }
+      ],
+      "distanceMeters": 15.0,
+      "walkingDurationSeconds": 25,
+      "instruction": "Walk from vp_tvr_403 to vp_tvr_404",
+      "isPublished": true
+    },
+    {
+      "floorId": "forum_via_sacra",
+      "fromId": "vp_forum_500",
+      "toId": "vp_forum_501",
+      "points": [
+        {
+          "x": 41.89065,
+          "y": 12.4886,
+          "dx": 41.89065,
+          "dy": 12.4886
+        },
+        {
+          "x": 41.8911,
+          "y": 12.48835,
+          "dx": 41.8911,
+          "dy": 12.48835
+        },
+        {
+          "x": 41.8916,
+          "y": 12.48795,
+          "dx": 41.8916,
+          "dy": 12.48795
+        }
+      ],
+      "distanceMeters": 15.0,
+      "walkingDurationSeconds": 25,
+      "instruction": "Walk from vp_forum_500 to vp_forum_501",
+      "isPublished": true
+    },
+    {
+      "floorId": "forum_via_sacra",
+      "fromId": "vp_forum_501",
+      "toId": "vp_forum_502",
+      "points": [
+        {
+          "x": 41.8916,
+          "y": 12.48795,
+          "dx": 41.8916,
+          "dy": 12.48795
+        },
+        {
+          "x": 41.89178,
+          "y": 12.4874,
+          "dx": 41.89178,
+          "dy": 12.4874
+        },
+        {
+          "x": 41.89195,
+          "y": 12.4868,
+          "dx": 41.89195,
+          "dy": 12.4868
+        }
+      ],
+      "distanceMeters": 15.0,
+      "walkingDurationSeconds": 25,
+      "instruction": "Walk from vp_forum_501 to vp_forum_502",
+      "isPublished": true
+    },
+    {
+      "floorId": "forum_via_sacra",
+      "fromId": "vp_forum_502",
+      "toId": "vp_forum_503",
+      "points": [
+        {
+          "x": 41.89195,
+          "y": 12.4868,
+          "dx": 41.89195,
+          "dy": 12.4868
+        },
+        {
+          "x": 41.89182,
+          "y": 12.48655,
+          "dx": 41.89182,
+          "dy": 12.48655
+        },
+        {
+          "x": 41.89165,
+          "y": 12.48625,
+          "dx": 41.89165,
+          "dy": 12.48625
+        }
+      ],
+      "distanceMeters": 15.0,
+      "walkingDurationSeconds": 25,
+      "instruction": "Walk from vp_forum_502 to vp_forum_503",
+      "isPublished": true
+    },
+    {
+      "floorId": "forum_senate_rostra",
+      "fromId": "vp_forum_504",
+      "toId": "vp_forum_505",
+      "points": [
+        {
+          "x": 41.8927,
+          "y": 12.4853,
+          "dx": 41.8927,
+          "dy": 12.4853
+        },
+        {
+          "x": 41.89255,
+          "y": 12.4851,
+          "dx": 41.89255,
+          "dy": 12.4851
+        },
+        {
+          "x": 41.8924,
+          "y": 12.4849,
+          "dx": 41.8924,
+          "dy": 12.4849
+        }
+      ],
+      "distanceMeters": 15.0,
+      "walkingDurationSeconds": 25,
+      "instruction": "Walk from vp_forum_504 to vp_forum_505",
+      "isPublished": true
+    },
+    {
+      "floorId": "forum_senate_rostra",
+      "fromId": "vp_forum_505",
+      "toId": "vp_forum_506",
+      "points": [
+        {
+          "x": 41.8924,
+          "y": 12.4849,
+          "dx": 41.8924,
+          "dy": 12.4849
+        },
+        {
+          "x": 41.8923,
+          "y": 12.4847,
+          "dx": 41.8923,
+          "dy": 12.4847
+        },
+        {
+          "x": 41.8922,
+          "y": 12.4845,
+          "dx": 41.8922,
+          "dy": 12.4845
+        }
+      ],
+      "distanceMeters": 15.0,
+      "walkingDurationSeconds": 25,
+      "instruction": "Walk from vp_forum_505 to vp_forum_506",
+      "isPublished": true
+    }
+  ],
+  "pedestrianRoutes": [
+    {
+      "routeId": "via_sacra_arch_to_forum",
+      "name": "Via Sacra (Arch of Constantine to Roman Forum)",
+      "fromLandmarkCode": "arch_of_constantine",
+      "toLandmarkCode": "roman_forum",
+      "distanceMeters": 420.0,
+      "estimatedWalkMinutes": 6,
+      "isAccessibleWheelchair": true,
+      "waypoints": [
+        {
+          "latitude": 41.890141,
+          "longitude": 12.490481
+        },
+        {
+          "latitude": 41.890205,
+          "longitude": 12.490257
+        },
+        {
+          "latitude": 41.890303,
+          "longitude": 12.48991
+        },
+        {
+          "latitude": 41.890441,
+          "longitude": 12.489426
+        },
+        {
+          "latitude": 41.890551,
+          "longitude": 12.489022
+        },
+        {
+          "latitude": 41.890661,
+          "longitude": 12.488622
+        },
+        {
+          "latitude": 41.890761,
+          "longitude": 12.488572
+        },
+        {
+          "latitude": 41.890909,
+          "longitude": 12.488533
+        },
+        {
+          "latitude": 41.891025,
+          "longitude": 12.488373
+        },
+        {
+          "latitude": 41.89123,
+          "longitude": 12.48785
+        },
+        {
+          "latitude": 41.89165,
+          "longitude": 12.48712
+        },
+        {
+          "latitude": 41.89205,
+          "longitude": 12.4866
+        }
+      ]
+    },
+    {
+      "routeId": "colosseum_to_arch_piazza",
+      "name": "Piazza del Colosseo Promenade (Colosseum to Arch of Constantine)",
+      "fromLandmarkCode": "colosseum",
+      "toLandmarkCode": "arch_of_constantine",
+      "distanceMeters": 180.0,
+      "estimatedWalkMinutes": 3,
+      "isAccessibleWheelchair": true,
+      "waypoints": [
+        {
+          "latitude": 41.89021,
+          "longitude": 12.492231
+        },
+        {
+          "latitude": 41.89008,
+          "longitude": 12.49175
+        },
+        {
+          "latitude": 41.88992,
+          "longitude": 12.49122
+        },
+        {
+          "latitude": 41.889762,
+          "longitude": 12.490667
+        }
+      ]
+    },
+    {
+      "routeId": "colosseum_to_ludus_magnus",
+      "name": "Via di San Giovanni in Laterano (Colosseum to Ludus Magnus)",
+      "fromLandmarkCode": "colosseum",
+      "toLandmarkCode": "ludus_magnus",
+      "distanceMeters": 240.0,
+      "estimatedWalkMinutes": 3,
+      "isAccessibleWheelchair": true,
+      "waypoints": [
+        {
+          "latitude": 41.89021,
+          "longitude": 12.492231
+        },
+        {
+          "latitude": 41.89035,
+          "longitude": 12.49312
+        },
+        {
+          "latitude": 41.89018,
+          "longitude": 12.4941
+        },
+        {
+          "latitude": 41.88995,
+          "longitude": 12.49505
+        }
+      ]
+    },
+    {
+      "routeId": "colosseum_to_temple_venus_rome",
+      "name": "Clivo di Venere Felice (Colosseum to Temple of Venus & Rome)",
+      "fromLandmarkCode": "colosseum",
+      "toLandmarkCode": "temple_venus_rome",
+      "distanceMeters": 160.0,
+      "estimatedWalkMinutes": 2,
+      "isAccessibleWheelchair": false,
+      "waypoints": [
+        {
+          "latitude": 41.89021,
+          "longitude": 12.492231
+        },
+        {
+          "latitude": 41.89052,
+          "longitude": 12.4911
+        },
+        {
+          "latitude": 41.89071,
+          "longitude": 12.49035
+        },
+        {
+          "latitude": 41.89083,
+          "longitude": 12.48972
+        }
+      ]
+    },
+    {
+      "routeId": "arch_to_celio_vibenna",
+      "name": "Via Celio Vibenna Perimeter Pathway",
+      "fromLandmarkCode": "arch_of_constantine",
+      "toLandmarkCode": "ludus_magnus",
+      "distanceMeters": 350.0,
+      "estimatedWalkMinutes": 5,
+      "isAccessibleWheelchair": true,
+      "waypoints": [
+        {
+          "latitude": 41.889762,
+          "longitude": 12.490667
+        },
+        {
+          "latitude": 41.88942,
+          "longitude": 12.49185
+        },
+        {
+          "latitude": 41.88965,
+          "longitude": 12.4933
+        },
+        {
+          "latitude": 41.88995,
+          "longitude": 12.49505
+        }
+      ]
+    },
+    {
+      "routeId": "temple_to_forum_via_sacra",
+      "name": "Upper Via Sacra (Temple of Venus & Rome to Roman Forum)",
+      "fromLandmarkCode": "temple_venus_rome",
+      "toLandmarkCode": "roman_forum",
+      "distanceMeters": 310.0,
+      "estimatedWalkMinutes": 4,
+      "isAccessibleWheelchair": true,
+      "waypoints": [
+        {
+          "latitude": 41.89083,
+          "longitude": 12.48972
+        },
+        {
+          "latitude": 41.89095,
+          "longitude": 12.48892
+        },
+        {
+          "latitude": 41.8914,
+          "longitude": 12.4878
+        },
+        {
+          "latitude": 41.89205,
+          "longitude": 12.4866
+        }
+      ]
+    },
+    {
+      "routeId": "forum_imperiali_promenade",
+      "name": "Via dei Fori Imperiali Panorama Walk",
+      "fromLandmarkCode": "colosseum",
+      "toLandmarkCode": "roman_forum",
+      "distanceMeters": 520.0,
+      "estimatedWalkMinutes": 7,
+      "isAccessibleWheelchair": true,
+      "waypoints": [
+        {
+          "latitude": 41.8908,
+          "longitude": 12.4925
+        },
+        {
+          "latitude": 41.8916,
+          "longitude": 12.4909
+        },
+        {
+          "latitude": 41.8922,
+          "longitude": 12.4893
+        },
+        {
+          "latitude": 41.89205,
+          "longitude": 12.4866
+        }
+      ]
+    },
+    {
+      "routeId": "via_claudia_celian_connector",
+      "name": "Via Claudia - Celian Hill Connector",
+      "fromLandmarkCode": "colosseum",
+      "toLandmarkCode": "arch_of_constantine",
+      "distanceMeters": 290.0,
+      "estimatedWalkMinutes": 4,
+      "isAccessibleWheelchair": true,
+      "waypoints": [
+        {
+          "latitude": 41.8893,
+          "longitude": 12.4938
+        },
+        {
+          "latitude": 41.889,
+          "longitude": 12.4924
+        },
+        {
+          "latitude": 41.8895,
+          "longitude": 12.4912
+        },
+        {
+          "latitude": 41.889762,
+          "longitude": 12.490667
+        }
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "code": "en",
+      "name": "English",
+      "nativeName": "English",
+      "isAvailable": true,
+      "isDefault": true,
+      "displayOrder": 1
+    },
+    {
+      "code": "it",
+      "name": "Italian",
+      "nativeName": "Italiano",
+      "isAvailable": true,
+      "isDefault": false,
+      "displayOrder": 2
+    },
+    {
+      "code": "es",
+      "name": "Spanish",
+      "nativeName": "Espa\u00f1ol",
+      "isAvailable": true,
+      "isDefault": false,
+      "displayOrder": 3
+    },
+    {
+      "code": "fr",
+      "name": "French",
+      "nativeName": "Fran\u00e7ais",
+      "isAvailable": true,
+      "isDefault": false,
+      "displayOrder": 4
+    },
+    {
+      "code": "de",
+      "name": "German",
+      "nativeName": "Deutsch",
+      "isAvailable": true,
+      "isDefault": false,
+      "displayOrder": 5
+    },
+    {
+      "code": "pt",
+      "name": "Portuguese",
+      "nativeName": "Portugu\u00eas",
+      "isAvailable": true,
+      "isDefault": false,
+      "displayOrder": 6
+    },
+    {
+      "code": "ja",
+      "name": "Japanese",
+      "nativeName": "\u65e5\u672c\u8a9e",
+      "isAvailable": true,
+      "isDefault": false,
+      "displayOrder": 7
+    },
+    {
+      "code": "ko",
+      "name": "Korean",
+      "nativeName": "\ud55c\uad6d\uc5b4",
+      "isAvailable": true,
+      "isDefault": false,
+      "displayOrder": 8
+    }
+  ],
+  "tickets": [
+    {
+      "token": "COL-DEMO-2026",
+      "tier": "full_access",
+      "allowedFloorIds": [
+        "floor_underground",
+        "floor_1",
+        "floor_2",
+        "floor_3",
+        "arch_ground",
+        "arch_attic",
+        "ludus_arena",
+        "ludus_tunnel",
+        "temple_east",
+        "temple_west",
+        "forum_via_sacra",
+        "forum_senate_rostra"
+      ],
+      "validFrom": "2026-01-01T00:00:00.000Z",
+      "validUntil": "2027-12-31T23:59:59.000Z",
+      "maxActivations": 5,
+      "currentActivations": 0,
+      "activatedDevices": [],
+      "isActive": true
+    },
+    {
+      "token": "COL-ARENA-9981",
+      "tier": "arena_priority",
+      "allowedFloorIds": [
+        "floor_1",
+        "floor_2",
+        "arch_ground",
+        "ludus_arena",
+        "temple_east",
+        "temple_west",
+        "forum_via_sacra",
+        "forum_senate_rostra"
+      ],
+      "validFrom": "2026-01-01T00:00:00.000Z",
+      "validUntil": "2027-12-31T23:59:59.000Z",
+      "maxActivations": 2,
+      "currentActivations": 0,
+      "activatedDevices": [],
+      "isActive": true
+    }
+  ]
+}

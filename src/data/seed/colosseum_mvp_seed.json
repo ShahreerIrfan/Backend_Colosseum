@@ -1,0 +1,1163 @@
+{
+  "floors": [
+    {
+      "floorId": "floor_underground",
+      "landmarkCode": "colosseum",
+      "levelIndex": -1,
+      "displayName": "Underground (Hypogeum)",
+      "shortName": "Underground",
+      "floorNumberLabel": "Underground",
+      "semanticLabel": "Underground Hypogeum, current floor",
+      "calibration": {
+        "centerCoordinates": {
+          "latitude": 41.89021,
+          "longitude": 12.492231
+        },
+        "defaultZoom": 18.6,
+        "mapNorthOffsetDegrees": -20.0
+      },
+      "mapAsset": {
+        "assetId": "underground_map",
+        "url": "assets/maps/underground_map.png"
+      }
+    },
+    {
+      "floorId": "floor_1",
+      "landmarkCode": "colosseum",
+      "levelIndex": 1,
+      "displayName": "Level 1",
+      "shortName": "Level 1",
+      "floorNumberLabel": "Floor 1",
+      "semanticLabel": "Level 1, current floor",
+      "calibration": {
+        "centerCoordinates": {
+          "latitude": 41.89021,
+          "longitude": 12.492231
+        },
+        "defaultZoom": 18.6,
+        "mapNorthOffsetDegrees": -20.0
+      },
+      "mapAsset": {
+        "assetId": "level_1_map",
+        "url": "assets/maps/level_1_map.png"
+      }
+    },
+    {
+      "floorId": "floor_2",
+      "landmarkCode": "colosseum",
+      "levelIndex": 2,
+      "displayName": "Level 2",
+      "shortName": "Level 2",
+      "floorNumberLabel": "Floor 2",
+      "semanticLabel": "Level 2, current floor",
+      "calibration": {
+        "centerCoordinates": {
+          "latitude": 41.89021,
+          "longitude": 12.492231
+        },
+        "defaultZoom": 18.6,
+        "mapNorthOffsetDegrees": -20.0
+      },
+      "mapAsset": {
+        "assetId": "level_2_map",
+        "url": "assets/maps/level_2_map.png"
+      }
+    },
+    {
+      "floorId": "floor_3",
+      "landmarkCode": "colosseum",
+      "levelIndex": 3,
+      "displayName": "Level 3",
+      "shortName": "Level 3",
+      "floorNumberLabel": "Floor 3",
+      "semanticLabel": "Level 3, current floor",
+      "calibration": {
+        "centerCoordinates": {
+          "latitude": 41.89021,
+          "longitude": 12.492231
+        },
+        "defaultZoom": 18.6,
+        "mapNorthOffsetDegrees": -20.0
+      },
+      "mapAsset": {
+        "assetId": "level_3_map",
+        "url": "assets/maps/level_3_map.png"
+      }
+    }
+  ],
+  "viewpoints": [
+    {
+      "id": "vp_100",
+      "floorId": "floor_underground",
+      "order": 100,
+      "title": "Spectacles in the Colosseum Arena Floor. The Superstars",
+      "description": "The exhibition entitled Spectacles in the Colosseum Arena Floor. The Superstars occupies the initial path of the visit of the underground levels and aims at illustrating the operation and use of the \"behind the scenes\" of the Colosseum with the support of multimedia devices, reconstructions, models, and original finds.\n\nThe first stop is the Corridor of the Gladiators, the underground service corridor that connected the amphitheatre with the main training gymnasium, the Ludus Magnus. From this corridor the animals were probably led for the hunting shows, but above all the gladiators proceeded before performing in the arena. A holographic projection gives an image of the march of the gladiators and 3D reconstructions show what the landscape around the Colosseum looked like 2000 years ago.\n\nThe tour continues with some excellent artefacts: the mosaic from the Castra Pretoria with men and animals at the end of a combat show (the theta nigrum symbol indicates that the animal has been killed) and the armour of the main fixed pairs of gladiators. Among others, one can recognise the Thracian against the Murmillo and the Retiarius against the Secutor, exhibited together with a selection of original artefacts that allow the visitor to appreciate the original armour and the combat poses: among all, a fragment of a step from the cavea of the Colosseum in which the Retiarius armed with a net and trident and the Secutor with his head protected by a completely smooth helmet are graffitied.\n\nGladiators were normally people who had fallen into dishonour (even intentionally) and were therefore legitimised to shed blood outside the military sacrament and to be judged by the people, like prisoners of war, slaves or infames, and wore the armour of peoples defeated by the Romans: Samnites, Gauls, Thracians. For the purposes of atoning for faults or recovering lost rights or gaining fame and notoriety, they had to accept the risk of death by swearing an oath to the deity:\n\nIuro... me uri vinciri verberari virgis ferroque necari et quidquid aliud iusseris vel invitum me pati passurum.\n\nThe combat between gladiators was the most anticipated moment of the entire day\u2019s spectacles: considered the heroes of the time, they were also immortalised on everyday objects, as shown by some oil lamps displayed in the showcase at the end of the corridor. They made their appearance in the arena in the afternoon, after the performance of the animal hunts in the morning.\n\nThe whole scenic apparatus was designed to impress and amaze the people seated on the cavea: lifts and platforms, as illustrated by the model exhibited in the museum, were used to make the protagonists of the performances appear from the darkness of the underground.",
+      "normalizedX": 0.8,
+      "normalizedY": 0.5,
+      "latitude": 41.89025,
+      "longitude": 12.49282,
+      "imageAsset": "assets/images/vp_100_arena_spectacles.jpg",
+      "audioDuration": "4 min 30s",
+      "triggerRadiusMeters": 4.0
+    },
+    {
+      "id": "vp_101",
+      "floorId": "floor_underground",
+      "order": 101,
+      "title": "Access to the Underground Levels: East & West Ramps, Ludus Magnus Tunnels & Fosso Labicano Ditch",
+      "description": "Below the arena floor, in the pitch-black darkness, surrounded by the pungent smell of men and animals, shrouded by smoke from the torches used to illuminate the space, the machinery of the spectacle was being readied to make an appearance.\n\nYou are now standing along the cryptoporticus which crosses the long axis of the oval of the Amphitheatre, from east to west. The protagonists of the games walked along this very pathway, coming directly from the nearby neighbourhood of the Amphitheatre, which is behind you, partially visible today between Via Labicana and Via di San Giovanni in Laterano.\n\nIf we try to make the walls which now block our passage disappear, we can imagine the corridor which led to the Ludus Magnus, one of the 4 barracks where the gladiators trained and got ready for battle. Originally, the Ludus was part of a broader complex which included a hospital (saniarium) and a morgue (spoliarium",
+      "normalizedX": 0.88,
+      "normalizedY": 0.38,
+      "latitude": 41.89032,
+      "longitude": 12.49305,
+      "imageAsset": "assets/images/vp_101_ludus_magnus_tunnel.jpg",
+      "audioDuration": "5 min 15s",
+      "triggerRadiusMeters": 4.0
+    },
+    {
+      "id": "vp_102",
+      "floorId": "floor_underground",
+      "order": 102,
+      "title": "General Introduction to the Underground Levels & Different Phases of Development",
+      "description": "When we refer to the \u2018underground levels\u2019, we are referring to the 76 x 44 meter space below the ancient arena of the Amphitheatre. These spaces contained the rooms used as service facilities for the shows.\n\nThe layout of the spaces and structures, which you are visiting, changed many times, even from the very beginning, due to the three emperors of the Flavian dynasty: Vespasian, Titus and Domitian. When the Amphitheatre was being built, before its inauguration in 80 CE, the underground spaces were completely empty. They had a dual role: they housed the wooden pillars which made up the complex supporting structure of the arena, in turn affixed to travertine blocks; and as a water basin for aquatic spectacles.\n\nOnly after the inauguration, which historical sources say lasted 100 days, did work begin on the construction of the walls which would support the new floor of the arena, part of Domitian\u2019s plan, to whom we owe the completion of the Amphitheatre. The rows of blocks in tufa stone on an east-west axis belong to this phase.\n\nDuring Imperial age and up to late antiquity, the underground levels underwent many changes. The Flavian structures in stone blocks were flanked by other walls, mostly in brick and without foundations. The main changes took place under Trajan, Septimius Severus and in late antiquity (between the 5th and 6th centuries).\n\nToday, the underground levels are marked by walls which create a series of corridors: 9 longitudinal and 6 rings. The corridors are today identified by a letter (A, B, C, D, E, F, G, H) and the sector (North and South). The central corridor, H, coincides with the longer east-west axis. As you can see, the walls were built according to different methods and with different materials:\n\u2022 In Roman concrete with course-laid brickwork (opus caementicium and opus latericium)\n\u2022 Walls in tuff blocks (gabino tuff, yellow tuff and peperino tuff) and blocks of travertine\n\u2022 Mixed masonry, with the extensive use of reclaimed materials (travertine, tuff, brick, marble)\n\nThe surviving antique paving, made in small bricks arranged in a herringbone motif (opus spicatum",
+      "normalizedX": 0.68,
+      "normalizedY": 0.3,
+      "latitude": 41.89045,
+      "longitude": 12.49258,
+      "imageAsset": "assets/images/vp_102_hypogeum_phases.jpg",
+      "audioDuration": "4 min 45s",
+      "triggerRadiusMeters": 4.0
+    },
+    {
+      "id": "vp_103",
+      "floorId": "floor_underground",
+      "order": 103,
+      "title": "The Hoists: The Flavian Phase with Large Perimetral Lifts",
+      "description": "From Domitian (81-96 CE",
+      "normalizedX": 0.48,
+      "normalizedY": 0.22,
+      "latitude": 41.89052,
+      "longitude": 12.49215,
+      "imageAsset": "assets/images/vp_103_flavian_hoists.jpg",
+      "audioDuration": "5 min 40s",
+      "triggerRadiusMeters": 4.0
+    },
+    {
+      "id": "vp_104",
+      "floorId": "floor_underground",
+      "order": 104,
+      "title": "Corridor H: Large Ramps and the Four Galleries to the North, South, East & West",
+      "description": "Called pegmata in ancient times, the system which raised the stage decorations was concentrated in the central corridor, that is, Corridor H, where you are now, and in nearby Corridor F. It consisted of 20 mobile platforms measuring about 5 by 4 meters, carved out of the wood floor of the arena. These platforms could be unhooked and slowly lowered along slots set at a 30-degree angle in the walls of the corridor. You can still see their traces today. When the platforms reached the bottom of the corridor, they were loaded with the stage settings. They then were brought back up to the arena floor, suddenly reappearing before the audience. This system guaranteed a delightful surprise each time it was used, never failing to impress the crowd.\n\nThe platforms were lifted through a system of cables which were coiled around the vertical pole of each winch, pushed by people. Ample traces of these winches can be seen on the floors. The underground levels were connected to corridors called \u2018cryptoporticos\u2019, which you\u2019ve already visited. They led to the exterior of the Amphitheatre and they were used to carry stage decorations and animals.\n\nAt first the sets were made and stored in the vestibule of the Domus Aurea, which Hadrian later turned into the Temple of Venus and Roma. Subsequently they were moved to a special building called the Summum Choragium, and then they were most likely moved again to the podium of the Temple to Venus and Roma, as Hadrian\u2019s architect, Apollodorus of Damascus, suggested. That way, they could be brought to the Amphitheatre without being seen beforehand.\n\nThe stages were \u2018moveable structures of wood, scaffolding towers like houses on wheels, covered with lively paintings, ornate cages for savage creatures\u2019, as Apuleius tells in his Metamorphoses.\n\nIn brick arranged in a herringbone pattern (opus spicatum",
+      "normalizedX": 0.48,
+      "normalizedY": 0.5,
+      "latitude": 41.89021,
+      "longitude": 12.49223,
+      "imageAsset": "assets/images/vp_104_corridor_h.jpg",
+      "audioDuration": "4 min 50s",
+      "triggerRadiusMeters": 4.0
+    },
+    {
+      "id": "vp_105",
+      "floorId": "floor_underground",
+      "order": 105,
+      "title": "The Hoists After the Fire of 217 CE",
+      "description": "You are now on the short axis of the oval of the underground area. From here, you can see all the corridors in a row and observe their different construction materials and methods. You can verify how, over the centuries, the original structures had been bolstered by reinforcing walls, and how raised and intermediate floors had been created.\n\nThe original system remained untouched for only a few decades. The stress and weight of the loads on the floor of the arena made it necessary to reinforce the tuff structures with brick walls, which progressively narrowed the corridors and caused the 28 lifts in the B corridors to be decommissioned by the early 2nd century.\n\nEven more drastic changes were implemented later on, under the Severan dynasty, following a particularly intense fire that erupted in the Amphitheatre in 217, damaging it so badly that it had to be closed until 222. All the wooden structures of the attic, the floor of the arena and all the wooden rigging in the underground levels were destroyed. Five years of intense work followed, leaving visible traces in the underground area of detailed and frenetic efforts to recover and refit the walls which had also been damaged in the fire.\n\nOnce the work was done, an entirely redesigned lifting system was in place, with an impressive 60 new hoists. This time they were placed at the centre of the underground area, in Corridors E and G.\n\nThe machinery for the spectacles simultaneously became larger and better performing: the lifting points were scattered about instead of clustered thanks to the use of smaller lifts, operated simultaneously through a large winch. You can see what is left of this system to the left of central corridor H: 40 lifts were in the G Corridors, 20 to the north and 20 to the south, and another 20 were to the right of the central corridor, in the E Corridors, 10 to the north and 10 to the south. The view of the sequence of these small lifts is very impressive, and provides insight into the frenzy that would have defined that area while shows were in progress.\n\nThose wood hoists lifted men and small to medium animals and they were housed in rectangular \u2018pits\u2019. Closed by flaps carved out of the floor of the arena, each one was crowned by four small travertine pillars. If you look slightly up, you can see them, at the top of the still-plastered walls. The pillars still bear the grooving of the cables which were attached to lead counterweights, while on the cross walls of the \u2018pits\u2019 you can see the plaster facing and also the grooves and incisions made to ensure that the wooden pieces fit perfectly into the walls.\n\nCompared to the first lifting system, the distance travelled by these hoists was shortened. They no longer started from the underground floor, but from a wooden gallery that was over 3 meters above the floor. This left the slaves and workers free to move about and thereby maximise the available space on the lower level of the corridors.\n\nTo impress the audience during games and spectacles, every detail had to be thought out and tended to. In fact, the success of the shows began right here, thanks to the perfect functioning of this equipment. Over time, the small lifts had to be repaired more than once, until only the 40 hoists in Corridor G remained.",
+      "normalizedX": 0.5,
+      "normalizedY": 0.72,
+      "latitude": 41.88998,
+      "longitude": 12.49232,
+      "imageAsset": "assets/images/vp_105_severan_hoists.jpg",
+      "audioDuration": "5 min 10s",
+      "triggerRadiusMeters": 4.0
+    },
+    {
+      "id": "vp_106",
+      "floorId": "floor_underground",
+      "order": 106,
+      "title": "Archaeological Excavations and Restorations in the 19th & 20th Centuries",
+      "description": "As we previously mentioned, the underground levels of the Colosseum were filled in with dirt as of 523. For over 13 centuries, its structures were buried, known only through numerous literary sources in Latin.\n\nThe archaeological discoveries of Herculaneum and Pompei and the subsequent spread of Neoclassicism in the early 1800s sparked a renewed interest in archaeological sites. In this cultural framework, numerous archaeological excavations and studies began, involving the underground levels of the Colosseum in particular.\n\nSurveys of the Amphitheatre\u2019s arena floor began in 1811, during the French occupation of the Papal State. The excavation in the arena was a decision which held great symbolic value. Since 1750, the arena had been used as a site of martyr worship: moving the central cross and the shrines of the Stations of the Cross, by that time suspended on their exposed foundations, signified the secularisation of a sacred area.\n\nThe dig involved the western half of the floor, with the creation of deep trenches that ran along the walls. Work was slow, in part due to the problems caused by flooding groundwater. At this time, a heated debate began over the age of the underground structures, but by mid century \u2018it was agreed to recognise in them the receptacles that the ancients used to contain the beasts destined for the spectacle of daily hunts\u2019.\n\nWith the return of the Pope to Italy from France, in 1814, the excavated area was filled in with dirt again, not so much for problems with groundwater, but out of a desire to restore the chapels of the Stations of the Cross.\n\nArchaeological digs began again after the Unification of Italy with Rome as the capital city, from 1874 to 1875. They were led by Pietro Rosa and this time they focused on the eastern half of the underground levels, finally reaching the flooring in opus spicatum with the removal of that which remained of the infill from the late 5th-early 6th centuries.\n\nA notable amount of wooden structures was found, though none survive today. Thanks to the photographs and descriptions of H.J. Parker, we know that parts of machinery, long oak beams, sections of poles that supported the winches, and tracks to move stage decorations had been found. Elements that composed the cavea also came to light, such as the colonnade found on its top, the railings of the vomitoria, the facings of the tiered seating, and epigraphs: essentially everything which had first accidentally collapsed due to an earthquake, and which had later intentionally been thrown into the underground area.\n\nThe discovery of the existence of underground spaces in the amphitheatres of Capua and Pozzuoli, both in Campanian near Naples, have confirmed the role of those at the Colosseum.\n\nIn 1938, the continuation and complete excavation of the arena was entrusted to an entrepreneur, an engineer named Giuseppe Cozzo, who demolished a sizeable quantity of structures which he deemed to be hazardous.\n\nThe dilapidated state of the structures to the west, where you are now standing, was presented as evidence of the extensive damage caused to this part of the Amphitheatre by the earthquakes of 443 and 508. Cozzo completely destroyed that which remained, including the large vaulted spaces under the west entry to the underground area. He then proceeded to rebuild it, meticulously documenting his work, extending even into the niches along the perimeter and the wall of the podium.",
+      "normalizedX": 0.24,
+      "normalizedY": 0.5,
+      "latitude": 41.89018,
+      "longitude": 12.49155,
+      "imageAsset": "assets/images/vp_106_excavations_restorations.jpg",
+      "audioDuration": "5 min 30s",
+      "triggerRadiusMeters": 4.0
+    },
+    {
+      "id": "vp_200",
+      "floorId": "floor_1",
+      "order": 200,
+      "title": "Northern Imperial Entrance & Arch 38",
+      "description": "Welcome to Level 1 of the Colosseum. You are standing at the monumental Northern Imperial Entrance, situated directly between arches 38 and 39 along the monument\u2019s short north-south axis.\n\nUnlike the other 76 numbered perimeter arches through which everyday spectators passed, this grand axial entrance bore no Roman numerals. It was reserved exclusively for the Roman Emperor, high magistrates, and the sacred College of Vestal Virgins. It opened directly onto a private vaulted passageway leading straight to the Imperial Box without having to mix with the public crowds.\n\nLook closely at the underside of the surviving barrel vaulting overhead. Here you can admire some of the only surviving original Flavian stucco reliefs in the entire Colosseum. Dating to the late 1st century CE, these exquisite white and polychrome plaster reliefs depict geometric panels, mythological figures, and delicate acanthus leaf motifs that once covered all VIP corridors in gleaming Roman opulence.",
+      "normalizedX": 0.5,
+      "normalizedY": 0.16,
+      "latitude": 41.890469,
+      "longitude": 12.492357,
+      "imageAsset": "assets/images/vp_200.jpg",
+      "audioDuration": "3 min 45s",
+      "triggerRadiusMeters": 4.0
+    },
+    {
+      "id": "vp_201",
+      "floorId": "floor_1",
+      "order": 201,
+      "title": "Entrance Arches & Roman Crowd-Control System",
+      "description": "Step out toward the outer perimeter arcade on the northeastern quadrant. Look up at the travertine keystones crowning the monumental ground-level arches.\n\nEngraved deeply into the stone above each arch, you can still see ancient Roman numerals carved over two millennia ago. The 76 public entrance arches were numbered consecutively from I to LXXVI (1 to 76). Every Roman spectator held a small clay ticket token called a tessera, which functioned exactly like a modern stadium ticket.\n\nThe tessera specified four crucial pieces of information: the arch number through which to enter (fornix",
+      "normalizedX": 0.72,
+      "normalizedY": 0.22,
+      "latitude": 41.890352,
+      "longitude": 12.492597,
+      "imageAsset": "assets/images/vp_201.jpg",
+      "audioDuration": "3 min 30s",
+      "triggerRadiusMeters": 4.0
+    },
+    {
+      "id": "vp_202",
+      "floorId": "floor_1",
+      "order": 202,
+      "title": "Vomitoria & Circulation Passages",
+      "description": "You are now traversing the wide annular ambulatory corridor on the eastern perimeter, supported by massive travertine piers and groin-vaulted concrete ceilings.\n\nBranching inward from this circular gallery are dozens of steep radial staircases and exit portals known in Latin as vomitoria\u2014from the Latin verb vomere, meaning \"to spew forth or discharge rapidly.\" The term described how the building seemed to miraculously discharge tens of thousands of citizens out onto the surrounding piazza in just a matter of minutes.\n\nRoman architects designed overlapping concentric rings and independent one-way staircases so that senators ascending to the podium never crossed paths with plebeians climbing to the upper wooden bleachers. This architectural segregation ensured complete civic order and social separation at all times.",
+      "normalizedX": 0.86,
+      "normalizedY": 0.44,
+      "latitude": 41.890139,
+      "longitude": 12.492682,
+      "imageAsset": "assets/images/vp_202.jpg",
+      "audioDuration": "3 min 15s",
+      "triggerRadiusMeters": 4.0
+    },
+    {
+      "id": "vp_203",
+      "floorId": "floor_1",
+      "order": 203,
+      "title": "Arena & Hypogeum Overview",
+      "description": "Step onto the eastern viewing balcony bordering the arena floor. From this elevated vantage point, you have a direct panoramic view down into the hypogeum and across the modern partial wooden arena reconstruction.\n\nThe ancient arena measured 86 meters in length by 54 meters in width. It consisted of heavy wooden planks resting on masonry arches, covered with fine yellow sand imported from the mouth of the Tiber. During the morning spectacles, called venationes, the arena was transformed into living landscapes with exotic trees, rocky crags, and painted hills brought up from below.\n\nSeparating the spectators from the deadly combatants was a 4-meter-high sheer marble podium wall, crowned by revolving ivory or bronze rollers that prevented leopards and lions from gaining traction to leap into the crowd. Heavily armed archers and spear-wielding guards were stationed at intervals behind safety netting to guarantee the safety of Rome\u2019s ruling elite.",
+      "normalizedX": 0.74,
+      "normalizedY": 0.5,
+      "latitude": 41.890133,
+      "longitude": 12.492517,
+      "imageAsset": "assets/images/vp_203.jpg",
+      "audioDuration": "4 min 10s",
+      "triggerRadiusMeters": 4.0
+    },
+    {
+      "id": "vp_204",
+      "floorId": "floor_1",
+      "order": 204,
+      "title": "Senatorial Seating \u2014 Loca",
+      "description": "You are now standing at the edge of the podium\u2014the lowest, most prestigious seating zone in the entire Colosseum, directly bordering the arena rim.\n\nThis exclusive level was reserved entirely for Roman senators, foreign ambassadors, and senior religious magistrates. Unlike the upper tiers where spectators sat crowded on shared stone bleachers, senators sat on wide, low marble terraces in personal portable folding chairs made of bronze and ivory, called subsellia, carried in by their private enslaved attendants.\n\nLook closely at the marble revetment blocks on the podium parapet. You will see deep Latin inscriptions cut into the marble. These are the loca\u2014official assigned seat reservations. Whenever a senator died or lost his seat, stonecutters chiseled out the old name and recarved the new senator\u2019s name over the depression (palimpsest). Most surviving inscriptions here date to the 5th and 6th centuries CE, commemorating senators of late antiquity.",
+      "normalizedX": 0.64,
+      "normalizedY": 0.6,
+      "latitude": 41.890089,
+      "longitude": 12.492361,
+      "imageAsset": "assets/images/vp_204.jpg",
+      "audioDuration": "3 min 50s",
+      "triggerRadiusMeters": 4.0
+    },
+    {
+      "id": "vp_205",
+      "floorId": "floor_1",
+      "order": 205,
+      "title": "Imperial Box / Pulvinar",
+      "description": "You are standing at the southern short axis of the arena\u2014the location of the imperial box, known in antiquity as the pulvinar or cubiculum.\n\nFrom this prime elevated pavilion, the Roman Emperor sat crowned with gold laurels, surrounded by his praetorian bodyguards, the empress, and the high magistrates of Rome. Across from him on the northern axis sat the six Vestal Virgins, the sacred priestesses of Vesta who held the highest religious honor in the Roman state.\n\nThe pulvinar gave the Emperor direct visual dominance over the arena spectacles. It was here that victorious gladiators stood looking upward, awaiting the emperor\u2019s verdict: missio (spared life) or pollice verso (the turned thumb directing death). Attending the Colosseum was essential imperial politics\u2014it was the only venue where the ordinary people of Rome could collectively address the Emperor directly with cheers, petitions, or demands.",
+      "normalizedX": 0.5,
+      "normalizedY": 0.68,
+      "latitude": 41.890073,
+      "longitude": 12.492164,
+      "imageAsset": "assets/images/vp_205.jpg",
+      "audioDuration": "4 min 20s",
+      "triggerRadiusMeters": 4.0
+    },
+    {
+      "id": "vp_206",
+      "floorId": "floor_1",
+      "order": 206,
+      "title": "Maenianum Primum \u2014 Knights' Seating",
+      "description": "Behind the senatorial podium, elevated by a high marble balustrade (balteus",
+      "normalizedX": 0.38,
+      "normalizedY": 0.64,
+      "latitude": 41.890142,
+      "longitude": 12.492036,
+      "imageAsset": "assets/images/vp_206.jpg",
+      "audioDuration": "3 min 20s",
+      "triggerRadiusMeters": 4.0
+    },
+    {
+      "id": "vp_207",
+      "floorId": "floor_1",
+      "order": 207,
+      "title": "Cavea Social Hierarchy",
+      "description": "From this western cavea section, gaze upward along the sweeping slope of the tiered seating tiers.\n\nThe cavea was not merely a venue for entertainment; it was a physical, monumental diagram of Roman class hierarchy, codified by Emperor Augustus in the Lex Iulia Theatralis. Every Roman sat precisely where his legal identity dictated:\n\n\u2022 The Podium: Senators and Vestal Virgins in ivory chairs\n\u2022 Maenianum Primum: Knights and military tribunes in white togas\n\u2022 Maenianum Secundum Imum: Wealthy male Roman citizens (toga wearers)\n\u2022 Maenianum Secundum Summum: Poorer Roman plebeians dressed in dark wool cloaks (pullati)\n\u2022 Maenianum Summum in Ligneis: The highest wooden bleachers under the portico for day-laborers, foreigners, enslaved people, and women.\n\nTo sit in the wrong section was a criminal offence punished with heavy fines and public disgrace. The Colosseum displayed Roman society to itself in rigid order.",
+      "normalizedX": 0.26,
+      "normalizedY": 0.5,
+      "latitude": 41.890287,
+      "longitude": 12.491945,
+      "imageAsset": "assets/images/vp_207.jpg",
+      "audioDuration": "3 min 40s",
+      "triggerRadiusMeters": 4.0
+    },
+    {
+      "id": "vp_208",
+      "floorId": "floor_1",
+      "order": 208,
+      "title": "Arena Spectacles Viewpoint",
+      "description": "You are standing at the northwestern vantage point looking down directly across the arena axis.\n\nImagine a full day of games in the Flavian era. The spectacles unfolded in three distinct acts across the day:\n\n1. Morning (Venationes): Exotic wild animal hunts. Thousands of animals imported from Africa, Asia, and northern Europe\u2014lions, tigers, elephants, rhinoceroses, and bears\u2014faced trained hunters (venatores) amidst theatrical scenery.\n\n2. Midday (Meridiani / Ludi Meridiani): Public executions of convicted criminals (damnati ad bestias or damnati ad gladium",
+      "normalizedX": 0.36,
+      "normalizedY": 0.32,
+      "latitude": 41.890392,
+      "longitude": 12.492131,
+      "imageAsset": "assets/images/vp_208.jpg",
+      "audioDuration": "4 min 45s",
+      "triggerRadiusMeters": 4.0
+    },
+    {
+      "id": "vp_300",
+      "floorId": "floor_2",
+      "order": 300,
+      "title": "Second-Level Cavea Panorama",
+      "description": "Welcome to Level 2. You have emerged onto the sweeping circular promenade of the second tier of the Colosseum.\n\nFrom this elevated height of approximately 18 meters above the arena floor, the full elliptical geometry of the amphitheatre reveals itself. The outer circumference of 527 meters and the towering inner retaining walls demonstrate the sheer scale of Flavian engineering.\n\nLook down across the interior: you can clearly distinguish the dividing balustrades separating the social tiers, the radiating barrel-vaulted access passages, and the subterranean corridors of the hypogeum exposed to the open sky. During the ancient games, thousands of spectators walked along this very promenade to reach their seats or buy snacks from street vendors stationed in the vaulted bays.",
+      "normalizedX": 0.5,
+      "normalizedY": 0.24,
+      "latitude": 41.890408,
+      "longitude": 12.492328,
+      "imageAsset": "assets/images/vp_300.jpg",
+      "audioDuration": "3 min 50s",
+      "triggerRadiusMeters": 4.0
+    },
+    {
+      "id": "vp_301",
+      "floorId": "floor_2",
+      "order": 301,
+      "title": "Maenianum Secundum",
+      "description": "You are standing within the middle seating tier, known historically as the maenianum secundum.\n\nThis massive section was subdivided into two horizontal zones: the lower tier (maenianum secundum imum",
+      "normalizedX": 0.68,
+      "normalizedY": 0.3,
+      "latitude": 41.890304,
+      "longitude": 12.49252,
+      "imageAsset": "assets/images/vp_301.jpg",
+      "audioDuration": "3 min 15s",
+      "triggerRadiusMeters": 4.0
+    },
+    {
+      "id": "vp_302",
+      "floorId": "floor_2",
+      "order": 302,
+      "title": "Panoramic Terrace & Archaeological Landscape",
+      "description": "Step out onto the outer panoramic terrace facing east toward the Roman archaeological park.\n\nFrom here, you are rewarded with an extraordinary panoramic vista of ancient Rome. Directly beneath you stands the monumental Arch of Constantine, erected in 315 CE to celebrate Constantine\u2019s victory at the Battle of the Milvian Bridge. Beyond it lies the foundation of the Meta Sudans, the ancient conical sweating fountain.\n\nLooking west along the ancient Via Sacra, you can trace the triumphal procession route winding past the Temple of Venus and Roma toward the Arch of Titus and the Roman Forum, flanked by the lush green slopes of the Palatine Hill where Roman emperors built their sprawling imperial palaces.",
+      "normalizedX": 0.85,
+      "normalizedY": 0.5,
+      "latitude": 41.890097,
+      "longitude": 12.492648,
+      "imageAsset": "assets/images/vp_302.jpg",
+      "audioDuration": "3 min 40s",
+      "triggerRadiusMeters": 4.0
+    },
+    {
+      "id": "vp_303",
+      "floorId": "floor_2",
+      "order": 303,
+      "title": "Colosseum Museum \u2014 Spectators & Seating",
+      "description": "Enter the southern gallery of Level 2, which houses the permanent Museum of the Colosseum. This first exhibition hall is devoted to the spectators who populated the amphitheatre.\n\nExhibited here are authentic inscribed marble seat blocks (loca) discovered during excavations. Notice the deeply carved Latin names of distinguished 5th-century Roman senators such as Messius Phoebus and Decius Marius Venantius Basilius, who financed games after the catastrophic earthquakes of 443 and 508 CE.\n\nAlongside the official inscriptions, examine the informal ancient graffiti etched into the marble by ordinary spectators waiting for the games: sketches of hunting hounds, caricatures of popular gladiators with their weapon tallies, and board games (tabulae lusoriae) carved into the steps to pass the long hours between spectacles.",
+      "normalizedX": 0.7,
+      "normalizedY": 0.68,
+      "latitude": 41.890008,
+      "longitude": 12.492402,
+      "imageAsset": "assets/images/vp_303.jpg",
+      "audioDuration": "4 min 15s",
+      "triggerRadiusMeters": 4.0
+    },
+    {
+      "id": "vp_304",
+      "floorId": "floor_2",
+      "order": 304,
+      "title": "Colosseum Museum \u2014 Marble & Sculptural Decoration",
+      "description": "Continue through the museum into the room displaying surviving architectural and sculptural elements that once adorned the amphitheatre.\n\nAlthough today the Colosseum appears primarily as exposed travertine, tufa, and brick-faced concrete, in antiquity it was encrusted with dazzling white Luna marble and colorful polychrome stones. Displayed here are monumental Corinthian and Composite capitals, intricately carved marble barrier screens (transennae) with geometric openwork, and gutter spouts carved in the form of roaring lion heads.\n\nAlso featured are fragments of figurative relief friezes depicting scenes of animal hunts and gladiatorial combat, which once decorated the podium balustrades and the ceremonial imperial entrances.",
+      "normalizedX": 0.5,
+      "normalizedY": 0.76,
+      "latitude": 41.890012,
+      "longitude": 12.492134,
+      "imageAsset": "assets/images/vp_304.jpg",
+      "audioDuration": "3 min 30s",
+      "triggerRadiusMeters": 4.0
+    },
+    {
+      "id": "vp_305",
+      "floorId": "floor_2",
+      "order": 305,
+      "title": "Colosseum Through the Middle Ages",
+      "description": "This gallery chronicles the fascinating medieval and post-classical afterlife of the Colosseum.\n\nFollowing the cessation of spectacles in the 6th century, the monument was dramatically repurposed. In the 12th and 13th centuries, the noble Frangipane family fortified the Colosseum, transforming the ancient ruin into a private castle complete with battlements and fortified gates.\n\nThe arcade bays were rented out to shoemakers, blacksmiths, glue-makers, and tavern keepers. Lime kilns (calcarae) were built right inside the arena to melt down ancient marble statues and revetments into construction mortar for medieval Rome.\n\nThe destruction was finally halted in 1749 when Pope Benedict XIV declared the Colosseum a sacred martyrium consecrated to the passion of Jesus and the Christian martyrs, erecting the Stations of the Cross that stood in the arena for over a century.",
+      "normalizedX": 0.32,
+      "normalizedY": 0.66,
+      "latitude": 41.890146,
+      "longitude": 12.491957,
+      "imageAsset": "assets/images/vp_305.jpg",
+      "audioDuration": "4 min 00s",
+      "triggerRadiusMeters": 4.0
+    },
+    {
+      "id": "vp_306",
+      "floorId": "floor_2",
+      "order": 306,
+      "title": "Lucangeli Model & Reconstruction",
+      "description": "You have reached the centerpiece of the Colosseum Museum: the magnificent historic wooden architectural model created by master artisan Carlo Lucangeli.\n\nConstructed between 1790 and 1812 at a precise 1:60 scale using cork, wood, and plaster, this celebrated masterpiece took over twenty years of meticulous survey and craft. Lucangeli worked directly alongside leading Roman antiquarians, measuring surviving masonry block by block to reconstruct the intact appearance of the ancient amphitheatre.\n\nLook closely at the cutaway sections: the model reveals the entire four-tiered exterior facade with its statues nestled in the arches, the interior radial staircases, the sloping cavea tiers, the imperial boxes, and the complete velum awning rigging system. It remains to this day one of the most accurate, evocative physical reconstructions of the Colosseum ever made.",
+      "normalizedX": 0.24,
+      "normalizedY": 0.48,
+      "latitude": 41.890309,
+      "longitude": 12.491929,
+      "imageAsset": "assets/images/vp_306.jpg",
+      "audioDuration": "4 min 30s",
+      "triggerRadiusMeters": 4.0
+    },
+    {
+      "id": "vp_400",
+      "floorId": "floor_3",
+      "order": 400,
+      "title": "Intermediate Gallery \u2014 Approach to Level 3",
+      "description": "Welcome to the upper realm of the Colosseum. You are standing inside the monumental intermediate gallery connecting the second and third levels, recently reopened to the public after comprehensive architectural restoration.\n\nNotice the sheer soaring height of the vaulted brick-and-mortar ceilings. To support the tremendous weight of the upper masonry and thousands of spectators above, Roman master engineers designed intersecting barrel vaults reinforced with brick ribs (bipedales).\n\nExamine the brick surfaces: many still bear factory stamps (bolli laterizi) specifying the brickworks owner, kiln master, and consular dating stamps from the reigns of Domitian and Trajan. This gallery formed the main circulatory artery through which upper-tier spectators moved toward the high stairways.",
+      "normalizedX": 0.28,
+      "normalizedY": 0.36,
+      "latitude": 41.890388,
+      "longitude": 12.492021,
+      "imageAsset": "assets/images/vp_400.jpg",
+      "audioDuration": "3 min 15s",
+      "triggerRadiusMeters": 4.0
+    },
+    {
+      "id": "vp_401",
+      "floorId": "floor_3",
+      "order": 401,
+      "title": "Roman Water Management System",
+      "description": "At this station along the northern gallery wall, examine the remarkable surviving evidence of the Colosseum\u2019s hydraulic engineering.\n\nManaging torrential rainfall across a 2-hectare open-air amphitheatre was a monumental technical challenge. Water falling onto the upper tiers was collected by lead-lined travertine gutters and channeled through vertical terracotta and lead pipes (fistulae) concealed inside the core of the concrete piers.\n\nThese vertical downspouts discharged into four giant underground vaulted sewer collectors ringing the perimeter of the building, which in turn carried the stormwater out into the ancient municipal drainage network leading to the Tiber River. Notice the vertical recessed conduits and travertine catch-basins still clearly visible in the wall masonry beside you.",
+      "normalizedX": 0.38,
+      "normalizedY": 0.22,
+      "latitude": 41.890462,
+      "longitude": 12.492192,
+      "imageAsset": "assets/images/vp_401.jpg",
+      "audioDuration": "3 min 45s",
+      "triggerRadiusMeters": 4.0
+    },
+    {
+      "id": "vp_402",
+      "floorId": "floor_3",
+      "order": 402,
+      "title": "Tituli Picti \u2014 Ancient Red Inscriptions",
+      "description": "Look closely at the travertine pillar surfaces in this protected upper ambulatory section.\n\nUnder specialized museum lighting, you can see faint traces of ancient red ochre paint: these are the famous tituli picti (painted inscriptions). Preserved sheltered from rain and sunlight for two millennia, these red brush-painted inscriptions were practical quarry and stonemason tallies marking shipment batches from the travertine quarries of Tivoli (Tibur).\n\nBeside the official shipping marks, archaeologists discovered spontaneous graffiti left by ancient visitors and workmen: tally marks recording gladiator bouts, small sketches of helmets and palm fronds, phallic symbols carved as apotropaic charms to ward off the evil eye, and personal names of late-antique Roman citizens.",
+      "normalizedX": 0.54,
+      "normalizedY": 0.18,
+      "latitude": 41.890441,
+      "longitude": 12.492398,
+      "imageAsset": "assets/images/vp_402.jpg",
+      "audioDuration": "3 min 30s",
+      "triggerRadiusMeters": 4.0
+    },
+    {
+      "id": "vp_403",
+      "floorId": "floor_3",
+      "order": 403,
+      "title": "Third-Level Cavea / Upper Seating",
+      "description": "Step out onto the high viewing platform of the third level cavea, elevated more than 30 meters above the arena.\n\nIn antiquity, this uppermost seating tier\u2014the maenianum summum in ligneis\u2014consisted of steep wooden bleachers sheltered beneath a continuous covered colonnade of slender marble columns. Commissioned under Emperor Domitian, this was the zone assigned to the humblest members of Roman society: day laborers, non-citizen freedmen, enslaved people, and women.\n\nSeated so high above the arena, the gladiators appeared like miniature figurines, and the roar of the lower crowd rose up as a thunderous roar. Yet even here, spectators were protected from the Mediterranean sun by the giant linen velum awning, suspended from 240 wooden masts anchored to the external attic cornices.",
+      "normalizedX": 0.7,
+      "normalizedY": 0.28,
+      "latitude": 41.890313,
+      "longitude": 12.492551,
+      "imageAsset": "assets/images/vp_403.jpg",
+      "audioDuration": "3 min 50s",
+      "triggerRadiusMeters": 4.0
+    },
+    {
+      "id": "vp_404",
+      "floorId": "floor_3",
+      "order": 404,
+      "title": "Upper Levels & Belvedere View",
+      "description": "You have reached the highest accessible point of the Colosseum: the world-famous Belvedere panoramic terrace, perched 48 meters above the valley floor near the monument\u2019s attic.\n\nTake a moment to absorb the breathtaking 360-degree vista before you. Looking inward, you command an unmatched bird\u2019s-eye perspective across the entire amphitheatre: the curved rows of cavea tiers falling away toward the arena, the labyrinth of hypogeum walls below, and the monumental outer structural arches.\n\nLooking outward over the attic parapet, Rome unfolds around you: the green summit of the Oppian Hill, the Esquiline neighborhood, the gardens of the Domus Aurea, and the distant dome of Saint Peter\u2019s on the horizon. Here, standing between the sky and the stone, you experience the timeless majesty of the Flavian Amphitheatre\u2014a testament to human ambition that has endured for nearly two thousand years.",
+      "normalizedX": 0.8,
+      "normalizedY": 0.44,
+      "latitude": 41.890159,
+      "longitude": 12.492611,
+      "imageAsset": "assets/images/vp_404.jpg",
+      "audioDuration": "4 min 20s",
+      "triggerRadiusMeters": 4.0
+    }
+  ],
+  "itineraries": [
+    {
+      "floorId": "floor_underground",
+      "fromId": "vp_100",
+      "toId": "vp_101",
+      "points": [
+        {
+          "x": 0.8,
+          "y": 0.5
+        },
+        {
+          "x": 0.83,
+          "y": 0.44
+        },
+        {
+          "x": 0.88,
+          "y": 0.38
+        }
+      ]
+    },
+    {
+      "floorId": "floor_underground",
+      "fromId": "vp_101",
+      "toId": "vp_102",
+      "points": [
+        {
+          "x": 0.88,
+          "y": 0.38
+        },
+        {
+          "x": 0.82,
+          "y": 0.32
+        },
+        {
+          "x": 0.75,
+          "y": 0.3
+        },
+        {
+          "x": 0.68,
+          "y": 0.3
+        }
+      ]
+    },
+    {
+      "floorId": "floor_underground",
+      "fromId": "vp_102",
+      "toId": "vp_103",
+      "points": [
+        {
+          "x": 0.68,
+          "y": 0.3
+        },
+        {
+          "x": 0.58,
+          "y": 0.24
+        },
+        {
+          "x": 0.48,
+          "y": 0.22
+        }
+      ]
+    },
+    {
+      "floorId": "floor_underground",
+      "fromId": "vp_103",
+      "toId": "vp_104",
+      "points": [
+        {
+          "x": 0.48,
+          "y": 0.22
+        },
+        {
+          "x": 0.48,
+          "y": 0.36
+        },
+        {
+          "x": 0.48,
+          "y": 0.5
+        }
+      ]
+    },
+    {
+      "floorId": "floor_underground",
+      "fromId": "vp_104",
+      "toId": "vp_105",
+      "points": [
+        {
+          "x": 0.48,
+          "y": 0.5
+        },
+        {
+          "x": 0.49,
+          "y": 0.61
+        },
+        {
+          "x": 0.5,
+          "y": 0.72
+        }
+      ]
+    },
+    {
+      "floorId": "floor_underground",
+      "fromId": "vp_105",
+      "toId": "vp_106",
+      "points": [
+        {
+          "x": 0.5,
+          "y": 0.72
+        },
+        {
+          "x": 0.4,
+          "y": 0.72
+        },
+        {
+          "x": 0.3,
+          "y": 0.64
+        },
+        {
+          "x": 0.24,
+          "y": 0.56
+        },
+        {
+          "x": 0.24,
+          "y": 0.5
+        }
+      ]
+    },
+    {
+      "floorId": "floor_1",
+      "fromId": "vp_200",
+      "toId": "vp_201",
+      "points": [
+        {
+          "x": 0.5,
+          "y": 0.16
+        },
+        {
+          "x": 0.6,
+          "y": 0.18
+        },
+        {
+          "x": 0.72,
+          "y": 0.22
+        }
+      ]
+    },
+    {
+      "floorId": "floor_1",
+      "fromId": "vp_201",
+      "toId": "vp_202",
+      "points": [
+        {
+          "x": 0.72,
+          "y": 0.22
+        },
+        {
+          "x": 0.8,
+          "y": 0.32
+        },
+        {
+          "x": 0.86,
+          "y": 0.44
+        }
+      ]
+    },
+    {
+      "floorId": "floor_1",
+      "fromId": "vp_202",
+      "toId": "vp_203",
+      "points": [
+        {
+          "x": 0.86,
+          "y": 0.44
+        },
+        {
+          "x": 0.8,
+          "y": 0.48
+        },
+        {
+          "x": 0.74,
+          "y": 0.5
+        }
+      ]
+    },
+    {
+      "floorId": "floor_1",
+      "fromId": "vp_203",
+      "toId": "vp_204",
+      "points": [
+        {
+          "x": 0.74,
+          "y": 0.5
+        },
+        {
+          "x": 0.7,
+          "y": 0.56
+        },
+        {
+          "x": 0.64,
+          "y": 0.6
+        }
+      ]
+    },
+    {
+      "floorId": "floor_1",
+      "fromId": "vp_204",
+      "toId": "vp_205",
+      "points": [
+        {
+          "x": 0.64,
+          "y": 0.6
+        },
+        {
+          "x": 0.58,
+          "y": 0.65
+        },
+        {
+          "x": 0.5,
+          "y": 0.68
+        }
+      ]
+    },
+    {
+      "floorId": "floor_1",
+      "fromId": "vp_205",
+      "toId": "vp_206",
+      "points": [
+        {
+          "x": 0.5,
+          "y": 0.68
+        },
+        {
+          "x": 0.44,
+          "y": 0.66
+        },
+        {
+          "x": 0.38,
+          "y": 0.64
+        }
+      ]
+    },
+    {
+      "floorId": "floor_1",
+      "fromId": "vp_206",
+      "toId": "vp_207",
+      "points": [
+        {
+          "x": 0.38,
+          "y": 0.64
+        },
+        {
+          "x": 0.31,
+          "y": 0.58
+        },
+        {
+          "x": 0.26,
+          "y": 0.5
+        }
+      ]
+    },
+    {
+      "floorId": "floor_1",
+      "fromId": "vp_207",
+      "toId": "vp_208",
+      "points": [
+        {
+          "x": 0.26,
+          "y": 0.5
+        },
+        {
+          "x": 0.3,
+          "y": 0.4
+        },
+        {
+          "x": 0.36,
+          "y": 0.32
+        }
+      ]
+    },
+    {
+      "floorId": "floor_2",
+      "fromId": "vp_300",
+      "toId": "vp_301",
+      "points": [
+        {
+          "x": 0.5,
+          "y": 0.24
+        },
+        {
+          "x": 0.6,
+          "y": 0.26
+        },
+        {
+          "x": 0.68,
+          "y": 0.3
+        }
+      ]
+    },
+    {
+      "floorId": "floor_2",
+      "fromId": "vp_301",
+      "toId": "vp_302",
+      "points": [
+        {
+          "x": 0.68,
+          "y": 0.3
+        },
+        {
+          "x": 0.78,
+          "y": 0.4
+        },
+        {
+          "x": 0.85,
+          "y": 0.5
+        }
+      ]
+    },
+    {
+      "floorId": "floor_2",
+      "fromId": "vp_302",
+      "toId": "vp_303",
+      "points": [
+        {
+          "x": 0.85,
+          "y": 0.5
+        },
+        {
+          "x": 0.78,
+          "y": 0.6
+        },
+        {
+          "x": 0.7,
+          "y": 0.68
+        }
+      ]
+    },
+    {
+      "floorId": "floor_2",
+      "fromId": "vp_303",
+      "toId": "vp_304",
+      "points": [
+        {
+          "x": 0.7,
+          "y": 0.68
+        },
+        {
+          "x": 0.6,
+          "y": 0.73
+        },
+        {
+          "x": 0.5,
+          "y": 0.76
+        }
+      ]
+    },
+    {
+      "floorId": "floor_2",
+      "fromId": "vp_304",
+      "toId": "vp_305",
+      "points": [
+        {
+          "x": 0.5,
+          "y": 0.76
+        },
+        {
+          "x": 0.4,
+          "y": 0.72
+        },
+        {
+          "x": 0.32,
+          "y": 0.66
+        }
+      ]
+    },
+    {
+      "floorId": "floor_2",
+      "fromId": "vp_305",
+      "toId": "vp_306",
+      "points": [
+        {
+          "x": 0.32,
+          "y": 0.66
+        },
+        {
+          "x": 0.26,
+          "y": 0.58
+        },
+        {
+          "x": 0.24,
+          "y": 0.48
+        }
+      ]
+    },
+    {
+      "floorId": "floor_3",
+      "fromId": "vp_400",
+      "toId": "vp_401",
+      "points": [
+        {
+          "x": 0.28,
+          "y": 0.36
+        },
+        {
+          "x": 0.32,
+          "y": 0.28
+        },
+        {
+          "x": 0.38,
+          "y": 0.22
+        }
+      ]
+    },
+    {
+      "floorId": "floor_3",
+      "fromId": "vp_401",
+      "toId": "vp_402",
+      "points": [
+        {
+          "x": 0.38,
+          "y": 0.22
+        },
+        {
+          "x": 0.46,
+          "y": 0.19
+        },
+        {
+          "x": 0.54,
+          "y": 0.18
+        }
+      ]
+    },
+    {
+      "floorId": "floor_3",
+      "fromId": "vp_402",
+      "toId": "vp_403",
+      "points": [
+        {
+          "x": 0.54,
+          "y": 0.18
+        },
+        {
+          "x": 0.62,
+          "y": 0.22
+        },
+        {
+          "x": 0.7,
+          "y": 0.28
+        }
+      ]
+    },
+    {
+      "floorId": "floor_3",
+      "fromId": "vp_403",
+      "toId": "vp_404",
+      "points": [
+        {
+          "x": 0.7,
+          "y": 0.28
+        },
+        {
+          "x": 0.76,
+          "y": 0.36
+        },
+        {
+          "x": 0.8,
+          "y": 0.44
+        }
+      ]
+    }
+  ],
+  "landmarks": [
+    {
+      "code": "colosseum",
+      "name": "Colosseum",
+      "assetPath": "assets/logo/Colosseum.png",
+      "center": {
+        "latitude": 41.89025,
+        "longitude": 12.49223
+      },
+      "dimensions": {
+        "widthMeters": 190.0,
+        "heightMeters": 158.0
+      },
+      "calibration": {
+        "rotationDegrees": 0.0,
+        "anchorX": 0.5,
+        "anchorY": 0.52
+      },
+      "display": {
+        "zIndex": 1,
+        "minZoom": 13.0,
+        "maxZoom": 21.0
+      }
+    },
+    {
+      "code": "arch_of_constantine",
+      "name": "Arch of Constantine",
+      "assetPath": "assets/logo/Arch of Constantine.png",
+      "center": {
+        "latitude": 41.889762,
+        "longitude": 12.490667
+      },
+      "dimensions": {
+        "widthMeters": 34.0,
+        "heightMeters": 30.0
+      },
+      "calibration": {
+        "rotationDegrees": 0.0,
+        "anchorX": 0.5,
+        "anchorY": 0.75
+      },
+      "display": {
+        "zIndex": 2,
+        "minZoom": 14.5,
+        "maxZoom": 21.0
+      }
+    },
+    {
+      "code": "ludus_magnus",
+      "name": "Ludus Magnus",
+      "assetPath": "assets/logo/Ludus Magnus.png",
+      "center": {
+        "latitude": 41.89045,
+        "longitude": 12.4951
+      },
+      "dimensions": {
+        "widthMeters": 82.0,
+        "heightMeters": 68.0
+      },
+      "calibration": {
+        "rotationDegrees": 0.0,
+        "anchorX": 0.52,
+        "anchorY": 0.55
+      },
+      "display": {
+        "zIndex": 2,
+        "minZoom": 14.0,
+        "maxZoom": 21.0
+      }
+    },
+    {
+      "code": "temple_venus_rome",
+      "name": "Temple of Venus and Rome",
+      "assetPath": "assets/logo/Temple of Venus and Rome.png",
+      "center": {
+        "latitude": 41.8909,
+        "longitude": 12.4891
+      },
+      "dimensions": {
+        "widthMeters": 135.0,
+        "heightMeters": 95.0
+      },
+      "calibration": {
+        "rotationDegrees": -3.0,
+        "anchorX": 0.52,
+        "anchorY": 0.6
+      },
+      "display": {
+        "zIndex": 1,
+        "minZoom": 13.5,
+        "maxZoom": 21.0
+      }
+    },
+    {
+      "code": "roman_forum",
+      "name": "Roman Forum",
+      "assetPath": "assets/logo/Roman Forum.png",
+      "center": {
+        "latitude": 41.89205,
+        "longitude": 12.4866
+      },
+      "dimensions": {
+        "widthMeters": 58.0,
+        "heightMeters": 52.0
+      },
+      "calibration": {
+        "rotationDegrees": 0.0,
+        "anchorX": 0.5,
+        "anchorY": 0.78
+      },
+      "display": {
+        "zIndex": 0,
+        "minZoom": 13.0,
+        "maxZoom": 21.0
+      }
+    }
+  ],
+  "languages": [
+    {
+      "code": "en",
+      "name": "English",
+      "nativeName": "English",
+      "isAvailable": true,
+      "isDefault": true,
+      "displayOrder": 1
+    },
+    {
+      "code": "it",
+      "name": "Italian",
+      "nativeName": "Italiano",
+      "isAvailable": true,
+      "isDefault": false,
+      "displayOrder": 2
+    },
+    {
+      "code": "fr",
+      "name": "French",
+      "nativeName": "Fran\u00e7ais",
+      "isAvailable": true,
+      "isDefault": false,
+      "displayOrder": 3
+    },
+    {
+      "code": "de",
+      "name": "German",
+      "nativeName": "Deutsch",
+      "isAvailable": true,
+      "isDefault": false,
+      "displayOrder": 4
+    },
+    {
+      "code": "es",
+      "name": "Spanish",
+      "nativeName": "Espa\u00f1ol",
+      "isAvailable": true,
+      "isDefault": false,
+      "displayOrder": 5
+    },
+    {
+      "code": "pt",
+      "name": "Portuguese",
+      "nativeName": "Portugu\u00eas",
+      "isAvailable": true,
+      "isDefault": false,
+      "displayOrder": 6
+    },
+    {
+      "code": "ja",
+      "name": "Japanese",
+      "nativeName": "\u65e5\u672c\u8a9e",
+      "isAvailable": true,
+      "isDefault": false,
+      "displayOrder": 7
+    },
+    {
+      "code": "ko",
+      "name": "Korean",
+      "nativeName": "\ud55c\uad6d\uc5b4",
+      "isAvailable": true,
+      "isDefault": false,
+      "displayOrder": 8
+    }
+  ],
+  "tickets": [
+    {
+      "token": "COL-DEMO-2026",
+      "tier": "full_access",
+      "allowedFloorIds": [
+        "floor_underground",
+        "floor_1",
+        "floor_2",
+        "floor_3"
+      ],
+      "validUntil": "2027-12-31T23:59:59.000Z",
+      "maxActivations": 100,
+      "isActive": true
+    },
+    {
+      "token": "COL-VIP-FULL",
+      "tier": "full_access",
+      "allowedFloorIds": [
+        "floor_underground",
+        "floor_1",
+        "floor_2",
+        "floor_3"
+      ],
+      "validUntil": "2027-12-31T23:59:59.000Z",
+      "maxActivations": 50,
+      "isActive": true
+    }
+  ]
+}

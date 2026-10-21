@@ -1,0 +1,84 @@
+import express, { Request, Response } from 'express';
+import cors from 'cors';
+import cookieParser from 'cookie-parser';
+import http, { Server } from 'node:http';
+import { EnvConstant } from '@constants/allConstant.js';
+import { errorHandler } from '@middlewares/errorHandler.js';
+import router from '@routes/index.js';
+import { connectDB, disconnectDB } from '@config/db.js';
+import { connectRedis } from '@config/redis.js';
+import { autoSeedIfEmpty } from './scripts/seedDatabase.js';
+
+const app = express();
+const server: Server = http.createServer(app);
+
+// Middlewares
+app.use(
+  cors({
+    origin: EnvConstant.CORS_ORIGIN,
+    credentials: true,
+  })
+);
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(cookieParser());
+
+// Base informational endpoint
+app.get('/', (_req: Request, res: Response) => {
+  res.status(200).json({
+    name: 'Colosseum Audio Tour Backend API',
+    version: '1.0.0',
+    documentation: `${EnvConstant.API_PREFIX}/health`,
+    status: 'running',
+  });
+});
+
+// Mount domain routes under API prefix
+app.use(EnvConstant.API_PREFIX, router);
+
+// Global Error Handler
+app.use(errorHandler);
+
+// Server startup
+const startServer = async (): Promise<void> => {
+  try {
+    await connectDB();
+    await autoSeedIfEmpty();
+    await connectRedis();
+
+    server.listen(EnvConstant.PORT, () => {
+      console.log(`===============================================`);
+      console.log(`🚀 Colosseum Backend running on port ${EnvConstant.PORT}`);
+      console.log(`📡 Environment: ${EnvConstant.NODE_ENV}`);
+      console.log(`🔗 Base URL: http://localhost:${EnvConstant.PORT}`);
+      console.log(
+        `🩺 Health check: http://localhost:${EnvConstant.PORT}${EnvConstant.API_PREFIX}/health`
+      );
+      console.log(
+        `📦 Tour Bundle: http://localhost:${EnvConstant.PORT}${EnvConstant.API_PREFIX}/sync/bundle`
+      );
+      console.log(`===============================================`);
+    });
+  } catch (error) {
+    console.error('❌ Failed to start server:', error);
+    process.exit(1);
+  }
+};
+
+const handleShutdown = async (signal: string): Promise<void> => {
+  console.log(`\nReceived ${signal}. Shutting down gracefully...`);
+  server.close(async () => {
+    await disconnectDB();
+    console.log('Server closed. Process terminated.');
+    process.exit(0);
+  });
+};
+
+process.on('SIGINT', () => handleShutdown('SIGINT'));
+process.on('SIGTERM', () => handleShutdown('SIGTERM'));
+
+if (process.env.NODE_ENV !== 'test') {
+  startServer();
+}
+
+export default app;

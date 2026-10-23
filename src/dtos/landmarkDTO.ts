@@ -22,6 +22,7 @@ export const LandmarkSchema = z.object({
   name: z.string().min(1, Message.nameRequired),
   description: z.string().default(''),
   assetPath: z.string().default(''),
+  cloudinaryPublicId: z.string().default(''),
   center: LandmarkCenterSchema,
   widthMeters: z.number().positive(Message.widthMetersRequired),
   heightMeters: z.number().positive(Message.heightMetersRequired),

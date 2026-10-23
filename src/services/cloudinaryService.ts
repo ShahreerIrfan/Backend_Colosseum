@@ -80,7 +80,16 @@ export default class CloudinaryService {
     if (!isCloudinaryConfigured) {
       throw new Error('Cloudinary credentials are not configured.');
     }
-    return cloudinary.uploader.destroy(publicId, { resource_type: resourceType });
+    const res = await cloudinary.uploader.destroy(publicId, { resource_type: resourceType });
+    if (res?.result === 'not found' && resourceType === 'image') {
+      // Try raw in case it was classified as raw
+      try {
+        return await cloudinary.uploader.destroy(publicId, { resource_type: 'raw' });
+      } catch {
+        return res;
+      }
+    }
+    return res;
   }
 
   /**

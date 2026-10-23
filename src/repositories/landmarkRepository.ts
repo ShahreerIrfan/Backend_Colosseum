@@ -8,6 +8,7 @@ export default class LandmarkRepository {
       name: data.name,
       description: data.description || '',
       assetPath: data.assetPath || '',
+      cloudinaryPublicId: data.cloudinaryPublicId || '',
       location: {
         type: 'Point',
         coordinates: [data.center.longitude, data.center.latitude],
@@ -74,7 +75,6 @@ export default class LandmarkRepository {
   async GetByID(idOrCode: string): Promise<LandmarkDTO.Landmark | null> {
     const doc = await Landmark.findOne({
       $or: [{ _id: idOrCode.match(/^[0-9a-fA-F]{24}$/) ? idOrCode : null }, { code: idOrCode }],
-      isPublished: true,
     })
       .lean()
       .exec();
@@ -97,6 +97,7 @@ export default class LandmarkRepository {
     if (data.name !== undefined) updateData.name = data.name;
     if (data.description !== undefined) updateData.description = data.description;
     if (data.assetPath !== undefined) updateData.assetPath = data.assetPath;
+    if (data.cloudinaryPublicId !== undefined) updateData.cloudinaryPublicId = data.cloudinaryPublicId;
     if (data.center !== undefined) {
       updateData.location = {
         type: 'Point',
@@ -124,14 +125,11 @@ export default class LandmarkRepository {
   }
 
   async Remove(idOrCode: string): Promise<boolean> {
-    const res = await Landmark.updateOne(
-      {
-        $or: [{ _id: idOrCode.match(/^[0-9a-fA-F]{24}$/) ? idOrCode : null }, { code: idOrCode }],
-      },
-      { $set: { isPublished: false } }
-    ).exec();
+    const res = await Landmark.deleteOne({
+      $or: [{ _id: idOrCode.match(/^[0-9a-fA-F]{24}$/) ? idOrCode : null }, { code: idOrCode }],
+    }).exec();
 
-    return res.modifiedCount > 0;
+    return (res.deletedCount ?? 0) > 0;
   }
 
   async FindActiveOverlays(): Promise<any[]> {
@@ -170,6 +168,7 @@ export default class LandmarkRepository {
       name: lm.name,
       description: lm.description || '',
       assetPath: lm.assetPath || '',
+      cloudinaryPublicId: lm.cloudinaryPublicId || '',
       center: {
         latitude: lm.location?.coordinates?.[1] ?? 0.0,
         longitude: lm.location?.coordinates?.[0] ?? 0.0,

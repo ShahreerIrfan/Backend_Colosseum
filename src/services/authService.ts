@@ -125,6 +125,21 @@ export default class AuthService {
     return updated;
   }
 
+  async UpdateUserDetails(
+    userId: string,
+    data: Partial<AuthDTO.User>
+  ): Promise<AuthDTO.User> {
+    const user = await this.authRepository.FindById(userId);
+    if (!user) {
+      throw new Error.NotFoundError(Message.userNotFound);
+    }
+    const updated = await this.authRepository.Update(userId, data);
+    if (!updated) {
+      throw new Error.NotFoundError(Message.userNotFound);
+    }
+    return updated;
+  }
+
   async RemoveUser(userId: string): Promise<boolean> {
     const user = await this.authRepository.FindById(userId);
     if (!user) {

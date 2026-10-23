@@ -82,6 +82,16 @@ export default class AuthController {
     });
   };
 
+  UpdateUserDetails = async (req: Request, res: Response): Promise<void> => {
+    const id = req.validatedParams.id;
+    const data = req.validatedBody;
+    const updated = await this.authService.UpdateUserDetails(id, data);
+    ResponseHandler.send(res, HttpStatus.OK.code, {
+      data: updated,
+      message: 'User details updated successfully',
+    });
+  };
+
   RemoveUser = async (req: Request, res: Response): Promise<void> => {
     const id = req.validatedParams.id;
     await this.authService.RemoveUser(id);

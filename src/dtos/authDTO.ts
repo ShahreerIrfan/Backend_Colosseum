@@ -73,6 +73,14 @@ export const updateUserRoleSchema = z.object({
   role: RoleSchema,
 });
 
+export const updateUserDetailsSchema = z.object({
+  name: z.string().min(2, Message.name.minimumLength).optional(),
+  email: z.string().email(Message.email).optional(),
+  role: RoleSchema.optional(),
+  is_active: z.boolean().optional(),
+  assignedFloorIds: z.array(z.string()).optional(),
+});
+
 export type Role = z.infer<typeof RoleSchema>;
 export type User = z.infer<typeof UserSchema>;
 export type SignUp = z.infer<typeof signUpSchema>;
@@ -81,3 +89,4 @@ export type AuthPayload = z.infer<typeof authPayloadSchema>;
 export type AuthResponse = z.infer<typeof authResponseSchema>;
 export type ChangePassword = z.infer<typeof changePasswordSchema>;
 export type UpdateUserRole = z.infer<typeof updateUserRoleSchema>;
+export type UpdateUserDetails = z.infer<typeof updateUserDetailsSchema>;

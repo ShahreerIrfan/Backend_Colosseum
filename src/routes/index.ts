@@ -7,6 +7,7 @@ import ticketRoute from './ticketRoute.js';
 import syncRoute from './syncRoute.js';
 import pedestrianRouteRoutes from './pedestrianRouteRoutes.js';
 import parkConfigRoutes from './parkConfigRoutes.js';
+import uploadRoute from './uploadRoute.js';
 import SyncController from '@controllers/syncController.js';
 
 const router: Router = express.Router();
@@ -23,6 +24,7 @@ router.use('/routes/pedestrian', pedestrianRouteRoutes);
 router.use('/pedestrian-routes', pedestrianRouteRoutes);
 router.use('/park/config', parkConfigRoutes);
 router.use('/park-config', parkConfigRoutes);
+router.use('/uploads', uploadRoute);
 
 // System health check
 router.get('/health', (_req: Request, res: Response) => {

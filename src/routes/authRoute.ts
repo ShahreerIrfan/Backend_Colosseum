@@ -21,6 +21,14 @@ router.post(
 );
 
 router.get('/users', authenticateToken, authorizeRole.adminOnly, authController.GetAllUsers);
+router.patch(
+  '/users/:id/role',
+  authenticateToken,
+  authorizeRole.adminOnly,
+  Validator.params(CommonItemDTO.IdSchema),
+  Validator.body(AuthDTO.updateUserRoleSchema),
+  authController.UpdateUserRole
+);
 router.delete(
   '/users/:id',
   authenticateToken,

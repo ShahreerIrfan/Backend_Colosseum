@@ -69,6 +69,10 @@ export const changePasswordSchema = z.object({
   newPassword: signUpSchema.shape.password,
 });
 
+export const updateUserRoleSchema = z.object({
+  role: RoleSchema,
+});
+
 export type Role = z.infer<typeof RoleSchema>;
 export type User = z.infer<typeof UserSchema>;
 export type SignUp = z.infer<typeof signUpSchema>;
@@ -76,3 +80,4 @@ export type SignIn = z.infer<typeof signInSchema>;
 export type AuthPayload = z.infer<typeof authPayloadSchema>;
 export type AuthResponse = z.infer<typeof authResponseSchema>;
 export type ChangePassword = z.infer<typeof changePasswordSchema>;
+export type UpdateUserRole = z.infer<typeof updateUserRoleSchema>;

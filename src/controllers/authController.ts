@@ -72,6 +72,16 @@ export default class AuthController {
     });
   };
 
+  UpdateUserRole = async (req: Request, res: Response): Promise<void> => {
+    const id = req.validatedParams.id;
+    const { role } = req.validatedBody;
+    const updated = await this.authService.UpdateUserRole(id, role);
+    ResponseHandler.send(res, HttpStatus.OK.code, {
+      data: updated,
+      message: 'User role updated successfully',
+    });
+  };
+
   RemoveUser = async (req: Request, res: Response): Promise<void> => {
     const id = req.validatedParams.id;
     await this.authService.RemoveUser(id);

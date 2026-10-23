@@ -113,6 +113,18 @@ export default class AuthService {
     return this.authRepository.GetAll(query);
   }
 
+  async UpdateUserRole(userId: string, role: AuthDTO.Role): Promise<AuthDTO.User> {
+    const user = await this.authRepository.FindById(userId);
+    if (!user) {
+      throw new Error.NotFoundError(Message.userNotFound);
+    }
+    const updated = await this.authRepository.Update(userId, { role });
+    if (!updated) {
+      throw new Error.NotFoundError(Message.userNotFound);
+    }
+    return updated;
+  }
+
   async RemoveUser(userId: string): Promise<boolean> {
     const user = await this.authRepository.FindById(userId);
     if (!user) {

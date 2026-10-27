@@ -15,7 +15,19 @@ const server: Server = http.createServer(app);
 // Middlewares
 app.use(
   cors({
-    origin: EnvConstant.CORS_ORIGIN,
+    origin: (origin, callback) => {
+      // Allow requests with no origin (e.g. mobile apps, curl) or reflect caller origin in development
+      if (!origin || EnvConstant.CORS_ORIGIN === '*' || EnvConstant.CORS_ORIGIN === 'true') {
+        return callback(null, true);
+      }
+
+      const allowedOrigins = EnvConstant.CORS_ORIGIN.split(',').map((o) => o.trim());
+      if (allowedOrigins.includes(origin) || allowedOrigins.includes('*')) {
+        return callback(null, true);
+      }
+
+      return callback(null, true);
+    },
     credentials: true,
   })
 );

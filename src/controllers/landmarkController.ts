@@ -37,6 +37,8 @@ export default class LandmarkController {
     const created = await this.landmarkService.CreateLandmark(data);
 
     await clearCachePattern('landmarks:*');
+    await clearCachePattern('tours:*');
+    await clearCachePattern('sync:*');
     ResponseHandler.send(res, HttpStatus.CREATED.code, {
       data: created,
       message: Message.landmarkCreated,
@@ -49,6 +51,8 @@ export default class LandmarkController {
     const updated = await this.landmarkService.UpdateLandmark(id, data);
 
     await clearCachePattern('landmarks:*');
+    await clearCachePattern('tours:*');
+    await clearCachePattern('sync:*');
     ResponseHandler.send(res, HttpStatus.OK.code, {
       data: updated,
       message: Message.landmarkUpdated,
@@ -60,6 +64,8 @@ export default class LandmarkController {
     await this.landmarkService.RemoveLandmark(id);
 
     await clearCachePattern('landmarks:*');
+    await clearCachePattern('tours:*');
+    await clearCachePattern('sync:*');
     ResponseHandler.send(res, HttpStatus.OK.code, {
       message: Message.landmarkRemoved,
     });

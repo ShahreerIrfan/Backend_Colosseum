@@ -953,7 +953,8 @@
     {
       "code": "colosseum",
       "name": "Colosseum",
-      "assetPath": "assets/logo/Colosseum.png",
+      "assetPath": "https://res.cloudinary.com/ddt9rog0e/image/upload/v1793118112/colosseum/landmarks/colosseum/logos/Colosseum_dzaqr6.png",
+      "thumbnailUrl": "",
       "center": {
         "latitude": 41.89025,
         "longitude": 12.49223
@@ -976,7 +977,8 @@
     {
       "code": "arch_of_constantine",
       "name": "Arch of Constantine",
-      "assetPath": "assets/logo/Arch of Constantine.png",
+      "assetPath": "https://res.cloudinary.com/ddt9rog0e/image/upload/v1793117892/colosseum/landmarks/arch_of_constantine/logos/Arch_of_Constantine_bzjpl9.png",
+      "thumbnailUrl": "https://res.cloudinary.com/ddt9rog0e/image/upload/v1793117917/colosseum/landmarks/arch_of_constantine/cards/Arch_of_Constantine__Rome__-_South_side__from_Via_triumphalis_ajiyme.jpg",
       "center": {
         "latitude": 41.889762,
         "longitude": 12.490667
@@ -999,7 +1001,8 @@
     {
       "code": "ludus_magnus",
       "name": "Ludus Magnus",
-      "assetPath": "assets/logo/Ludus Magnus.png",
+      "assetPath": "https://res.cloudinary.com/ddt9rog0e/image/upload/v1793118058/colosseum/landmarks/ludus_magnus/logos/Ludus_Magnus_d6qz2f.png",
+      "thumbnailUrl": "https://res.cloudinary.com/ddt9rog0e/image/upload/v1793118097/colosseum/landmarks/ludus_magnus/cards/Ludus_magnus_Rome_2006_en686t.jpg",
       "center": {
         "latitude": 41.89045,
         "longitude": 12.4951
@@ -1022,7 +1025,8 @@
     {
       "code": "temple_venus_rome",
       "name": "Temple of Venus and Rome",
-      "assetPath": "assets/logo/Temple of Venus and Rome.png",
+      "assetPath": "https://res.cloudinary.com/ddt9rog0e/image/upload/v1793117934/colosseum/landmarks/temple_venus_rome/logos/Temple_of_Venus_and_Rome_f7guef.png",
+      "thumbnailUrl": "https://res.cloudinary.com/ddt9rog0e/image/upload/v1793118042/colosseum/landmarks/temple_venus_rome/cards/3823503951_9dff623ffc_o-20261027-222030_wt8dn4.jpg",
       "center": {
         "latitude": 41.8909,
         "longitude": 12.4891
@@ -1045,7 +1049,8 @@
     {
       "code": "roman_forum",
       "name": "Roman Forum",
-      "assetPath": "assets/logo/Roman Forum.png",
+      "assetPath": "https://res.cloudinary.com/ddt9rog0e/image/upload/v1793117792/colosseum/landmarks/roman_forum/logos/Roman_Forum_kj4mf1.png",
+      "thumbnailUrl": "https://res.cloudinary.com/ddt9rog0e/image/upload/v1793117872/colosseum/landmarks/roman_forum/cards/Roman-Forum-1024x683_wq6pg4.jpg",
       "center": {
         "latitude": 41.89205,
         "longitude": 12.4866

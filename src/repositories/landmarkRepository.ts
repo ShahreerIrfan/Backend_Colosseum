@@ -9,6 +9,8 @@ export default class LandmarkRepository {
       description: data.description || '',
       assetPath: data.assetPath || '',
       cloudinaryPublicId: data.cloudinaryPublicId || '',
+      thumbnailUrl: data.thumbnailUrl || '',
+      thumbnailPublicId: data.thumbnailPublicId || '',
       location: {
         type: 'Point',
         coordinates: [data.center.longitude, data.center.latitude],
@@ -98,6 +100,8 @@ export default class LandmarkRepository {
     if (data.description !== undefined) updateData.description = data.description;
     if (data.assetPath !== undefined) updateData.assetPath = data.assetPath;
     if (data.cloudinaryPublicId !== undefined) updateData.cloudinaryPublicId = data.cloudinaryPublicId;
+    if (data.thumbnailUrl !== undefined) updateData.thumbnailUrl = data.thumbnailUrl;
+    if (data.thumbnailPublicId !== undefined) updateData.thumbnailPublicId = data.thumbnailPublicId;
     if (data.center !== undefined) {
       updateData.location = {
         type: 'Point',
@@ -140,6 +144,9 @@ export default class LandmarkRepository {
       name: lm.name,
       description: lm.description || '',
       assetPath: lm.assetPath,
+      cloudinaryPublicId: lm.cloudinaryPublicId || '',
+      thumbnailUrl: lm.thumbnailUrl || '',
+      thumbnailPublicId: lm.thumbnailPublicId || '',
       center: {
         latitude: lm.location?.coordinates?.[1] ?? 0.0,
         longitude: lm.location?.coordinates?.[0] ?? 0.0,
@@ -169,6 +176,8 @@ export default class LandmarkRepository {
       description: lm.description || '',
       assetPath: lm.assetPath || '',
       cloudinaryPublicId: lm.cloudinaryPublicId || '',
+      thumbnailUrl: lm.thumbnailUrl || '',
+      thumbnailPublicId: lm.thumbnailPublicId || '',
       center: {
         latitude: lm.location?.coordinates?.[1] ?? 0.0,
         longitude: lm.location?.coordinates?.[0] ?? 0.0,

@@ -74,6 +74,10 @@ export default class LandmarkService {
         await this.cloudinaryService.DeleteAsset(publicId);
       }
 
+      if ((existing as any).thumbnailPublicId) {
+        await this.cloudinaryService.DeleteAsset((existing as any).thumbnailPublicId);
+      }
+
       if (existing.code) {
         try {
           await this.cloudinaryService.DeleteFolder(`colosseum/landmarks/${existing.code}/overlays`);

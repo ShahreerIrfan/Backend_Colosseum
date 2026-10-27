@@ -75,6 +75,7 @@ export default class SyncRepository {
       name: lm.name,
       description: lm.description || '',
       assetPath: lm.assetPath,
+      thumbnailUrl: lm.thumbnailUrl || '',
       center: {
         latitude: lm.location?.coordinates?.[1] ?? 0.0,
         longitude: lm.location?.coordinates?.[0] ?? 0.0,

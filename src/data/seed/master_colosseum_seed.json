@@ -35,7 +35,8 @@
       "code": "colosseum",
       "name": "Colosseum (Flavian Amphitheatre)",
       "description": "The iconic elliptical amphitheatre in the centre of Rome, the largest ever built.",
-      "assetPath": "assets/floor_map/floor_level_1.svg",
+      "assetPath": "https://res.cloudinary.com/ddt9rog0e/image/upload/v1793118112/colosseum/landmarks/colosseum/logos/Colosseum_dzaqr6.png",
+      "thumbnailUrl": "",
       "center": {
         "latitude": 41.89021,
         "longitude": 12.492231
@@ -66,7 +67,8 @@
       "code": "arch_of_constantine",
       "name": "Arch of Constantine",
       "description": "Triumphal arch celebrating Emperor Constantine I's victory at the Battle of Milvian Bridge.",
-      "assetPath": "assets/logo/Arch of Constantine.png",
+      "assetPath": "https://res.cloudinary.com/ddt9rog0e/image/upload/v1793117892/colosseum/landmarks/arch_of_constantine/logos/Arch_of_Constantine_bzjpl9.png",
+      "thumbnailUrl": "https://res.cloudinary.com/ddt9rog0e/image/upload/v1793117917/colosseum/landmarks/arch_of_constantine/cards/Arch_of_Constantine__Rome__-_South_side__from_Via_triumphalis_ajiyme.jpg",
       "center": {
         "latitude": 41.889762,
         "longitude": 12.490667
@@ -97,7 +99,8 @@
       "code": "ludus_magnus",
       "name": "Ludus Magnus",
       "description": "The largest gladiatorial training arena and barracks in Rome, connected to Colosseum by tunnel.",
-      "assetPath": "assets/logo/Ludus Magnus.png",
+      "assetPath": "https://res.cloudinary.com/ddt9rog0e/image/upload/v1793118058/colosseum/landmarks/ludus_magnus/logos/Ludus_Magnus_d6qz2f.png",
+      "thumbnailUrl": "https://res.cloudinary.com/ddt9rog0e/image/upload/v1793118097/colosseum/landmarks/ludus_magnus/cards/Ludus_magnus_Rome_2006_en686t.jpg",
       "center": {
         "latitude": 41.88995,
         "longitude": 12.49505
@@ -128,7 +131,8 @@
       "code": "roman_forum",
       "name": "Roman Forum",
       "description": "The vibrant civic, political, religious and commercial hub of ancient Rome along the Via Sacra.",
-      "assetPath": "assets/logo/Roman Forum.png",
+      "assetPath": "https://res.cloudinary.com/ddt9rog0e/image/upload/v1793117792/colosseum/landmarks/roman_forum/logos/Roman_Forum_kj4mf1.png",
+      "thumbnailUrl": "https://res.cloudinary.com/ddt9rog0e/image/upload/v1793117872/colosseum/landmarks/roman_forum/cards/Roman-Forum-1024x683_wq6pg4.jpg",
       "center": {
         "latitude": 41.89205,
         "longitude": 12.4866
@@ -159,7 +163,8 @@
       "code": "temple_venus_rome",
       "name": "Temple of Venus and Rome",
       "description": "The largest known temple in ancient Rome, dedicated to Venus Felix and Roma Aeterna.",
-      "assetPath": "assets/logo/Temple of Venus and Rome.png",
+      "assetPath": "https://res.cloudinary.com/ddt9rog0e/image/upload/v1793117934/colosseum/landmarks/temple_venus_rome/logos/Temple_of_Venus_and_Rome_f7guef.png",
+      "thumbnailUrl": "https://res.cloudinary.com/ddt9rog0e/image/upload/v1793118042/colosseum/landmarks/temple_venus_rome/cards/3823503951_9dff623ffc_o-20261027-222030_wt8dn4.jpg",
       "center": {
         "latitude": 41.89083,
         "longitude": 12.48972
@@ -168,6 +173,25 @@
         "widthMeters": 145.0,
         "heightMeters": 100.0
       },
+      "calibration": {
+        "rotationDegrees": -30.0,
+        "anchorX": 0.5,
+        "anchorY": 0.5
+      },
+      "display": {
+        "zIndex": 7,
+        "minZoom": 13.0,
+        "maxZoom": 21.0
+      },
+      "marker": {
+        "colorHex": "#8E24AA",
+        "category": "Ancient Temple",
+        "iconName": "temple_buddhist_rounded",
+        "labelOffsetY": -22
+      },
+      "isPublished": true
+    }
+  ],
       "calibration": {
         "rotationDegrees": -30.0,
         "anchorX": 0.5,

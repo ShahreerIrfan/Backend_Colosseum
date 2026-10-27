@@ -181,6 +181,8 @@ export interface ILandmark {
   description?: string;
   assetPath: string;
   cloudinaryPublicId?: string;
+  thumbnailUrl?: string;
+  thumbnailPublicId?: string;
   location: GeoPoint;
   dimensions: LandmarkDimensions;
   calibration?: LandmarkCalibration;
@@ -196,6 +198,8 @@ export interface LandmarkOverlayDTO {
   name: string;
   description: string;
   assetPath: string;
+  thumbnailUrl?: string;
+  thumbnailPublicId?: string;
   center: {
     latitude: number;
     longitude: number;

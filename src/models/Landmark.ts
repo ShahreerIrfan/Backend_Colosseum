@@ -8,6 +8,8 @@ const LandmarkSchema = new Schema<ILandmark>(
     description: { type: String, default: '' },
     assetPath: { type: String, required: true },
     cloudinaryPublicId: { type: String, default: '' },
+    thumbnailUrl: { type: String, default: '' },
+    thumbnailPublicId: { type: String, default: '' },
     location: {
       type: { type: String, enum: ['Point'], default: 'Point' },
       coordinates: { type: [Number], required: true }, // [longitude, latitude]

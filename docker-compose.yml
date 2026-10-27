@@ -29,13 +29,15 @@ services:
         condition: service_healthy
     ports:
       - '3000:3000'
+    env_file:
+      - .env
     environment:
       - PORT=3000
       - NODE_ENV=production
       - API_PREFIX=/api/v1
       - CORS_ORIGIN=*
-      - MONGODB_URI=mongodb://mongodb:27017/colosseum_db
-      - MONGODB_DB_NAME=colosseum_db
+      - MONGODB_URI=${MONGODB_URI:-mongodb://mongodb:27017/colosseum_db}
+      - MONGODB_DB_NAME=${MONGODB_DB_NAME:-colosseum_db}
       - CLOUDINARY_CLOUD_NAME=${CLOUDINARY_CLOUD_NAME:-}
       - CLOUDINARY_API_KEY=${CLOUDINARY_API_KEY:-}
       - CLOUDINARY_API_SECRET=${CLOUDINARY_API_SECRET:-}

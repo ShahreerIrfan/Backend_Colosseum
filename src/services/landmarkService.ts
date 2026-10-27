@@ -57,7 +57,8 @@ export default class LandmarkService {
   async RemoveLandmark(id: string): Promise<boolean> {
     const existing = await this.landmarkRepository.GetByID(id);
     if (!existing) {
-      throw new Error.NotFoundError(Message.landmarkNotFound);
+      // Idempotent deletion: if landmark is already deleted or not found, return true
+      return true;
     }
 
     // Attempt to delete associated asset and folder from Cloudinary

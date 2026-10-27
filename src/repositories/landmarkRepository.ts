@@ -74,10 +74,13 @@ export default class LandmarkRepository {
     };
   }
 
+  private buildIdOrCodeFilter(idOrCode: string): Record<string, any> {
+    const isObjectId = /^[0-9a-fA-F]{24}$/.test(idOrCode);
+    return isObjectId ? { $or: [{ _id: idOrCode }, { code: idOrCode }] } : { code: idOrCode };
+  }
+
   async GetByID(idOrCode: string): Promise<LandmarkDTO.Landmark | null> {
-    const doc = await Landmark.findOne({
-      $or: [{ _id: idOrCode.match(/^[0-9a-fA-F]{24}$/) ? idOrCode : null }, { code: idOrCode }],
-    })
+    const doc = await Landmark.findOne(this.buildIdOrCodeFilter(idOrCode))
       .lean()
       .exec();
 
@@ -115,9 +118,7 @@ export default class LandmarkRepository {
     if (data.isPublished !== undefined) updateData.isPublished = data.isPublished;
 
     const doc = await Landmark.findOneAndUpdate(
-      {
-        $or: [{ _id: idOrCode.match(/^[0-9a-fA-F]{24}$/) ? idOrCode : null }, { code: idOrCode }],
-      },
+      this.buildIdOrCodeFilter(idOrCode),
       { $set: updateData },
       { new: true, runValidators: true }
     )
@@ -129,9 +130,7 @@ export default class LandmarkRepository {
   }
 
   async Remove(idOrCode: string): Promise<boolean> {
-    const res = await Landmark.deleteOne({
-      $or: [{ _id: idOrCode.match(/^[0-9a-fA-F]{24}$/) ? idOrCode : null }, { code: idOrCode }],
-    }).exec();
+    const res = await Landmark.deleteOne(this.buildIdOrCodeFilter(idOrCode)).exec();
 
     return (res.deletedCount ?? 0) > 0;
   }

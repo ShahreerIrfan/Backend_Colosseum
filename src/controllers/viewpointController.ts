@@ -38,6 +38,8 @@ export default class ViewpointController {
     const created = await this.viewpointService.CreateViewpoint(data);
 
     await clearCachePattern('viewpoints:*');
+    await clearCachePattern('sync:*');
+    await clearCachePattern('tours:*');
     ResponseHandler.send(res, HttpStatus.CREATED.code, {
       data: created,
       message: Message.viewpointCreated,
@@ -50,6 +52,8 @@ export default class ViewpointController {
     const updated = await this.viewpointService.UpdateViewpoint(id, data);
 
     await clearCachePattern('viewpoints:*');
+    await clearCachePattern('sync:*');
+    await clearCachePattern('tours:*');
     ResponseHandler.send(res, HttpStatus.OK.code, {
       data: updated,
       message: Message.viewpointUpdated,
@@ -61,6 +65,8 @@ export default class ViewpointController {
     await this.viewpointService.RemoveViewpoint(id);
 
     await clearCachePattern('viewpoints:*');
+    await clearCachePattern('sync:*');
+    await clearCachePattern('tours:*');
     ResponseHandler.send(res, HttpStatus.OK.code, {
       message: Message.viewpointRemoved,
     });

@@ -1,7 +1,19 @@
 import { Viewpoint } from '../models/Viewpoint.js';
 import * as ViewpointDTO from '@dtos/viewpointDTO.js';
+import crypto from 'crypto';
+import { TourSyncManifest } from '../models/TourSyncManifest.js';
 
 export default class ViewpointRepository {
+  private async touchManifest(): Promise<void> {
+    try {
+      const current = await TourSyncManifest.findOne({ isCurrent: true });
+      if (current) {
+        current.contentHash = crypto.randomBytes(16).toString('hex');
+        current.updatedAt = new Date();
+        await current.save();
+      }
+    } catch (_) {}
+  }
   async Create(data: ViewpointDTO.CreateViewpoint): Promise<ViewpointDTO.Viewpoint> {
     const doc = new Viewpoint({
       viewpointId: data.id,
@@ -35,6 +47,7 @@ export default class ViewpointRepository {
     });
 
     const saved = await doc.save();
+    await this.touchManifest();
     return this.resolveLanguage(saved, 'en');
   }
 
@@ -122,6 +135,7 @@ export default class ViewpointRepository {
       .exec();
 
     if (!updated) return null;
+    await this.touchManifest();
     return this.resolveLanguage(updated, 'en');
   }
 
@@ -136,7 +150,11 @@ export default class ViewpointRepository {
       { $set: { isPublished: false } }
     ).exec();
 
-    return res.modifiedCount > 0;
+    if (res.modifiedCount > 0) {
+      await this.touchManifest();
+      return true;
+    }
+    return false;
   }
 
   async FindByFloor(floorId: string, languageCode: string = 'en'): Promise<ViewpointDTO.Viewpoint[]> {

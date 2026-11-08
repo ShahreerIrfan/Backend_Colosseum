@@ -8,6 +8,7 @@ import syncRoute from './syncRoute.js';
 import pedestrianRouteRoutes from './pedestrianRouteRoutes.js';
 import parkConfigRoutes from './parkConfigRoutes.js';
 import uploadRoute from './uploadRoute.js';
+import floorRoute from './floorRoute.js';
 import SyncController from '@controllers/syncController.js';
 
 const router: Router = express.Router();
@@ -16,6 +17,7 @@ const syncController = new SyncController();
 // Domain-scoped sub-routes
 router.use('/auth', authRoute);
 router.use('/landmarks', landmarkRoute);
+router.use('/floors', floorRoute);
 router.use('/viewpoints', viewpointRoute);
 router.use('/audio', audioRoute);
 router.use('/tickets', ticketRoute);
@@ -38,8 +40,6 @@ router.get('/health', (_req: Request, res: Response) => {
 
 // Backward-compatible endpoints for mobile client & tests
 router.get('/tours/bundle', syncController.GetTourBundle);
-router.get('/floors', syncController.GetFloorsOverview);
-router.get('/floors/:floorId', syncController.GetFloorDetail);
 router.get('/languages', syncController.GetLanguages);
 
 export default router;

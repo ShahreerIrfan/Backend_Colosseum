@@ -20,35 +20,56 @@ export default class SyncService {
     return manifest;
   }
 
-  async GetOfflineTourBundle(languageCode: string = 'en'): Promise<any> {
-    const [manifest, landmarks, floors, pedestrianRoutes, parkConfig] = await Promise.all([
-      this.syncRepository.GetCurrentManifest(),
-      this.syncRepository.GetActiveLandmarks(),
-      this.syncRepository.GetAllFloors(),
-      this.syncRepository.GetAllPedestrianRoutes(),
-      this.syncRepository.GetParkConfig(),
+  async GetOfflineTourBundle(languageCode: string = 'en', landmarkCode?: string): Promise<any> {
+    for (let attempt = 0; attempt < 2; attempt++) {
+      const before = await this.syncRepository.GetCurrentManifest();
+      const bundle = await this.BuildOfflineTourBundle(languageCode, landmarkCode);
+      const after = await this.syncRepository.GetCurrentManifest();
+      if (before.contentHash === after.contentHash && before.packageVersion === after.packageVersion) {
+        return { ...bundle, manifest: after };
+      }
+    }
+    throw new Error.ConflictError('Tour content changed during sync. Try again shortly.');
+  }
+
+  private async BuildOfflineTourBundle(languageCode: string, landmarkCode?: string) {
+    const [publishedLandmarks, floors, pedestrianRoutes] = await Promise.all([
+      this.syncRepository.GetActiveLandmarks(languageCode),
+      this.syncRepository.GetAllFloors(landmarkCode),
+      this.syncRepository.GetAllPedestrianRoutes(languageCode, landmarkCode),
     ]);
+    const publishedIds = new Set(publishedLandmarks.map((landmark) => landmark.id));
+    const landmarks = landmarkCode
+      ? publishedLandmarks.filter((landmark) => landmark.id === landmarkCode)
+      : publishedLandmarks;
+    if (landmarkCode && landmarks.length === 0) {
+      throw new Error.NotFoundError('Published landmark not found.');
+    }
 
     const enrichedFloors = await Promise.all(
-      floors.map(async (floor) => {
+      floors.filter((floor) => publishedIds.has(floor.landmarkCode)).map(async (floor) => {
         const viewpoints = await this.syncRepository.GetViewpointsByFloor(
           floor.floorId,
           languageCode
         );
-        const itinerary = await this.syncRepository.GetItinerariesByFloor(floor.floorId);
+        const translated = this.syncRepository.localizedText<{ title: string }>(floor.localizedText, languageCode);
+        const itinerary = await this.syncRepository.GetItinerariesByFloor(
+          floor.floorId, viewpoints.map((viewpoint) => viewpoint.id)
+        );
 
         return {
           id: floor.floorId,
-          displayName: floor.displayName,
-          shortName: floor.shortName,
+          landmarkCode: floor.landmarkCode,
+          displayName: translated?.title ?? floor.displayName,
+          shortName: translated?.title ?? floor.shortName,
           floorNumberLabel: floor.floorNumberLabel,
           semanticLabel: floor.semanticLabel,
           center: floor.calibration?.centerCoordinates || {
             latitude: 41.89021,
             longitude: 12.492231,
           },
-          defaultZoom: floor.calibration?.defaultZoom || 18.6,
-          mapNorthOffsetDegrees: floor.calibration?.mapNorthOffsetDegrees || -20.0,
+          defaultZoom: floor.calibration?.defaultZoom ?? 18.6,
+          mapNorthOffsetDegrees: floor.calibration?.mapNorthOffsetDegrees ?? -20.0,
           mapAsset: floor.mapAsset?.assetId || 'level_1_map',
           mapAssetUrl: floor.mapAsset?.url || '',
           viewpoints,
@@ -58,11 +79,10 @@ export default class SyncService {
     );
 
     return {
-      manifest,
       landmarks,
       floors: enrichedFloors,
-      pedestrianRoutes,
-      parkConfig,
+      pedestrianRoutes: pedestrianRoutes.filter((route) =>
+        publishedIds.has(route.fromLandmarkCode) && publishedIds.has(route.toLandmarkCode)),
       syncedAt: new Date().toISOString(),
     };
   }
@@ -91,12 +111,16 @@ export default class SyncService {
     }
 
     const viewpoints = await this.syncRepository.GetViewpointsByFloor(floorId, languageCode);
-    const itinerary = await this.syncRepository.GetItinerariesByFloor(floorId);
+    const translated = this.syncRepository.localizedText<{ title: string }>(floor.localizedText, languageCode);
+    const itinerary = await this.syncRepository.GetItinerariesByFloor(
+      floorId, viewpoints.map((viewpoint) => viewpoint.id)
+    );
 
     return {
       id: floor.floorId,
-      displayName: floor.displayName,
-      shortName: floor.shortName,
+      landmarkCode: floor.landmarkCode,
+      displayName: translated?.title ?? floor.displayName,
+      shortName: translated?.title ?? floor.shortName,
       floorNumberLabel: floor.floorNumberLabel,
       semanticLabel: floor.semanticLabel,
       center: floor.calibration?.centerCoordinates,

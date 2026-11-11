@@ -14,7 +14,14 @@ export default class FloorService {
     if (existing) {
       throw new Error.ConflictError(`Floor with ID '${data.floorId}' already exists.`);
     }
-    return this.floorRepository.Create(data);
+    try {
+      return await this.floorRepository.Create(data);
+    } catch (error) {
+      if ((error as { code?: number })?.code === 11000) {
+        throw new Error.ConflictError(`Floor with ID '${data.floorId}' already exists.`);
+      }
+      throw error;
+    }
   }
 
   async GetAllFloors(query: FloorDTO.QueryFloor): Promise<{
@@ -38,7 +45,12 @@ export default class FloorService {
       throw new Error.NotFoundError(`Floor with ID '${id}' not found.`);
     }
 
-    const updated = await this.floorRepository.Update(id, data);
+    const updated = await this.floorRepository.Update(id, data).catch((error: unknown) => {
+      if ((error as { code?: number })?.code === 11000 && data.floorId) {
+        throw new Error.ConflictError(`Floor with ID '${data.floorId}' already exists.`);
+      }
+      throw error;
+    });
     if (!updated) {
       throw new Error.NotFoundError(`Floor with ID '${id}' not found.`);
     }

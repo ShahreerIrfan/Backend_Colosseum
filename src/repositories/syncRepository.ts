@@ -6,10 +6,12 @@ import { Viewpoint } from '../models/Viewpoint.js';
 import { ItinerarySegment } from '../models/ItinerarySegment.js';
 import { Language } from '../models/Language.js';
 import { PedestrianRoute } from '../models/PedestrianRoute.js';
-import { ParkConfig } from '../models/ParkConfig.js';
+import ViewpointRepository from '@repositories/viewpointRepository.js';
 import * as SyncDTO from '@dtos/syncDTO.js';
 
 export default class SyncRepository {
+  private readonly viewpoints = new ViewpointRepository();
+
   async GetCurrentManifest(): Promise<SyncDTO.TourSyncManifest> {
     const manifest = await TourSyncManifest.findOne({ isCurrent: true }).lean().exec();
     if (!manifest) {
@@ -37,8 +39,9 @@ export default class SyncRepository {
     };
   }
 
-  async GetAllFloors(): Promise<any[]> {
-    return Floor.find({ isPublished: true }).sort({ levelIndex: 1 }).lean().exec();
+  async GetAllFloors(landmarkCode?: string): Promise<any[]> {
+    return Floor.find({ isPublished: true, ...(landmarkCode && { landmarkCode }) })
+      .sort({ levelIndex: 1 }).lean().exec();
   }
 
   async GetFloorById(floorId: string): Promise<any | null> {
@@ -46,13 +49,16 @@ export default class SyncRepository {
   }
 
   async GetViewpointsByFloor(floorId: string, languageCode: string = 'en'): Promise<any[]> {
-    const raw = await Viewpoint.find({ floorId, isPublished: true }).sort({ order: 1 }).lean().exec();
-    return raw.map((vp) => this.resolveViewpoint(vp, languageCode));
+    return this.viewpoints.FindByFloor(floorId, languageCode);
   }
 
-  async GetItinerariesByFloor(floorId: string): Promise<any[]> {
-    const segments = await ItinerarySegment.find({ floorId, isPublished: true }).lean().exec();
+  async GetItinerariesByFloor(floorId: string, viewpointIds: string[]): Promise<any[]> {
+    const stops = [...viewpointIds, 'ENTRY', 'EXIT'];
+    const segments = await ItinerarySegment.find({
+      floorId, isPublished: true, fromId: { $in: stops }, toId: { $in: stops },
+    }).lean().exec();
     return segments.map((seg) => ({
+      coordinateSpace: seg.coordinateSpace,
       fromId: seg.fromId,
       toId: seg.toId,
       points: (seg.points || []).map((p: any) => ({ dx: p.x, dy: p.y })),
@@ -68,12 +74,17 @@ export default class SyncRepository {
     return Language.find({ isAvailable: true }).sort({ displayOrder: 1 }).lean().exec();
   }
 
-  async GetActiveLandmarks(): Promise<any[]> {
-    const raw = await Landmark.find({ isPublished: true }).sort({ 'display.zIndex': 1 }).lean().exec();
-    return raw.map((lm: any) => ({
+  async GetActiveLandmarks(languageCode = 'en', landmarkCode?: string): Promise<any[]> {
+    const raw = await Landmark.find({ isPublished: true, ...(landmarkCode && { code: landmarkCode }) })
+      .sort({ 'display.zIndex': 1 }).lean().exec();
+    return raw.map((lm: any) => {
+      const translated = this.localizedText<{ title: string; description: string }>(
+        lm.localizedText, languageCode,
+      );
+      return ({
       id: lm.code,
-      name: lm.name,
-      description: lm.description || '',
+      name: translated?.title ?? lm.name,
+      description: translated?.description ?? lm.description ?? '',
       assetPath: lm.assetPath,
       thumbnailUrl: lm.thumbnailUrl || '',
       center: {
@@ -94,11 +105,22 @@ export default class SyncRepository {
         iconName: 'monument',
         labelOffsetY: 0,
       },
-    }));
+      });
+    });
   }
 
-  async GetAllPedestrianRoutes(): Promise<any[]> {
-    const raw = await PedestrianRoute.find({ isPublished: true }).lean().exec();
+  localizedText<T>(translations: Record<string, T> | Map<string, T> | undefined, languageCode: string): T | undefined {
+    if (translations instanceof Map) return translations.get(languageCode);
+    return translations && Object.hasOwn(translations, languageCode)
+      ? translations[languageCode]
+      : undefined;
+  }
+
+  async GetAllPedestrianRoutes(languageCode = 'en', landmarkCode?: string): Promise<any[]> {
+    const raw = await PedestrianRoute.find({
+      isPublished: true,
+      ...(landmarkCode && { $or: [{ fromLandmarkCode: landmarkCode }, { toLandmarkCode: landmarkCode }] }),
+    }).lean().exec();
     return raw.map((r: any) => ({
       routeId: r.routeId,
       name: r.name,
@@ -111,62 +133,13 @@ export default class SyncRepository {
         longitude: w.longitude,
       })),
       isAccessibleWheelchair: r.isAccessibleWheelchair,
+      isOneWay: r.isOneWay ?? false,
+      instruction: this.localizedText<string>(r.instructionTranslations, languageCode) ?? r.instruction ?? '',
     }));
-  }
-
-  async GetParkConfig(): Promise<any | null> {
-    const doc = await ParkConfig.findOne({ configKey: 'archaeological_park_colosseum' }).lean().exec();
-    if (!doc) return null;
-    return {
-      configKey: doc.configKey,
-      centerCoordinates: doc.centerCoordinates,
-      boundaryRadiusMeters: doc.boundaryRadiusMeters,
-      proximityThresholds:
-        doc.proximityThresholds instanceof Map
-          ? Object.fromEntries(doc.proximityThresholds)
-          : doc.proximityThresholds || {},
-    };
   }
 
   async CountViewpointsByFloor(floorId: string): Promise<number> {
     return Viewpoint.countDocuments({ floorId, isPublished: true }).exec();
   }
 
-  private resolveViewpoint(vp: any, languageCode: string = 'en') {
-    const translations = vp.translations || {};
-    let localized: any;
-    if (translations instanceof Map) {
-      localized =
-        translations.get(languageCode) ||
-        translations.get('en') ||
-        translations.values().next().value;
-    } else if (typeof translations === 'object') {
-      localized = translations[languageCode] || translations.en || Object.values(translations)[0];
-    }
-
-    const {
-      title = '',
-      description = '',
-      audioUrl = '',
-      audioDuration = '3 min',
-    } = localized || {};
-
-    return {
-      id: vp.viewpointId || vp._id?.toString(),
-      floorId: vp.floorId,
-      title,
-      order: vp.order ?? 1,
-      normalizedX: vp.canvasCoordinates?.normalizedX ?? 0.5,
-      normalizedY: vp.canvasCoordinates?.normalizedY ?? 0.5,
-      latitude: vp.location?.coordinates?.[1] ?? null,
-      longitude: vp.location?.coordinates?.[0] ?? null,
-      imageAsset: vp.image?.url || '',
-      audioUrl,
-      audioDuration,
-      isVisited: false,
-      description,
-      triggerRadiusMeters: vp.navigation?.triggerRadiusMeters ?? 4.0,
-      targetGazeHeadingDegrees: vp.navigation?.targetGazeHeadingDegrees ?? null,
-    };
-  }
 }

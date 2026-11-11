@@ -20,6 +20,9 @@ const PedestrianRouteSchema = new Schema<IPedestrianRoute>(
     waypoints: { type: [WaypointSchema], required: true },
     isAccessibleWheelchair: { type: Boolean, default: true },
     isPublished: { type: Boolean, default: true },
+    isOneWay: { type: Boolean, default: false },
+    instruction: String,
+    instructionTranslations: { type: Map, of: String },
   },
   { timestamps: true }
 );

@@ -3,6 +3,7 @@ import { IFloor } from '../types/index.js';
 
 const FloorSchema = new Schema<IFloor>(
   {
+    localizedText: { type: Map, of: Schema.Types.Mixed },
     floorId: { type: String, required: true, unique: true, index: true }, // e.g. "floor_underground"
     landmarkCode: { type: String, required: true, default: 'colosseum', index: true },
     levelIndex: { type: Number, required: true }, // -1 (underground), 1, 2, 3

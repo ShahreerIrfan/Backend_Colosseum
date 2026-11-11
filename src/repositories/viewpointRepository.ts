@@ -1,19 +1,9 @@
 import { Viewpoint } from '../models/Viewpoint.js';
 import * as ViewpointDTO from '@dtos/viewpointDTO.js';
-import crypto from 'crypto';
-import { TourSyncManifest } from '../models/TourSyncManifest.js';
+import { bumpTourManifest } from '@utils/tourManifest.js';
 
 export default class ViewpointRepository {
-  private async touchManifest(): Promise<void> {
-    try {
-      const current = await TourSyncManifest.findOne({ isCurrent: true });
-      if (current) {
-        current.contentHash = crypto.randomBytes(16).toString('hex');
-        current.updatedAt = new Date();
-        await current.save();
-      }
-    } catch (_) {}
-  }
+
   async Create(data: ViewpointDTO.CreateViewpoint): Promise<ViewpointDTO.Viewpoint> {
     const doc = new Viewpoint({
       viewpointId: data.id,
@@ -29,14 +19,12 @@ export default class ViewpointRepository {
       },
       navigation: {
         triggerRadiusMeters: data.triggerRadiusMeters || 4.0,
-        targetGazeHeadingDegrees: data.targetGazeHeadingDegrees || null,
+        targetGazeHeadingDegrees: data.targetGazeHeadingDegrees ?? null,
       },
       translations: {
         en: {
           title: data.title,
           description: data.description || '',
-          audioUrl: data.audioUrl || '',
-          audioDuration: data.audioDuration || '3 min',
         },
       },
       image: {
@@ -47,7 +35,7 @@ export default class ViewpointRepository {
     });
 
     const saved = await doc.save();
-    await this.touchManifest();
+    await bumpTourManifest();
     return this.resolveLanguage(saved, 'en');
   }
 
@@ -67,7 +55,7 @@ export default class ViewpointRepository {
     const lang = queryData.lang || queryData.language || 'en';
 
     const [viewpoints, total] = await Promise.all([
-      Viewpoint.find(filter).sort({ order: 1 }).skip(skip).limit(limit).lean().exec(),
+      Viewpoint.find(filter).sort({ order: 1, _id: 1 }).skip(skip).limit(limit).lean().exec(),
       Viewpoint.countDocuments(filter).exec(),
     ]);
 
@@ -77,10 +65,10 @@ export default class ViewpointRepository {
     };
   }
 
-  async GetByID(viewpointId: string, languageCode: string = 'en'): Promise<ViewpointDTO.Viewpoint | null> {
+  async GetByID(viewpointId: string, languageCode: string = 'en', includeUnpublished = false): Promise<ViewpointDTO.Viewpoint | null> {
     const vp = await Viewpoint.findOne({
       $or: [{ viewpointId }, { _id: viewpointId.match(/^[0-9a-fA-F]{24}$/) ? viewpointId : null }],
-      isPublished: true,
+      ...(includeUnpublished ? {} : { isPublished: true }),
     })
       .lean()
       .exec();
@@ -91,9 +79,11 @@ export default class ViewpointRepository {
 
   async Update(
     viewpointId: string,
-    data: ViewpointDTO.UpdateViewpoint
+    data: ViewpointDTO.UpdateViewpoint,
+    sourceFloorId: string
   ): Promise<ViewpointDTO.Viewpoint | null> {
     const updateQuery: Record<string, any> = {};
+    if (data.floorId !== undefined) updateQuery.floorId = data.floorId;
     if (data.order !== undefined) updateQuery.order = data.order;
     if (data.normalizedX !== undefined)
       updateQuery['canvasCoordinates.normalizedX'] = data.normalizedX;
@@ -102,7 +92,7 @@ export default class ViewpointRepository {
     if (data.latitude !== undefined && data.longitude !== undefined) {
       updateQuery.location = {
         type: 'Point',
-        coordinates: [data.longitude, data.latitude],
+        coordinates: [data.longitude ?? 0, data.latitude ?? 0],
       };
     }
     if (data.imageAsset !== undefined) updateQuery['image.url'] = data.imageAsset;
@@ -112,17 +102,15 @@ export default class ViewpointRepository {
       updateQuery['navigation.targetGazeHeadingDegrees'] = data.targetGazeHeadingDegrees;
     if (data.isPublished !== undefined) updateQuery.isPublished = data.isPublished;
 
-    if (data.title !== undefined || data.description !== undefined || data.audioUrl !== undefined) {
+    if (data.title !== undefined || data.description !== undefined) {
       if (data.title !== undefined) updateQuery['translations.en.title'] = data.title;
       if (data.description !== undefined)
         updateQuery['translations.en.description'] = data.description;
-      if (data.audioUrl !== undefined) updateQuery['translations.en.audioUrl'] = data.audioUrl;
-      if (data.audioDuration !== undefined)
-        updateQuery['translations.en.audioDuration'] = data.audioDuration;
     }
 
     const updated = await Viewpoint.findOneAndUpdate(
       {
+        floorId: sourceFloorId,
         $or: [
           { viewpointId },
           { _id: viewpointId.match(/^[0-9a-fA-F]{24}$/) ? viewpointId : null },
@@ -135,7 +123,7 @@ export default class ViewpointRepository {
       .exec();
 
     if (!updated) return null;
-    await this.touchManifest();
+    await bumpTourManifest();
     return this.resolveLanguage(updated, 'en');
   }
 
@@ -151,7 +139,7 @@ export default class ViewpointRepository {
     ).exec();
 
     if (res.modifiedCount > 0) {
-      await this.touchManifest();
+      await bumpTourManifest();
       return true;
     }
     return false;
@@ -163,23 +151,12 @@ export default class ViewpointRepository {
   }
 
   private resolveLanguage(vp: any, languageCode: string = 'en'): ViewpointDTO.Viewpoint {
-    const translations = vp.translations || {};
-    let localized: any;
-    if (translations instanceof Map) {
-      localized =
-        translations.get(languageCode) ||
-        translations.get('en') ||
-        translations.values().next().value;
-    } else if (typeof translations === 'object') {
-      localized = translations[languageCode] || translations.en || Object.values(translations)[0];
-    }
-
-    const {
-      title = '',
-      description = '',
-      audioUrl = '',
-      audioDuration = '3 min',
-    } = localized || {};
+    const translations = vp.translations instanceof Map
+      ? Object.fromEntries(vp.translations) : (vp.translations ?? {});
+    const available = (key: string) => Object.hasOwn(translations, key);
+    const narrationLanguage = [languageCode, 'en', ...Object.keys(translations)].find(available);
+    const { title = '', description = '' } =
+      narrationLanguage === undefined ? {} : translations[narrationLanguage];
 
     return {
       id: vp.viewpointId || vp._id?.toString(),
@@ -191,10 +168,9 @@ export default class ViewpointRepository {
       latitude: vp.location?.coordinates?.[1] ?? null,
       longitude: vp.location?.coordinates?.[0] ?? null,
       imageAsset: vp.image?.url || '',
-      audioUrl,
-      audioDuration,
       isVisited: false,
       description,
+      narrationLanguage,
       triggerRadiusMeters: vp.navigation?.triggerRadiusMeters ?? 4.0,
       targetGazeHeadingDegrees: vp.navigation?.targetGazeHeadingDegrees ?? null,
       isPublished: vp.isPublished ?? true,

@@ -7,4 +7,3 @@ export { Language } from './Language.js';
 export { TourSyncManifest } from './TourSyncManifest.js';
 export { User } from './User.js';
 export { PedestrianRoute } from './PedestrianRoute.js';
-export { ParkConfig } from './ParkConfig.js';

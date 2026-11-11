@@ -3,6 +3,7 @@ import LandmarkController from '@controllers/landmarkController.js';
 import { Validator } from '@middlewares/requestValidator.js';
 import authenticateToken from '@middlewares/authenticateToken.js';
 import { authorizeRole } from '@middlewares/authorizeRoles.js';
+import { managedRolePermission } from '@middlewares/requirePermission.js';
 import { cacheMiddleware } from '@middlewares/redisCache.js';
 import * as LandmarkDTO from '@dtos/landmarkDTO.js';
 import * as CommonItemDTO from '@dtos/commonItemDTO.js';
@@ -19,7 +20,7 @@ router
   )
   .post(
     authenticateToken,
-    authorizeRole.hasRole('SUPER_ADMIN', 'ADMIN', 'MODERATOR'),
+    managedRolePermission('Monuments & Landmarks', 'Create', authorizeRole.hasRole('SUPER_ADMIN', 'ADMIN', 'MODERATOR')),
     Validator.body(LandmarkDTO.CreateLandmarkSchema),
     landmarkController.CreateLandmark
   );
@@ -30,10 +31,10 @@ router
   .get(cacheMiddleware('landmark'), landmarkController.GetLandmarkByID)
   .patch(
     authenticateToken,
-    authorizeRole.hasRole('SUPER_ADMIN', 'ADMIN', 'MODERATOR'),
+    managedRolePermission('Monuments & Landmarks', 'Update', authorizeRole.hasRole('SUPER_ADMIN', 'ADMIN', 'MODERATOR')),
     Validator.body(LandmarkDTO.UpdateLandmarkSchema),
     landmarkController.UpdateLandmark
   )
-  .delete(authenticateToken, authorizeRole.adminOnly, landmarkController.RemoveLandmark);
+  .delete(authenticateToken, managedRolePermission('Monuments & Landmarks', 'Delete', authorizeRole.adminOnly), landmarkController.RemoveLandmark);
 
 export default router;

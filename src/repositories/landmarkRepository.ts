@@ -1,5 +1,6 @@
 import { Landmark } from '../models/Landmark.js';
 import * as LandmarkDTO from '@dtos/landmarkDTO.js';
+import { bumpTourManifest } from '@utils/tourManifest.js';
 
 export default class LandmarkRepository {
   async Create(data: LandmarkDTO.CreateLandmark): Promise<LandmarkDTO.Landmark> {
@@ -33,6 +34,7 @@ export default class LandmarkRepository {
     });
 
     const saved = await doc.save();
+    await bumpTourManifest();
     return this.mapToDTO(saved);
   }
 
@@ -126,13 +128,16 @@ export default class LandmarkRepository {
       .exec();
 
     if (!doc) return null;
+    await bumpTourManifest();
     return this.mapToDTO(doc);
   }
 
   async Remove(idOrCode: string): Promise<boolean> {
     const res = await Landmark.deleteOne(this.buildIdOrCodeFilter(idOrCode)).exec();
 
-    return (res.deletedCount ?? 0) > 0;
+    if (!res.deletedCount) return false;
+    await bumpTourManifest();
+    return true;
   }
 
   async FindActiveOverlays(): Promise<any[]> {

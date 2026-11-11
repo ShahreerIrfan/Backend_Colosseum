@@ -1,14 +1,16 @@
 import { z } from 'zod';
+import { ADMIN_MODULE_ACTIONS } from '@constants/rbacConstants.js';
 import { MessageConstants } from '@constants/allConstant.js';
 
 const Message = MessageConstants.validation;
 
-export const RoleSchema = z.enum([
+export const SystemRoleSchema = z.enum([
   'SUPER_ADMIN',
   'ADMIN',
   'MODERATOR',
   'USER',
 ]);
+export const RoleSchema = z.union([SystemRoleSchema, z.string().regex(/^CUSTOM_[a-f0-9]{24}$/)]);
 
 export const UserSchema = z.object({
   id: z.string(),
@@ -40,6 +42,10 @@ export const signInSchema = z.object({
   email: z.string().email(Message.email),
   password: z.string().min(1, 'Password is required'),
 });
+export const publicSignUpSchema = signUpSchema.omit({ role: true, assignedFloorIds: true });
+export const createUserSchema = signUpSchema.extend({
+  name: signUpSchema.shape.name.optional(),
+}).transform((data) => ({ ...data, name: data.name ?? data.email }));
 
 export const rbacItemSchema = z.object({
   'module name': z.string(),
@@ -49,6 +55,12 @@ export const rbacItemSchema = z.object({
   Delete: z.enum(['true', 'false']),
 });
 
+export const managedRoleSchema = z.object({
+  name: z.string().trim().min(2).max(60),
+  permissions: z.array(rbacItemSchema).max(Object.keys(ADMIN_MODULE_ACTIONS).length),
+});
+export type ManagedRoleInput = z.infer<typeof managedRoleSchema>;
+
 export const authPayloadSchema = z.object({
   id: z.string(),
   email: z.string().email(),
@@ -56,6 +68,7 @@ export const authPayloadSchema = z.object({
   role: RoleSchema,
   assignedFloorIds: z.array(z.string()).default([]),
   userRole: z.string().optional(),
+  roleName: z.string().optional(),
   rback: z.array(rbacItemSchema).optional(),
 });
 

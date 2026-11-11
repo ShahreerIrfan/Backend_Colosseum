@@ -3,6 +3,7 @@ import AuthService from '@services/authService.js';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import { EnvConstant } from '@constants/allConstant.js';
+import { ManagedRole } from '../../models/ManagedRole.js';
 
 vi.mock('@repositories/authRepository.js');
 
@@ -82,6 +83,7 @@ describe('AuthService - JWT RBAC Integration', () => {
     });
 
     expect(result.user.userRole).toBe('super_admin');
+    expect(result.user.roleName).toBe('Super Admin');
     const landmarks = result.user.rback?.find(
       (m: any) => m['module name'] === 'Monuments & Landmarks'
     );
@@ -92,5 +94,63 @@ describe('AuthService - JWT RBAC Integration', () => {
       Update: 'true',
       Delete: 'true',
     });
+  });
+
+  it('returns the custom role name on sign-in and profile refresh for a dashboard-only user', async () => {
+    const role = 'CUSTOM_6af412afe898ad125d2ec681';
+    const account = {
+      id: 'custom-user',
+      name: 'Example user',
+      email: 'example@example.com',
+      role,
+      assignedFloorIds: [],
+      is_active: true,
+    };
+    const password = 'ExamplePassword123!';
+    const permissions = [{
+      'module name': 'Analytics & Visitor Telemetry',
+      Create: 'false', Read: 'true', Update: 'false', Delete: 'false',
+    }];
+    mockAuthRepo.FindByEmail = vi.fn().mockResolvedValue({
+      ...account, _id: account.id, password: await bcrypt.hash(password, 10),
+    });
+    mockAuthRepo.FindById = vi.fn().mockResolvedValue(account);
+    const lookup = vi.spyOn(ManagedRole, 'findOne').mockReturnValue({
+      lean: vi.fn()
+        .mockResolvedValueOnce({ name: 'Shaeakh', permissions })
+        .mockResolvedValueOnce({ name: 'Renamed role', permissions }),
+    } as unknown as ReturnType<typeof ManagedRole.findOne>);
+    try {
+      const session = await authService.SignIn({ email: account.email, password });
+      expect(session.user).toMatchObject({ role, roleName: 'Shaeakh', rback: permissions });
+      expect(await authService.GetProfile(account.id)).toMatchObject({
+        role, roleName: 'Renamed role', rback: permissions,
+      });
+    } finally {
+      lookup.mockRestore();
+    }
+  });
+
+  it('ignores role and floor assignments supplied through public registration', async () => {
+    mockAuthRepo.FindByEmail = vi.fn().mockResolvedValue(null);
+    mockAuthRepo.Create = vi.fn().mockImplementation(async (data) => ({ id: 'visitor', ...data }));
+    const account = await authService.SignUp({
+      ...{ role: 'SUPER_ADMIN', assignedFloorIds: ['floor-1'] },
+      name: 'Visitor',
+      email: 'visitor@example.com',
+      password: 'FixturePassword123!',
+    });
+    expect(account.user.role).toBe('USER');
+    expect(account.user.assignedFloorIds).toEqual([]);
+    expect(mockAuthRepo.Create.mock.calls[0][0].password).not.toBe('FixturePassword123!');
+  });
+
+  it('does not let an account manager delete a Super Admin account', async () => {
+    mockAuthRepo.FindById = vi.fn().mockResolvedValue({ role: 'SUPER_ADMIN' });
+    mockAuthRepo.Remove = vi.fn();
+    await expect(authService.RemoveUser({
+      id: 'staff', role: 'ADMIN', name: 'Staff', email: 'staff@example.com', assignedFloorIds: [],
+    }, 'root')).rejects.toThrow('higher level of access');
+    expect(mockAuthRepo.Remove).not.toHaveBeenCalled();
   });
 });

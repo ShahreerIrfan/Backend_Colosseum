@@ -1,11 +1,13 @@
 import jwt from 'jsonwebtoken';
 import { EnvConstant, MessageConstants } from '@constants/allConstant.js';
-import type { JwtPayload } from 'jsonwebtoken';
 import type { Request, Response, NextFunction } from 'express';
 import * as Error from '@errors/concreteErrors.js';
 import * as AuthDTO from '@dtos/authDTO.js';
+import AuthRepository from '@repositories/authRepository.js';
+import { resolvePermissions } from '@services/managedRoles.js';
 
 const Message = MessageConstants.errorMessage.authService;
+const accounts = new AuthRepository();
 
 export const authenticateToken = async (
   req: Request,
@@ -28,47 +30,22 @@ export const authenticateToken = async (
     }
   }
 
-  // Development resilience: allow mock frontend tokens or unauthenticated dev requests
-  if (
-    EnvConstant.NODE_ENV !== 'production' &&
-    (!token || token.startsWith('mock_jwt_token_') || token === 'null' || token === 'undefined')
-  ) {
-    req.user = {
-      id: '6ad27b2657e48d954d3bc43e',
-      email: EnvConstant.ADMIN_DEFAULT_EMAIL || 'admin@colosseumtour.it',
-      name: 'Super Administrator',
-      role: 'SUPER_ADMIN',
-      userRole: 'super_admin',
-      assignedFloorIds: [],
-    };
-    next();
-    return;
-  }
-
   if (!token) {
     next(new Error.AuthenticationError(Message.unauthorized));
     return;
   }
 
+  let session: AuthDTO.AuthPayload;
   try {
-    const payload = jwt.verify(token, JWT_SECRET) as JwtPayload;
-    req.user = payload as AuthDTO.AuthPayload;
-    next();
+    session = AuthDTO.authPayloadSchema.parse(jwt.verify(token, JWT_SECRET));
   } catch {
-    if (EnvConstant.NODE_ENV !== 'production') {
-      req.user = {
-        id: '6ad27b2657e48d954d3bc43e',
-        email: EnvConstant.ADMIN_DEFAULT_EMAIL || 'admin@colosseumtour.it',
-        name: 'Super Administrator',
-        role: 'SUPER_ADMIN',
-        userRole: 'super_admin',
-        assignedFloorIds: [],
-      };
-      next();
-      return;
-    }
-    next(new Error.AuthenticationError(Message.invalidCredential));
+    return next(new Error.AuthenticationError(Message.invalidCredential));
   }
+  if (!/^[a-f0-9]{24}$/i.test(session.id)) return next(new Error.AuthenticationError(Message.invalidCredential));
+  const account = await accounts.FindById(session.id);
+  if (!account?.is_active) return next(new Error.AuthenticationError(Message.invalidCredential));
+  req.user = { ...account, userRole: account.role.toLowerCase(), rback: await resolvePermissions(account.role) };
+  next();
 };
 
 export default authenticateToken;

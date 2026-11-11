@@ -78,6 +78,7 @@ export interface FloorMapAsset {
 }
 
 export interface IFloor {
+  localizedText?: Record<string, { title: string }>;
   floorId: string;
   landmarkCode: string;
   levelIndex: number;
@@ -132,6 +133,7 @@ export interface IItinerarySegment {
   fromId: string;
   toId: string;
   points: PointOffset[];
+  coordinateSpace?: 'gps';
   distanceMeters: number;
   walkingDurationSeconds: number;
   instruction?: string;
@@ -176,6 +178,7 @@ export interface LandmarkMarker {
 }
 
 export interface ILandmark {
+  localizedText?: Record<string, { title: string; description: string }>;
   code: string;
   name: string;
   description?: string;
@@ -219,6 +222,7 @@ export interface ILanguage {
   code: string;
   name: string;
   nativeName: string;
+  ttsLocale?: string;
   isAvailable: boolean;
   isDefault: boolean;
   displayOrder: number;
@@ -271,6 +275,9 @@ export interface TicketSessionDTO {
 }
 
 export interface IPedestrianRoute {
+  isOneWay?: boolean;
+  instruction?: string;
+  instructionTranslations?: Record<string, string>;
   routeId: string;
   name: string;
   fromLandmarkCode: string;
@@ -295,28 +302,11 @@ export interface PedestrianRouteDTO {
   isAccessibleWheelchair: boolean;
 }
 
-export interface IParkConfig {
-  configKey: string;
-  centerCoordinates: { latitude: number; longitude: number };
-  boundaryRadiusMeters: number;
-  proximityThresholds: Record<string, number>;
-  createdAt?: Date;
-  updatedAt?: Date;
-}
-
-export interface ParkConfigDTO {
-  configKey: string;
-  centerCoordinates: { latitude: number; longitude: number };
-  boundaryRadiusMeters: number;
-  proximityThresholds: Record<string, number>;
-}
-
 export interface OfflineTourBundle {
   manifest: ITourSyncManifest;
   landmarks: LandmarkOverlayDTO[];
   floors: FloorDetailDTO[];
   pedestrianRoutes?: PedestrianRouteDTO[];
-  parkConfig?: ParkConfigDTO;
   syncedAt: string;
 }
 

@@ -3,6 +3,7 @@ import { ILandmark } from '../types/index.js';
 
 const LandmarkSchema = new Schema<ILandmark>(
   {
+    localizedText: { type: Map, of: Schema.Types.Mixed },
     code: { type: String, required: true, unique: true, index: true }, // e.g. "colosseum"
     name: { type: String, required: true },
     description: { type: String, default: '' },

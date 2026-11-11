@@ -525,23 +525,6 @@ def get_tickets():
         }
     ]
 
-def get_park_config():
-    return {
-        "configKey": "archaeological_park_colosseum",
-        "centerCoordinates": { "latitude": 41.890210, "longitude": 12.492231 },
-        "boundaryRadiusMeters": 600.0,
-        "proximityThresholds": {
-            "colosseum": 120.0,
-            "romanForum": 100.0,
-            "archConstantine": 70.0,
-            "ludusMagnus": 80.0,
-            "templeVenusRome": 80.0
-        }
-    }
-
-# -----------------------------------------------------------------------------
-# Main Assembly
-# -----------------------------------------------------------------------------
 def main():
     print("🚀 Extracting complete Colosseum Archaeological Park data...")
     landmarks = extract_landmarks()
@@ -567,7 +550,6 @@ def main():
 
     languages = get_languages()
     tickets = get_tickets()
-    park_config = get_park_config()
 
     master_seed = {
         "manifest": {
@@ -577,7 +559,6 @@ def main():
             "totalLandmarks": len(landmarks),
             "supportedLanguages": [l["code"] for l in languages]
         },
-        "parkConfig": park_config,
         "landmarks": landmarks,
         "floors": floors,
         "viewpoints": all_vps,

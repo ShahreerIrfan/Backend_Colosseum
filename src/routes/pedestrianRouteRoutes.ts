@@ -3,6 +3,7 @@ import PedestrianRouteController from '@controllers/pedestrianRouteController.js
 import { Validator } from '@middlewares/requestValidator.js';
 import authenticateToken from '@middlewares/authenticateToken.js';
 import { authorizeRole } from '@middlewares/authorizeRoles.js';
+import { managedRolePermission } from '@middlewares/requirePermission.js';
 import { cacheMiddleware } from '@middlewares/redisCache.js';
 import * as PedestrianRouteDTO from '@dtos/pedestrianRouteDTO.js';
 import * as CommonItemDTO from '@dtos/commonItemDTO.js';
@@ -12,6 +13,13 @@ const pedestrianRouteController = new PedestrianRouteController();
 
 // Find connecting route between two landmarks
 router.get('/find', pedestrianRouteController.FindRoute);
+router.get(
+  '/admin/list',
+  authenticateToken,
+  managedRolePermission('Pedestrian Street Routes', 'Read', authorizeRole.adminOnly),
+  Validator.query(PedestrianRouteDTO.QueryPedestrianRouteSchema),
+  pedestrianRouteController.GetAdminRoutes
+);
 
 router
   .route('/')
@@ -22,7 +30,7 @@ router
   )
   .post(
     authenticateToken,
-    authorizeRole.hasRole('SUPER_ADMIN', 'ADMIN'),
+    managedRolePermission('Pedestrian Street Routes', 'Create', authorizeRole.hasRole('SUPER_ADMIN', 'ADMIN')),
     Validator.body(PedestrianRouteDTO.CreatePedestrianRouteSchema),
     pedestrianRouteController.CreateRoute
   );
@@ -33,13 +41,13 @@ router
   .get(cacheMiddleware('route:pedestrian'), pedestrianRouteController.GetRouteByID)
   .patch(
     authenticateToken,
-    authorizeRole.hasRole('SUPER_ADMIN', 'ADMIN'),
+    managedRolePermission('Pedestrian Street Routes', 'Update', authorizeRole.hasRole('SUPER_ADMIN', 'ADMIN')),
     Validator.body(PedestrianRouteDTO.UpdatePedestrianRouteSchema),
     pedestrianRouteController.UpdateRoute
   )
   .delete(
     authenticateToken,
-    authorizeRole.adminOnly,
+    managedRolePermission('Pedestrian Street Routes', 'Delete', authorizeRole.adminOnly),
     pedestrianRouteController.RemoveRoute
   );
 

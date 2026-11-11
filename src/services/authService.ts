@@ -3,7 +3,9 @@ import jwt from 'jsonwebtoken';
 import AuthRepository from '@repositories/authRepository.js';
 import * as AuthDTO from '@dtos/authDTO.js';
 import * as Error from '@errors/concreteErrors.js';
-import { EnvConstant, MessageConstants, RbacConstants } from '@constants/allConstant.js';
+import { EnvConstant, MessageConstants } from '@constants/allConstant.js';
+
+import { assertCanManageAccountRole, resolveAccountRole } from './managedRoles.js';
 
 const Message = MessageConstants.errorMessage.authService;
 
@@ -14,22 +16,10 @@ export default class AuthService {
     this.authRepository = new AuthRepository();
   }
 
-  async SignUp(data: AuthDTO.SignUp): Promise<AuthDTO.AuthResponse> {
-    const existing = await this.authRepository.FindByEmail(data.email);
-    if (existing) {
-      throw new Error.ConflictError(Message.userAlreadyExists);
-    }
-
-    const saltRounds = 10;
-    const hashedPassword = await bcrypt.hash(data.password, saltRounds);
-
-    const user = await this.authRepository.Create({
-      ...data,
-      password: hashedPassword,
-    });
-
+  async SignUp(data: Omit<AuthDTO.SignUp, 'role' | 'assignedFloorIds'>): Promise<AuthDTO.AuthResponse> {
+    const user = await this.createAccount({ ...data, role: 'USER', assignedFloorIds: [] });
     const userRole = user.role.toLowerCase();
-    const rback = RbacConstants.getRoleRbac(user.role);
+    const { name: roleName, permissions: rback } = await resolveAccountRole(user.role);
 
     const payload: AuthDTO.AuthPayload = {
       id: user.id,
@@ -38,6 +28,7 @@ export default class AuthService {
       role: user.role,
       assignedFloorIds: user.assignedFloorIds || [],
       userRole,
+      roleName,
       rback,
     };
 
@@ -65,7 +56,7 @@ export default class AuthService {
     }
 
     const userRole = userDoc.role.toLowerCase();
-    const rback = RbacConstants.getRoleRbac(userDoc.role);
+    const { name: roleName, permissions: rback } = await resolveAccountRole(userDoc.role);
 
     const payload: AuthDTO.AuthPayload = {
       id: userDoc._id.toString(),
@@ -74,6 +65,7 @@ export default class AuthService {
       role: userDoc.role as AuthDTO.Role,
       assignedFloorIds: userDoc.assignedFloorIds || [],
       userRole,
+      roleName,
       rback,
     };
 
@@ -85,12 +77,13 @@ export default class AuthService {
     };
   }
 
-  async GetProfile(userId: string): Promise<AuthDTO.User> {
+  async GetProfile(userId: string) {
     const user = await this.authRepository.FindById(userId);
     if (!user) {
       throw new Error.NotFoundError(Message.userNotFound);
     }
-    return user;
+    const { name: roleName, permissions: rback } = await resolveAccountRole(user.role);
+    return { ...user, userRole: user.role.toLowerCase(), roleName, rback };
   }
 
   async ChangePassword(userId: string, data: AuthDTO.ChangePassword): Promise<boolean> {
@@ -113,39 +106,49 @@ export default class AuthService {
     return this.authRepository.GetAll(query);
   }
 
-  async UpdateUserRole(userId: string, role: AuthDTO.Role): Promise<AuthDTO.User> {
+  async CreateUser(actor: AuthDTO.AuthPayload, data: AuthDTO.SignUp): Promise<AuthDTO.User> {
+    await assertCanManageAccountRole(actor, data.role, true);
+    return this.createAccount(data);
+  }
+
+  private async createAccount(data: AuthDTO.SignUp): Promise<AuthDTO.User> {
+    if (await this.authRepository.FindByEmail(data.email)) {
+      throw new Error.ConflictError(Message.userAlreadyExists);
+    }
+    try {
+      return await this.authRepository.Create({ ...data, password: await bcrypt.hash(data.password, 10) });
+    } catch (error) {
+      if ((error as { code?: number })?.code === 11000) {
+        throw new Error.ConflictError(Message.userAlreadyExists);
+      }
+      throw error;
+    }
+  }
+
+  async UpdateUserDetails(actor: AuthDTO.AuthPayload, userId: string, data: AuthDTO.UpdateUserDetails) {
     const user = await this.authRepository.FindById(userId);
-    if (!user) {
-      throw new Error.NotFoundError(Message.userNotFound);
+    if (!user) throw new Error.NotFoundError(Message.userNotFound);
+    if (actor.id === userId) {
+      if ((data.role && data.role !== user.role) || data.is_active === false) {
+        throw new Error.AuthorizationError('You cannot change your own role or deactivate your account.');
+      }
+    } else {
+      await assertCanManageAccountRole(actor, user.role);
     }
-    const updated = await this.authRepository.Update(userId, { role });
-    if (!updated) {
-      throw new Error.NotFoundError(Message.userNotFound);
-    }
+    if (data.role && data.role !== user.role) await assertCanManageAccountRole(actor, data.role, true);
+    const updated = await this.authRepository.Update(userId, data, user.role);
+    if (!updated) throw new Error.ConflictError('The account changed. Reload and try again.');
     return updated;
   }
 
-  async UpdateUserDetails(
-    userId: string,
-    data: Partial<AuthDTO.User>
-  ): Promise<AuthDTO.User> {
+  async RemoveUser(actor: AuthDTO.AuthPayload, userId: string): Promise<boolean> {
+    if (actor.id === userId) throw new Error.AuthorizationError('You cannot delete your own account.');
     const user = await this.authRepository.FindById(userId);
-    if (!user) {
-      throw new Error.NotFoundError(Message.userNotFound);
-    }
-    const updated = await this.authRepository.Update(userId, data);
-    if (!updated) {
-      throw new Error.NotFoundError(Message.userNotFound);
-    }
-    return updated;
-  }
-
-  async RemoveUser(userId: string): Promise<boolean> {
-    const user = await this.authRepository.FindById(userId);
-    if (!user) {
-      throw new Error.NotFoundError(Message.userNotFound);
-    }
-    return this.authRepository.Remove(userId);
+    if (!user) throw new Error.NotFoundError(Message.userNotFound);
+    await assertCanManageAccountRole(actor, user.role);
+    const removed = await this.authRepository.Remove(userId, user.role);
+    if (!removed) throw new Error.ConflictError('The account changed. Reload and try again.');
+    return removed;
   }
 
   private generateToken(payload: AuthDTO.AuthPayload): string {

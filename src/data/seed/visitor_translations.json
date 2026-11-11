@@ -1,0 +1,2133 @@
+[
+  {
+    "kind": "landmark",
+    "id": "colosseum",
+    "source": {
+      "title": "Colosseum (Flavian Amphitheatre)",
+      "description": "The iconic elliptical amphitheatre in the centre of Rome, the largest ever built."
+    },
+    "translations": {
+      "it": {
+        "title": "Colosseo (Anfiteatro Flavio)",
+        "description": "L’iconico anfiteatro ellittico nel centro di Roma, il più grande mai costruito."
+      },
+      "es": {
+        "title": "Coliseo (Anfiteatro Flavio)",
+        "description": "El emblemático anfiteatro elíptico del centro de Roma, el mayor jamás construido."
+      },
+      "fr": {
+        "title": "Colisée (amphithéâtre Flavien)",
+        "description": "L’emblématique amphithéâtre elliptique du centre de Rome, le plus grand jamais construit."
+      },
+      "de": {
+        "title": "Kolosseum (Flavisches Amphitheater)",
+        "description": "Das Wahrzeichen im Zentrum Roms ist das größte elliptische Amphitheater, das je gebaut wurde."
+      },
+      "pt": {
+        "title": "Coliseu (Anfiteatro Flávio)",
+        "description": "O emblemático anfiteatro elíptico no centro de Roma, o maior alguma vez construído."
+      },
+      "ja": {
+        "title": "コロッセオ（フラウィウス円形闘技場）",
+        "description": "ローマ中心部を象徴する楕円形の円形闘技場で、これまでに建てられた中で最大です。"
+      },
+      "ko": {
+        "title": "콜로세움(플라비우스 원형 경기장)",
+        "description": "로마 중심부를 대표하는 타원형 원형 경기장으로, 건설된 원형 경기장 중 가장 큽니다."
+      }
+    }
+  },
+  {
+    "kind": "landmark",
+    "id": "arch_of_constantine",
+    "source": {
+      "title": "Arch of Constantine",
+      "description": "Triumphal arch celebrating Emperor Constantine I's victory at the Battle of Milvian Bridge."
+    },
+    "translations": {
+      "it": {
+        "title": "Arco di Costantino",
+        "description": "Arco trionfale che celebra la vittoria dell’imperatore Costantino I nella battaglia di Ponte Milvio."
+      },
+      "es": {
+        "title": "Arco de Constantino",
+        "description": "Arco de triunfo que conmemora la victoria del emperador Constantino I en la batalla del puente Milvio."
+      },
+      "fr": {
+        "title": "Arc de Constantin",
+        "description": "Arc de triomphe célébrant la victoire de l’empereur Constantin Ier à la bataille du pont Milvius."
+      },
+      "de": {
+        "title": "Konstantinsbogen",
+        "description": "Triumphbogen zur Feier des Sieges Kaiser Konstantins I. in der Schlacht an der Milvischen Brücke."
+      },
+      "pt": {
+        "title": "Arco de Constantino",
+        "description": "Arco triunfal que celebra a vitória do imperador Constantino I na batalha da Ponte Mílvia."
+      },
+      "ja": {
+        "title": "コンスタンティヌスの凱旋門",
+        "description": "ミルウィウス橋の戦いにおけるコンスタンティヌス1世の勝利を記念する凱旋門です。"
+      },
+      "ko": {
+        "title": "콘스탄티누스 개선문",
+        "description": "밀비우스 다리 전투에서 콘스탄티누스 1세가 거둔 승리를 기리는 개선문입니다."
+      }
+    }
+  },
+  {
+    "kind": "landmark",
+    "id": "ludus_magnus",
+    "source": {
+      "title": "Ludus Magnus",
+      "description": "The largest gladiatorial training arena and barracks in Rome, connected to Colosseum by tunnel."
+    },
+    "translations": {
+      "it": {
+        "title": "Ludus Magnus",
+        "description": "La più grande arena di addestramento con caserma per gladiatori a Roma, collegata al Colosseo da un tunnel."
+      },
+      "es": {
+        "title": "Ludus Magnus",
+        "description": "La mayor arena de entrenamiento y cuartel de gladiadores de Roma, unida al Coliseo por un túnel."
+      },
+      "fr": {
+        "title": "Ludus Magnus",
+        "description": "Le plus grand complexe d’entraînement et de casernement des gladiateurs de Rome, relié au Colisée par un tunnel."
+      },
+      "de": {
+        "title": "Ludus Magnus",
+        "description": "Roms größte Trainingsarena und Unterkunft für Gladiatoren war durch einen Tunnel mit dem Kolosseum verbunden."
+      },
+      "pt": {
+        "title": "Ludus Magnus",
+        "description": "A maior arena de treino e alojamento de gladiadores de Roma, ligada ao Coliseu por um túnel."
+      },
+      "ja": {
+        "title": "ルドゥス・マグヌス",
+        "description": "ローマ最大の剣闘士の訓練場兼宿舎で、トンネルでコロッセオとつながっていました。"
+      },
+      "ko": {
+        "title": "루두스 마그누스",
+        "description": "로마 최대의 검투사 훈련 경기장이자 숙소로, 터널을 통해 콜로세움과 연결되었습니다."
+      }
+    }
+  },
+  {
+    "kind": "landmark",
+    "id": "roman_forum",
+    "source": {
+      "title": "Roman Forum",
+      "description": "The vibrant civic, political, religious and commercial hub of ancient Rome along the Via Sacra."
+    },
+    "translations": {
+      "it": {
+        "title": "Foro Romano",
+        "description": "Il vivace centro civico, politico, religioso e commerciale dell’antica Roma lungo la Via Sacra."
+      },
+      "es": {
+        "title": "Foro Romano",
+        "description": "El animado centro cívico, político, religioso y comercial de la antigua Roma, a lo largo de la Vía Sacra."
+      },
+      "fr": {
+        "title": "Forum romain",
+        "description": "Le cœur civique, politique, religieux et commercial de la Rome antique, le long de la Via Sacra."
+      },
+      "de": {
+        "title": "Forum Romanum",
+        "description": "Das lebendige bürgerliche, politische, religiöse und wirtschaftliche Zentrum des antiken Rom an der Via Sacra."
+      },
+      "pt": {
+        "title": "Fórum Romano",
+        "description": "O vibrante centro cívico, político, religioso e comercial da Roma antiga, ao longo da Via Sacra."
+      },
+      "ja": {
+        "title": "フォロ・ロマーノ",
+        "description": "ウィア・サクラ沿いに広がる、古代ローマの市民生活、政治、宗教、商業の中心地でした。"
+      },
+      "ko": {
+        "title": "포로 로마노",
+        "description": "비아 사크라를 따라 펼쳐진 고대 로마의 시민 생활, 정치, 종교, 상업의 중심지입니다."
+      }
+    }
+  },
+  {
+    "kind": "landmark",
+    "id": "temple_venus_rome",
+    "source": {
+      "title": "Temple of Venus and Rome",
+      "description": "The largest known temple in ancient Rome, dedicated to Venus Felix and Roma Aeterna."
+    },
+    "translations": {
+      "it": {
+        "title": "Tempio di Venere e Roma",
+        "description": "Il più grande tempio conosciuto dell’antica Roma, dedicato a Venere Felice e Roma Aeterna."
+      },
+      "es": {
+        "title": "Templo de Venus y Roma",
+        "description": "El mayor templo conocido de la antigua Roma, dedicado a Venus Felix y Roma Aeterna."
+      },
+      "fr": {
+        "title": "Temple de Vénus et de Rome",
+        "description": "Le plus grand temple connu de la Rome antique, dédié à Vénus Felix et à Roma Aeterna."
+      },
+      "de": {
+        "title": "Tempel der Venus und der Roma",
+        "description": "Der größte bekannte Tempel des antiken Rom war Venus Felix und Roma Aeterna geweiht."
+      },
+      "pt": {
+        "title": "Templo de Vénus e Roma",
+        "description": "O maior templo conhecido da Roma antiga, dedicado a Vénus Felix e Roma Aeterna."
+      },
+      "ja": {
+        "title": "ウェヌスとローマ神殿",
+        "description": "ウェヌス・フェリクスとローマ・アエテルナに捧げられた、知られている中で古代ローマ最大の神殿です。"
+      },
+      "ko": {
+        "title": "베누스와 로마 신전",
+        "description": "베누스 펠릭스와 로마 아이테르나에게 봉헌된, 알려진 고대 로마 신전 중 가장 큰 신전입니다."
+      }
+    }
+  },
+  {
+    "kind": "floor",
+    "id": "floor_underground",
+    "source": {
+      "title": "Underground (Hypogeum)"
+    },
+    "translations": {
+      "it": {
+        "title": "Sotterranei (Ipogeo)"
+      },
+      "es": {
+        "title": "Subterráneos (Hipogeo)"
+      },
+      "fr": {
+        "title": "Souterrains (hypogée)"
+      },
+      "de": {
+        "title": "Untergeschoss (Hypogäum)"
+      },
+      "pt": {
+        "title": "Subterrâneos (Hipogeu)"
+      },
+      "ja": {
+        "title": "地下（ヒュポゲウム）"
+      },
+      "ko": {
+        "title": "지하층(히포게움)"
+      }
+    }
+  },
+  {
+    "kind": "floor",
+    "id": "floor_1",
+    "source": {
+      "title": "Level 1"
+    },
+    "translations": {
+      "it": {
+        "title": "Primo livello"
+      },
+      "es": {
+        "title": "Nivel 1"
+      },
+      "fr": {
+        "title": "Niveau 1"
+      },
+      "de": {
+        "title": "Ebene 1"
+      },
+      "pt": {
+        "title": "Nível 1"
+      },
+      "ja": {
+        "title": "第1層"
+      },
+      "ko": {
+        "title": "1층"
+      }
+    }
+  },
+  {
+    "kind": "floor",
+    "id": "floor_2",
+    "source": {
+      "title": "Level 2"
+    },
+    "translations": {
+      "it": {
+        "title": "Secondo livello"
+      },
+      "es": {
+        "title": "Nivel 2"
+      },
+      "fr": {
+        "title": "Niveau 2"
+      },
+      "de": {
+        "title": "Ebene 2"
+      },
+      "pt": {
+        "title": "Nível 2"
+      },
+      "ja": {
+        "title": "第2層"
+      },
+      "ko": {
+        "title": "2층"
+      }
+    }
+  },
+  {
+    "kind": "floor",
+    "id": "floor_3",
+    "source": {
+      "title": "Level 3"
+    },
+    "translations": {
+      "it": {
+        "title": "Terzo livello"
+      },
+      "es": {
+        "title": "Nivel 3"
+      },
+      "fr": {
+        "title": "Niveau 3"
+      },
+      "de": {
+        "title": "Ebene 3"
+      },
+      "pt": {
+        "title": "Nível 3"
+      },
+      "ja": {
+        "title": "第3層"
+      },
+      "ko": {
+        "title": "3층"
+      }
+    }
+  },
+  {
+    "kind": "floor",
+    "id": "arch_ground",
+    "source": {
+      "title": "Plaza & Constantinian Reliefs"
+    },
+    "translations": {
+      "it": {
+        "title": "Piazza e rilievi costantiniani"
+      },
+      "es": {
+        "title": "Plaza y relieves de Constantino"
+      },
+      "fr": {
+        "title": "Place et reliefs constantiniens"
+      },
+      "de": {
+        "title": "Platz und konstantinische Reliefs"
+      },
+      "pt": {
+        "title": "Praça e relevos constantinianos"
+      },
+      "ja": {
+        "title": "広場とコンスタンティヌス時代の浮彫"
+      },
+      "ko": {
+        "title": "광장과 콘스탄티누스 시대 부조"
+      }
+    }
+  },
+  {
+    "kind": "floor",
+    "id": "arch_attic",
+    "source": {
+      "title": "Attic & Upper Terrace"
+    },
+    "translations": {
+      "it": {
+        "title": "Attico e terrazza superiore"
+      },
+      "es": {
+        "title": "Ático y terraza superior"
+      },
+      "fr": {
+        "title": "Attique et terrasse supérieure"
+      },
+      "de": {
+        "title": "Attika und obere Terrasse"
+      },
+      "pt": {
+        "title": "Ático e terraço superior"
+      },
+      "ja": {
+        "title": "アティックと上部テラス"
+      },
+      "ko": {
+        "title": "아티카와 위쪽 테라스"
+      }
+    }
+  },
+  {
+    "kind": "floor",
+    "id": "ludus_arena",
+    "source": {
+      "title": "Gladiator Arena & Cavea"
+    },
+    "translations": {
+      "it": {
+        "title": "Arena dei gladiatori e cavea"
+      },
+      "es": {
+        "title": "Arena de gladiadores y graderío"
+      },
+      "fr": {
+        "title": "Arène des gladiateurs et gradins"
+      },
+      "de": {
+        "title": "Gladiatorenarena und Zuschauerränge"
+      },
+      "pt": {
+        "title": "Arena dos gladiadores e bancadas"
+      },
+      "ja": {
+        "title": "剣闘士の闘技場と観客席"
+      },
+      "ko": {
+        "title": "검투사 경기장과 관중석"
+      }
+    }
+  },
+  {
+    "kind": "floor",
+    "id": "ludus_tunnel",
+    "source": {
+      "title": "Subterranean Tunnel to Colosseum"
+    },
+    "translations": {
+      "it": {
+        "title": "Tunnel sotterraneo verso il Colosseo"
+      },
+      "es": {
+        "title": "Túnel subterráneo hacia el Coliseo"
+      },
+      "fr": {
+        "title": "Tunnel souterrain vers le Colisée"
+      },
+      "de": {
+        "title": "Unterirdischer Tunnel zum Kolosseum"
+      },
+      "pt": {
+        "title": "Túnel subterrâneo para o Coliseu"
+      },
+      "ja": {
+        "title": "コロッセオへ続く地下トンネル"
+      },
+      "ko": {
+        "title": "콜로세움으로 이어지는 지하 터널"
+      }
+    }
+  },
+  {
+    "kind": "floor",
+    "id": "temple_east",
+    "source": {
+      "title": "Venus Cella & East Terrace"
+    },
+    "translations": {
+      "it": {
+        "title": "Cella di Venere e terrazza orientale"
+      },
+      "es": {
+        "title": "Cella de Venus y terraza oriental"
+      },
+      "fr": {
+        "title": "Cella de Vénus et terrasse est"
+      },
+      "de": {
+        "title": "Cella der Venus und Ostterrasse"
+      },
+      "pt": {
+        "title": "Cela de Vénus e terraço oriental"
+      },
+      "ja": {
+        "title": "ウェヌスの神室と東テラス"
+      },
+      "ko": {
+        "title": "베누스의 신실과 동쪽 테라스"
+      }
+    }
+  },
+  {
+    "kind": "floor",
+    "id": "temple_west",
+    "source": {
+      "title": "Roma Cella & Forum Belvedere"
+    },
+    "translations": {
+      "it": {
+        "title": "Cella di Roma e belvedere sul Foro"
+      },
+      "es": {
+        "title": "Cella de Roma y mirador del Foro"
+      },
+      "fr": {
+        "title": "Cella de Rome et belvédère du Forum"
+      },
+      "de": {
+        "title": "Cella der Roma und Aussichtspunkt am Forum"
+      },
+      "pt": {
+        "title": "Cela de Roma e miradouro do Fórum"
+      },
+      "ja": {
+        "title": "ローマの神室とフォルムの展望台"
+      },
+      "ko": {
+        "title": "로마 여신의 신실과 포룸 전망대"
+      }
+    }
+  },
+  {
+    "kind": "floor",
+    "id": "forum_via_sacra",
+    "source": {
+      "title": "Via Sacra & Triumphal Way"
+    },
+    "translations": {
+      "it": {
+        "title": "Via Sacra e percorso trionfale"
+      },
+      "es": {
+        "title": "Vía Sacra y recorrido triunfal"
+      },
+      "fr": {
+        "title": "Via Sacra et voie triomphale"
+      },
+      "de": {
+        "title": "Via Sacra und Triumphweg"
+      },
+      "pt": {
+        "title": "Via Sacra e percurso triunfal"
+      },
+      "ja": {
+        "title": "ウィア・サクラと凱旋路"
+      },
+      "ko": {
+        "title": "비아 사크라와 개선 행렬로"
+      }
+    }
+  },
+  {
+    "kind": "floor",
+    "id": "forum_senate_rostra",
+    "source": {
+      "title": "Senate, Curia & The Rostra"
+    },
+    "translations": {
+      "it": {
+        "title": "Senato, Curia e Rostri"
+      },
+      "es": {
+        "title": "Senado, Curia y Rostros"
+      },
+      "fr": {
+        "title": "Sénat, Curie et Rostres"
+      },
+      "de": {
+        "title": "Senat, Kurie und Rostra"
+      },
+      "pt": {
+        "title": "Senado, Cúria e Rostros"
+      },
+      "ja": {
+        "title": "元老院、クリア、ロストラ"
+      },
+      "ko": {
+        "title": "원로원, 쿠리아, 로스트라"
+      }
+    }
+  },
+  {
+    "kind": "viewpoint",
+    "id": "vp_100",
+    "source": {
+      "title": "Spectacles in the Colosseum Arena Floor. The Superstars",
+      "description": "Spectacles in the Colosseum Arena Floor. The Superstars"
+    },
+    "translations": {
+      "it": {
+        "title": "Gli spettacoli nell’arena del Colosseo e le loro star"
+      },
+      "es": {
+        "title": "Los espectáculos de la arena del Coliseo y sus estrellas"
+      },
+      "fr": {
+        "title": "Les spectacles de l’arène du Colisée et leurs vedettes"
+      },
+      "de": {
+        "title": "Die Schauspiele in der Arena des Kolosseums und ihre Stars"
+      },
+      "pt": {
+        "title": "Os espetáculos na arena do Coliseu e as suas estrelas"
+      },
+      "ja": {
+        "title": "コロッセオの闘技場の見世物とその花形たち"
+      },
+      "ko": {
+        "title": "콜로세움 경기장의 공연과 인기 스타"
+      }
+    }
+  },
+  {
+    "kind": "viewpoint",
+    "id": "vp_101",
+    "source": {
+      "title": "Access to the Underground Levels: East & West Ramps, Ludus Magnus Tunnels & Fosso Labicano Ditch",
+      "description": "Access to the Underground Levels: East & West Ramps, Ludus Magnus Tunnels & Fosso Labicano Ditch"
+    },
+    "translations": {
+      "it": {
+        "title": "Accessi ai sotterranei: rampe est e ovest, tunnel del Ludus Magnus e fosso Labicano"
+      },
+      "es": {
+        "title": "Accesos al subsuelo: rampas este y oeste, túneles del Ludus Magnus y foso Labicano"
+      },
+      "fr": {
+        "title": "Accès aux souterrains : rampes est et ouest, tunnels du Ludus Magnus et fossé Labicano"
+      },
+      "de": {
+        "title": "Zugänge zum Untergeschoss: Ost- und Westrampen, Tunnel des Ludus Magnus und Fosso Labicano"
+      },
+      "pt": {
+        "title": "Acessos aos subterrâneos: rampas este e oeste, túneis do Ludus Magnus e fosso Labicano"
+      },
+      "ja": {
+        "title": "地下への入口：東西の斜路、ルドゥス・マグヌスのトンネル、ラビカーノ溝"
+      },
+      "ko": {
+        "title": "지하층 출입로: 동서 경사로, 루두스 마그누스 터널과 라비카노 수로"
+      }
+    }
+  },
+  {
+    "kind": "viewpoint",
+    "id": "vp_102",
+    "source": {
+      "title": "General Introduction to the Underground Levels & Different Phases of Development",
+      "description": "General Introduction to the Underground Levels & Different Phases of Development"
+    },
+    "translations": {
+      "it": {
+        "title": "Introduzione ai sotterranei e alle loro fasi di sviluppo"
+      },
+      "es": {
+        "title": "Introducción a los subterráneos y sus fases de desarrollo"
+      },
+      "fr": {
+        "title": "Introduction aux souterrains et à leurs phases d’aménagement"
+      },
+      "de": {
+        "title": "Einführung in die Untergeschosse und ihre Bauphasen"
+      },
+      "pt": {
+        "title": "Introdução aos subterrâneos e às suas fases de desenvolvimento"
+      },
+      "ja": {
+        "title": "地下施設の概要と整備の変遷"
+      },
+      "ko": {
+        "title": "지하 시설 개요와 조성 단계"
+      }
+    }
+  },
+  {
+    "kind": "viewpoint",
+    "id": "vp_103",
+    "source": {
+      "title": "The Hoists: The Flavian Phase with Large Perimetral Lifts",
+      "description": "The Hoists: The Flavian Phase with Large Perimetral Lifts"
+    },
+    "translations": {
+      "it": {
+        "title": "I montacarichi: la fase flavia con grandi elevatori perimetrali"
+      },
+      "es": {
+        "title": "Montacargas: la fase flavia y sus grandes elevadores perimetrales"
+      },
+      "fr": {
+        "title": "Les monte-charges : la phase flavienne et ses grands élévateurs périphériques"
+      },
+      "de": {
+        "title": "Lastenaufzüge: die flavische Phase mit großen Aufzügen am Rand"
+      },
+      "pt": {
+        "title": "Elevadores de carga: a fase flávia e os grandes elevadores periféricos"
+      },
+      "ja": {
+        "title": "昇降装置：フラウィウス朝時代の外周部の大型昇降機"
+      },
+      "ko": {
+        "title": "승강 장치: 플라비우스 왕조 시기 외곽의 대형 승강기"
+      }
+    }
+  },
+  {
+    "kind": "viewpoint",
+    "id": "vp_104",
+    "source": {
+      "title": "Corridor H: Large Ramps and the Four Galleries to the North, South, East & West",
+      "description": "Corridor H: Large Ramps and the Four Galleries to the North, South, East & West"
+    },
+    "translations": {
+      "it": {
+        "title": "Corridoio H: grandi rampe e quattro gallerie a nord, sud, est e ovest"
+      },
+      "es": {
+        "title": "Corredor H: grandes rampas y cuatro galerías al norte, sur, este y oeste"
+      },
+      "fr": {
+        "title": "Couloir H : grandes rampes et quatre galeries au nord, au sud, à l’est et à l’ouest"
+      },
+      "de": {
+        "title": "Korridor H: große Rampen und vier Galerien nach Norden, Süden, Osten und Westen"
+      },
+      "pt": {
+        "title": "Corredor H: grandes rampas e quatro galerias a norte, sul, este e oeste"
+      },
+      "ja": {
+        "title": "通路H：大きな斜路と東西南北の四つの回廊"
+      },
+      "ko": {
+        "title": "H 통로: 대형 경사로와 동서남북의 네 회랑"
+      }
+    }
+  },
+  {
+    "kind": "viewpoint",
+    "id": "vp_105",
+    "source": {
+      "title": "The Hoists After the Fire of 217 CE",
+      "description": "The Hoists After the Fire of 217 CE"
+    },
+    "translations": {
+      "it": {
+        "title": "I montacarichi dopo l’incendio del 217 d.C."
+      },
+      "es": {
+        "title": "Los montacargas tras el incendio del año 217 d. C."
+      },
+      "fr": {
+        "title": "Les monte-charges après l’incendie de 217 apr. J.-C."
+      },
+      "de": {
+        "title": "Die Lastenaufzüge nach dem Brand von 217 n. Chr."
+      },
+      "pt": {
+        "title": "Os elevadores após o incêndio de 217 d.C."
+      },
+      "ja": {
+        "title": "217年の火災後の昇降装置"
+      },
+      "ko": {
+        "title": "서기 217년 화재 이후의 승강 장치"
+      }
+    }
+  },
+  {
+    "kind": "viewpoint",
+    "id": "vp_106",
+    "source": {
+      "title": "Archaeological Excavations and Restorations in the 19th & 20th Centuries",
+      "description": "Archaeological Excavations and Restorations in the 19th & 20th Centuries"
+    },
+    "translations": {
+      "it": {
+        "title": "Scavi archeologici e restauri tra Ottocento e Novecento"
+      },
+      "es": {
+        "title": "Excavaciones arqueológicas y restauraciones de los siglos XIX y XX"
+      },
+      "fr": {
+        "title": "Fouilles archéologiques et restaurations aux XIXᵉ et XXᵉ siècles"
+      },
+      "de": {
+        "title": "Archäologische Ausgrabungen und Restaurierungen im 19. und 20. Jahrhundert"
+      },
+      "pt": {
+        "title": "Escavações arqueológicas e restauros dos séculos XIX e XX"
+      },
+      "ja": {
+        "title": "19世紀と20世紀の発掘調査と修復"
+      },
+      "ko": {
+        "title": "19세기와 20세기의 고고학 발굴과 복원"
+      }
+    }
+  },
+  {
+    "kind": "viewpoint",
+    "id": "vp_200",
+    "source": {
+      "title": "Northern Imperial Entrance & Arch 38",
+      "description": "Northern Imperial Entrance & Arch 38"
+    },
+    "translations": {
+      "it": {
+        "title": "Ingresso imperiale settentrionale e arcata 38"
+      },
+      "es": {
+        "title": "Entrada imperial norte y arco 38"
+      },
+      "fr": {
+        "title": "Entrée impériale nord et arcade 38"
+      },
+      "de": {
+        "title": "Nördlicher Kaisereingang und Bogen 38"
+      },
+      "pt": {
+        "title": "Entrada imperial norte e arco 38"
+      },
+      "ja": {
+        "title": "北側の皇帝用入口と第38アーチ"
+      },
+      "ko": {
+        "title": "북쪽 황제 전용 입구와 38번 아치"
+      }
+    }
+  },
+  {
+    "kind": "viewpoint",
+    "id": "vp_201",
+    "source": {
+      "title": "Entrance Arches & Roman Crowd-Control System",
+      "description": "Entrance Arches & Roman Crowd-Control System"
+    },
+    "translations": {
+      "it": {
+        "title": "Arcate d’ingresso e gestione delle folle nell’antica Roma"
+      },
+      "es": {
+        "title": "Arcos de entrada y organización del público romano"
+      },
+      "fr": {
+        "title": "Arcades d’entrée et gestion des foules à Rome"
+      },
+      "de": {
+        "title": "Eingangsbögen und Besucherlenkung im antiken Rom"
+      },
+      "pt": {
+        "title": "Arcos de entrada e gestão do público na Roma antiga"
+      },
+      "ja": {
+        "title": "入口のアーチと古代ローマの観客誘導"
+      },
+      "ko": {
+        "title": "입구 아치와 고대 로마의 관중 동선 관리"
+      }
+    }
+  },
+  {
+    "kind": "viewpoint",
+    "id": "vp_202",
+    "source": {
+      "title": "Vomitoria & Circulation Passages",
+      "description": "Vomitoria & Circulation Passages"
+    },
+    "translations": {
+      "it": {
+        "title": "Vomitori e passaggi di circolazione"
+      },
+      "es": {
+        "title": "Vomitorios y pasajes de circulación"
+      },
+      "fr": {
+        "title": "Vomitoires et passages de circulation"
+      },
+      "de": {
+        "title": "Vomitorien und Verbindungsgänge"
+      },
+      "pt": {
+        "title": "Vomitorios e passagens de circulação"
+      },
+      "ja": {
+        "title": "観客席の出入口と通路"
+      },
+      "ko": {
+        "title": "관중석 출입구와 이동 통로"
+      }
+    }
+  },
+  {
+    "kind": "viewpoint",
+    "id": "vp_203",
+    "source": {
+      "title": "Arena & Hypogeum Overview",
+      "description": "Arena & Hypogeum Overview"
+    },
+    "translations": {
+      "it": {
+        "title": "Panoramica dell’arena e dell’ipogeo"
+      },
+      "es": {
+        "title": "Vista general de la arena y el hipogeo"
+      },
+      "fr": {
+        "title": "Vue d’ensemble de l’arène et de l’hypogée"
+      },
+      "de": {
+        "title": "Überblick über Arena und Hypogäum"
+      },
+      "pt": {
+        "title": "Vista geral da arena e do hipogeu"
+      },
+      "ja": {
+        "title": "闘技場と地下施設の概要"
+      },
+      "ko": {
+        "title": "경기장과 지하 시설 개요"
+      }
+    }
+  },
+  {
+    "kind": "viewpoint",
+    "id": "vp_204",
+    "source": {
+      "title": "Senatorial Seating — Loca",
+      "description": "Senatorial Seating — Loca"
+    },
+    "translations": {
+      "it": {
+        "title": "Posti dei senatori, i loca"
+      },
+      "es": {
+        "title": "Asientos senatoriales, los loca"
+      },
+      "fr": {
+        "title": "Places des sénateurs, les loca"
+      },
+      "de": {
+        "title": "Senatorensitze, die Loca"
+      },
+      "pt": {
+        "title": "Assentos dos senadores, os loca"
+      },
+      "ja": {
+        "title": "元老院議員の指定席（ロカ）"
+      },
+      "ko": {
+        "title": "원로원 의원 전용 좌석, 로카"
+      }
+    }
+  },
+  {
+    "kind": "viewpoint",
+    "id": "vp_205",
+    "source": {
+      "title": "Imperial Box / Pulvinar",
+      "description": "Imperial Box / Pulvinar"
+    },
+    "translations": {
+      "it": {
+        "title": "Palco imperiale, il pulvinar"
+      },
+      "es": {
+        "title": "Palco imperial, el pulvinar"
+      },
+      "fr": {
+        "title": "Loge impériale, le pulvinar"
+      },
+      "de": {
+        "title": "Kaiserloge, das Pulvinar"
+      },
+      "pt": {
+        "title": "Tribuna imperial, o pulvinar"
+      },
+      "ja": {
+        "title": "皇帝の特別席（プルウィナール）"
+      },
+      "ko": {
+        "title": "황제 특별석, 풀비나르"
+      }
+    }
+  },
+  {
+    "kind": "viewpoint",
+    "id": "vp_206",
+    "source": {
+      "title": "Maenianum Primum — Knights\\",
+      "description": "Maenianum Primum — Knights\\"
+    },
+    "translations": {
+      "it": {
+        "title": "Maenianum primum: i cavalieri"
+      },
+      "es": {
+        "title": "Maenianum primum: los caballeros"
+      },
+      "fr": {
+        "title": "Maenianum primum : les chevaliers"
+      },
+      "de": {
+        "title": "Maenianum primum: die Ritter"
+      },
+      "pt": {
+        "title": "Maenianum primum: os cavaleiros"
+      },
+      "ja": {
+        "title": "第一区画（マエニアヌム・プリムム）：騎士階級"
+      },
+      "ko": {
+        "title": "첫 번째 관중석 구역: 기사 계층"
+      }
+    }
+  },
+  {
+    "kind": "viewpoint",
+    "id": "vp_207",
+    "source": {
+      "title": "Cavea Social Hierarchy",
+      "description": "Cavea Social Hierarchy"
+    },
+    "translations": {
+      "it": {
+        "title": "Gerarchia sociale nella cavea"
+      },
+      "es": {
+        "title": "Jerarquía social en el graderío"
+      },
+      "fr": {
+        "title": "Hiérarchie sociale dans les gradins"
+      },
+      "de": {
+        "title": "Soziale Rangordnung auf den Zuschauerrängen"
+      },
+      "pt": {
+        "title": "Hierarquia social nas bancadas"
+      },
+      "ja": {
+        "title": "観客席に表れた社会的な序列"
+      },
+      "ko": {
+        "title": "관중석에 드러난 사회적 위계"
+      }
+    }
+  },
+  {
+    "kind": "viewpoint",
+    "id": "vp_208",
+    "source": {
+      "title": "Arena Spectacles Viewpoint",
+      "description": "Arena Spectacles Viewpoint"
+    },
+    "translations": {
+      "it": {
+        "title": "Punto di osservazione degli spettacoli nell’arena"
+      },
+      "es": {
+        "title": "Mirador de los espectáculos de la arena"
+      },
+      "fr": {
+        "title": "Point de vue sur les spectacles de l’arène"
+      },
+      "de": {
+        "title": "Aussichtspunkt für die Arenaschauspiele"
+      },
+      "pt": {
+        "title": "Miradouro dos espetáculos da arena"
+      },
+      "ja": {
+        "title": "闘技場の見世物を見渡す観覧地点"
+      },
+      "ko": {
+        "title": "경기장 공연을 내려다보는 관람 지점"
+      }
+    }
+  },
+  {
+    "kind": "viewpoint",
+    "id": "vp_300",
+    "source": {
+      "title": "Second-Level Cavea Panorama",
+      "description": "Second-Level Cavea Panorama"
+    },
+    "translations": {
+      "it": {
+        "title": "Panorama della cavea dal secondo livello"
+      },
+      "es": {
+        "title": "Panorámica del graderío desde el segundo nivel"
+      },
+      "fr": {
+        "title": "Panorama des gradins depuis le deuxième niveau"
+      },
+      "de": {
+        "title": "Blick auf die Zuschauerränge von der zweiten Ebene"
+      },
+      "pt": {
+        "title": "Panorâmica das bancadas a partir do segundo nível"
+      },
+      "ja": {
+        "title": "第2層から見渡す観客席"
+      },
+      "ko": {
+        "title": "2층에서 바라본 관중석 전경"
+      }
+    }
+  },
+  {
+    "kind": "viewpoint",
+    "id": "vp_301",
+    "source": {
+      "title": "Maenianum Secundum",
+      "description": "Maenianum Secundum"
+    },
+    "translations": {
+      "it": {
+        "title": "Maenianum secundum"
+      },
+      "es": {
+        "title": "Maenianum secundum"
+      },
+      "fr": {
+        "title": "Maenianum secundum"
+      },
+      "de": {
+        "title": "Maenianum secundum"
+      },
+      "pt": {
+        "title": "Maenianum secundum"
+      },
+      "ja": {
+        "title": "第二区画（マエニアヌム・セクンドゥム）"
+      },
+      "ko": {
+        "title": "두 번째 관중석 구역, 마이니아눔 세쿤둠"
+      }
+    }
+  },
+  {
+    "kind": "viewpoint",
+    "id": "vp_302",
+    "source": {
+      "title": "Panoramic Terrace & Archaeological Landscape",
+      "description": "Panoramic Terrace & Archaeological Landscape"
+    },
+    "translations": {
+      "it": {
+        "title": "Terrazza panoramica e paesaggio archeologico"
+      },
+      "es": {
+        "title": "Terraza panorámica y paisaje arqueológico"
+      },
+      "fr": {
+        "title": "Terrasse panoramique et paysage archéologique"
+      },
+      "de": {
+        "title": "Aussichtsterrasse und archäologische Landschaft"
+      },
+      "pt": {
+        "title": "Terraço panorâmico e paisagem arqueológica"
+      },
+      "ja": {
+        "title": "展望テラスと遺跡の景観"
+      },
+      "ko": {
+        "title": "전망 테라스와 유적 경관"
+      }
+    }
+  },
+  {
+    "kind": "viewpoint",
+    "id": "vp_303",
+    "source": {
+      "title": "Colosseum Museum — Spectators & Seating",
+      "description": "Colosseum Museum — Spectators & Seating"
+    },
+    "translations": {
+      "it": {
+        "title": "Museo del Colosseo: spettatori e posti a sedere"
+      },
+      "es": {
+        "title": "Museo del Coliseo: público y asientos"
+      },
+      "fr": {
+        "title": "Musée du Colisée : spectateurs et places"
+      },
+      "de": {
+        "title": "Museum des Kolosseums: Zuschauer und Sitzplätze"
+      },
+      "pt": {
+        "title": "Museu do Coliseu: espectadores e assentos"
+      },
+      "ja": {
+        "title": "コロッセオ博物館：観客と座席"
+      },
+      "ko": {
+        "title": "콜로세움 박물관: 관중과 좌석"
+      }
+    }
+  },
+  {
+    "kind": "viewpoint",
+    "id": "vp_304",
+    "source": {
+      "title": "Colosseum Museum — Marble & Sculptural Decoration",
+      "description": "Colosseum Museum — Marble & Sculptural Decoration"
+    },
+    "translations": {
+      "it": {
+        "title": "Museo del Colosseo: marmo e decorazione scultorea"
+      },
+      "es": {
+        "title": "Museo del Coliseo: mármol y decoración escultórica"
+      },
+      "fr": {
+        "title": "Musée du Colisée : marbre et décor sculpté"
+      },
+      "de": {
+        "title": "Museum des Kolosseums: Marmor und bildhauerischer Schmuck"
+      },
+      "pt": {
+        "title": "Museu do Coliseu: mármore e decoração escultórica"
+      },
+      "ja": {
+        "title": "コロッセオ博物館：大理石と彫刻装飾"
+      },
+      "ko": {
+        "title": "콜로세움 박물관: 대리석과 조각 장식"
+      }
+    }
+  },
+  {
+    "kind": "viewpoint",
+    "id": "vp_305",
+    "source": {
+      "title": "Colosseum Through the Middle Ages",
+      "description": "Colosseum Through the Middle Ages"
+    },
+    "translations": {
+      "it": {
+        "title": "Il Colosseo nel Medioevo"
+      },
+      "es": {
+        "title": "El Coliseo en la Edad Media"
+      },
+      "fr": {
+        "title": "Le Colisée au Moyen Âge"
+      },
+      "de": {
+        "title": "Das Kolosseum im Mittelalter"
+      },
+      "pt": {
+        "title": "O Coliseu na Idade Média"
+      },
+      "ja": {
+        "title": "中世のコロッセオ"
+      },
+      "ko": {
+        "title": "중세의 콜로세움"
+      }
+    }
+  },
+  {
+    "kind": "viewpoint",
+    "id": "vp_306",
+    "source": {
+      "title": "Lucangeli Model & Reconstruction",
+      "description": "Lucangeli Model & Reconstruction"
+    },
+    "translations": {
+      "it": {
+        "title": "Il modello di Lucangeli e la ricostruzione"
+      },
+      "es": {
+        "title": "Maqueta de Lucangeli y reconstrucción"
+      },
+      "fr": {
+        "title": "Maquette de Lucangeli et reconstitution"
+      },
+      "de": {
+        "title": "Lucangelis Modell und die Rekonstruktion"
+      },
+      "pt": {
+        "title": "Maquete de Lucangeli e reconstrução"
+      },
+      "ja": {
+        "title": "ルカンジェリの模型と復元"
+      },
+      "ko": {
+        "title": "루칸젤리의 모형과 복원"
+      }
+    }
+  },
+  {
+    "kind": "viewpoint",
+    "id": "vp_400",
+    "source": {
+      "title": "Intermediate Gallery — Approach to Level 3",
+      "description": "Intermediate Gallery — Approach to Level 3"
+    },
+    "translations": {
+      "it": {
+        "title": "Galleria intermedia verso il terzo livello"
+      },
+      "es": {
+        "title": "Galería intermedia hacia el nivel 3"
+      },
+      "fr": {
+        "title": "Galerie intermédiaire vers le niveau 3"
+      },
+      "de": {
+        "title": "Zwischengalerie auf dem Weg zu Ebene 3"
+      },
+      "pt": {
+        "title": "Galeria intermédia a caminho do nível 3"
+      },
+      "ja": {
+        "title": "第3層に向かう中間回廊"
+      },
+      "ko": {
+        "title": "3층으로 이어지는 중간 회랑"
+      }
+    }
+  },
+  {
+    "kind": "viewpoint",
+    "id": "vp_401",
+    "source": {
+      "title": "Roman Water Management System",
+      "description": "Roman Water Management System"
+    },
+    "translations": {
+      "it": {
+        "title": "Il sistema idraulico romano"
+      },
+      "es": {
+        "title": "Sistema romano de gestión del agua"
+      },
+      "fr": {
+        "title": "Gestion de l’eau à l’époque romaine"
+      },
+      "de": {
+        "title": "Die römische Wasserwirtschaft"
+      },
+      "pt": {
+        "title": "Sistema romano de gestão da água"
+      },
+      "ja": {
+        "title": "古代ローマの水管理システム"
+      },
+      "ko": {
+        "title": "고대 로마의 물 관리 체계"
+      }
+    }
+  },
+  {
+    "kind": "viewpoint",
+    "id": "vp_402",
+    "source": {
+      "title": "Tituli Picti — Ancient Red Inscriptions",
+      "description": "Tituli Picti — Ancient Red Inscriptions"
+    },
+    "translations": {
+      "it": {
+        "title": "Tituli picti: antiche iscrizioni in rosso"
+      },
+      "es": {
+        "title": "Tituli picti: antiguas inscripciones rojas"
+      },
+      "fr": {
+        "title": "Tituli picti : anciennes inscriptions rouges"
+      },
+      "de": {
+        "title": "Tituli picti: antike rote Inschriften"
+      },
+      "pt": {
+        "title": "Tituli picti: antigas inscrições a vermelho"
+      },
+      "ja": {
+        "title": "ティトゥリ・ピクティ：古代の赤い銘文"
+      },
+      "ko": {
+        "title": "티툴리 픽티: 고대의 붉은 명문"
+      }
+    }
+  },
+  {
+    "kind": "viewpoint",
+    "id": "vp_403",
+    "source": {
+      "title": "Third-Level Cavea / Upper Seating",
+      "description": "Third-Level Cavea / Upper Seating"
+    },
+    "translations": {
+      "it": {
+        "title": "Cavea del terzo livello e gradinate superiori"
+      },
+      "es": {
+        "title": "Graderío del tercer nivel y asientos superiores"
+      },
+      "fr": {
+        "title": "Gradins du troisième niveau et places supérieures"
+      },
+      "de": {
+        "title": "Zuschauerränge der dritten Ebene und obere Sitze"
+      },
+      "pt": {
+        "title": "Bancadas do terceiro nível e assentos superiores"
+      },
+      "ja": {
+        "title": "第3層の観客席と上段の座席"
+      },
+      "ko": {
+        "title": "3층 관중석과 상단 좌석"
+      }
+    }
+  },
+  {
+    "kind": "viewpoint",
+    "id": "vp_404",
+    "source": {
+      "title": "Upper Levels & Belvedere View",
+      "description": "Upper Levels & Belvedere View"
+    },
+    "translations": {
+      "it": {
+        "title": "Livelli superiori e vista dal belvedere"
+      },
+      "es": {
+        "title": "Niveles superiores y vistas desde el mirador"
+      },
+      "fr": {
+        "title": "Niveaux supérieurs et vue depuis le belvédère"
+      },
+      "de": {
+        "title": "Obere Ebenen und Blick vom Belvedere"
+      },
+      "pt": {
+        "title": "Níveis superiores e vista do miradouro"
+      },
+      "ja": {
+        "title": "上層階と展望台からの眺め"
+      },
+      "ko": {
+        "title": "상층과 전망대에서 바라본 풍경"
+      }
+    }
+  },
+  {
+    "kind": "viewpoint",
+    "id": "vp_arch_200",
+    "source": {
+      "title": "South Facade: The Battle of the Milvian Bridge & Siege of Verona",
+      "description": "South Facade: The Battle of the Milvian Bridge & Siege of Verona"
+    },
+    "translations": {
+      "it": {
+        "title": "Facciata sud: battaglia di Ponte Milvio e assedio di Verona"
+      },
+      "es": {
+        "title": "Fachada sur: batalla del puente Milvio y asedio de Verona"
+      },
+      "fr": {
+        "title": "Façade sud : bataille du pont Milvius et siège de Vérone"
+      },
+      "de": {
+        "title": "Südfassade: Schlacht an der Milvischen Brücke und Belagerung von Verona"
+      },
+      "pt": {
+        "title": "Fachada sul: batalha da Ponte Mílvia e cerco de Verona"
+      },
+      "ja": {
+        "title": "南側の正面：ミルウィウス橋の戦いとヴェローナの包囲"
+      },
+      "ko": {
+        "title": "남쪽 정면: 밀비우스 다리 전투와 베로나 공방전"
+      }
+    }
+  },
+  {
+    "kind": "viewpoint",
+    "id": "vp_arch_201",
+    "source": {
+      "title": "The Central Fornix & Inscription: \"Instinctu Divinitatis\"",
+      "description": "The Central Fornix & Inscription: \"Instinctu Divinitatis\""
+    },
+    "translations": {
+      "it": {
+        "title": "Fornice centrale e iscrizione «Instinctu Divinitatis»"
+      },
+      "es": {
+        "title": "Arco central e inscripción «Instinctu Divinitatis»"
+      },
+      "fr": {
+        "title": "Baie centrale et inscription « Instinctu Divinitatis »"
+      },
+      "de": {
+        "title": "Zentraler Durchgang und Inschrift „Instinctu Divinitatis“"
+      },
+      "pt": {
+        "title": "Arco central e inscrição «Instinctu Divinitatis»"
+      },
+      "ja": {
+        "title": "中央のアーチと「Instinctu Divinitatis」の銘文"
+      },
+      "ko": {
+        "title": "중앙 아치와 ‘Instinctu Divinitatis’ 명문"
+      }
+    }
+  },
+  {
+    "kind": "viewpoint",
+    "id": "vp_arch_202",
+    "source": {
+      "title": "North Facade: Trajanic Dacian Prisoners & Marcus Aurelius Panels",
+      "description": "North Facade: Trajanic Dacian Prisoners & Marcus Aurelius Panels"
+    },
+    "translations": {
+      "it": {
+        "title": "Facciata nord: prigionieri daci di epoca traianea e pannelli di Marco Aurelio"
+      },
+      "es": {
+        "title": "Fachada norte: prisioneros dacios de época de Trajano y paneles de Marco Aurelio"
+      },
+      "fr": {
+        "title": "Façade nord : prisonniers daces de l’époque de Trajan et panneaux de Marc Aurèle"
+      },
+      "de": {
+        "title": "Nordfassade: dakische Gefangene aus der Zeit Trajans und Reliefplatten Mark Aurels"
+      },
+      "pt": {
+        "title": "Fachada norte: prisioneiros dácios da época de Trajano e painéis de Marco Aurélio"
+      },
+      "ja": {
+        "title": "北側の正面：トラヤヌス時代のダキア人捕虜像とマルクス・アウレリウスの浮彫"
+      },
+      "ko": {
+        "title": "북쪽 정면: 트라야누스 시대의 다키아인 포로상과 마르쿠스 아우렐리우스 부조"
+      }
+    }
+  },
+  {
+    "kind": "viewpoint",
+    "id": "vp_arch_203",
+    "source": {
+      "title": "Lateral Medallions: Hadrianic Hunts, Sol and Luna Chariots",
+      "description": "Lateral Medallions: Hadrianic Hunts, Sol and Luna Chariots"
+    },
+    "translations": {
+      "it": {
+        "title": "Medaglioni laterali: cacce adrianee e carri di Sole e Luna"
+      },
+      "es": {
+        "title": "Medallones laterales: cacerías de Adriano y carros del Sol y la Luna"
+      },
+      "fr": {
+        "title": "Médaillons latéraux : chasses d’Hadrien et chars du Soleil et de la Lune"
+      },
+      "de": {
+        "title": "Seitliche Medaillons: Hadrians Jagdszenen und die Wagen von Sol und Luna"
+      },
+      "pt": {
+        "title": "Medalhões laterais: caçadas de Adriano e carros do Sol e da Lua"
+      },
+      "ja": {
+        "title": "側面の円形浮彫：ハドリアヌスの狩猟と太陽神・月神の戦車"
+      },
+      "ko": {
+        "title": "측면 원형 부조: 하드리아누스의 사냥과 태양신·달의 여신의 전차"
+      }
+    }
+  },
+  {
+    "kind": "viewpoint",
+    "id": "vp_arch_204",
+    "source": {
+      "title": "The Interior Stairway & Brick Vaulted Attic Chambers",
+      "description": "The Interior Stairway & Brick Vaulted Attic Chambers"
+    },
+    "translations": {
+      "it": {
+        "title": "Scala interna e ambienti dell’attico con volte in mattoni"
+      },
+      "es": {
+        "title": "Escalera interior y cámaras del ático con bóvedas de ladrillo"
+      },
+      "fr": {
+        "title": "Escalier intérieur et salles voûtées en brique de l’attique"
+      },
+      "de": {
+        "title": "Innentreppe und ziegelgewölbte Kammern der Attika"
+      },
+      "pt": {
+        "title": "Escadaria interior e salas abobadadas em tijolo no ático"
+      },
+      "ja": {
+        "title": "内部階段とレンガのヴォールト天井を持つアティックの部屋"
+      },
+      "ko": {
+        "title": "내부 계단과 벽돌 궁륭 천장이 있는 아티카 방"
+      }
+    }
+  },
+  {
+    "kind": "viewpoint",
+    "id": "vp_arch_205",
+    "source": {
+      "title": "Panoramic Vista: The Via Triumphalis & Palatine Flank",
+      "description": "Panoramic Vista: The Via Triumphalis & Palatine Flank"
+    },
+    "translations": {
+      "it": {
+        "title": "Panorama sulla Via Triumphalis e sul fianco del Palatino"
+      },
+      "es": {
+        "title": "Panorámica de la Vía Triumphalis y la ladera del Palatino"
+      },
+      "fr": {
+        "title": "Panorama sur la Via Triumphalis et le flanc du Palatin"
+      },
+      "de": {
+        "title": "Panoramablick auf die Via Triumphalis und die Flanke des Palatin"
+      },
+      "pt": {
+        "title": "Vista panorâmica da Via Triumphalis e da encosta do Palatino"
+      },
+      "ja": {
+        "title": "ウィア・トリウンファリスとパラティーノの丘の斜面の眺め"
+      },
+      "ko": {
+        "title": "비아 트리움팔리스와 팔라티노 언덕 비탈의 전경"
+      }
+    }
+  },
+  {
+    "kind": "viewpoint",
+    "id": "vp_ludus_300",
+    "source": {
+      "title": "The Miniature Elliptical Practice Arena & Curved Cavea",
+      "description": "The Miniature Elliptical Practice Arena & Curved Cavea"
+    },
+    "translations": {
+      "it": {
+        "title": "Arena ellittica di allenamento in miniatura e cavea curva"
+      },
+      "es": {
+        "title": "Arena elíptica de entrenamiento en miniatura y graderío curvo"
+      },
+      "fr": {
+        "title": "Petite arène elliptique d’entraînement et gradins incurvés"
+      },
+      "de": {
+        "title": "Kleine elliptische Übungsarena und geschwungene Zuschauerränge"
+      },
+      "pt": {
+        "title": "Pequena arena elíptica de treino e bancadas curvas"
+      },
+      "ja": {
+        "title": "小型の楕円形練習場と弧を描く観客席"
+      },
+      "ko": {
+        "title": "작은 타원형 훈련 경기장과 곡선형 관중석"
+      }
+    }
+  },
+  {
+    "kind": "viewpoint",
+    "id": "vp_ludus_301",
+    "source": {
+      "title": "The Quadriporticus Arcades & Gladiator Cells (Cubicula)",
+      "description": "The Quadriporticus Arcades & Gladiator Cells (Cubicula)"
+    },
+    "translations": {
+      "it": {
+        "title": "Arcate del quadriportico e celle dei gladiatori, i cubicula"
+      },
+      "es": {
+        "title": "Arcadas del cuadripórtico y celdas de gladiadores (cubicula)"
+      },
+      "fr": {
+        "title": "Arcades du quadriportique et cellules des gladiateurs (cubicula)"
+      },
+      "de": {
+        "title": "Arkaden des Vierseitenportikus und Gladiatorenzellen (Cubicula)"
+      },
+      "pt": {
+        "title": "Arcadas do quadripórtico e celas dos gladiadores (cubicula)"
+      },
+      "ja": {
+        "title": "四面柱廊のアーチと剣闘士の小部屋（クビクラ）"
+      },
+      "ko": {
+        "title": "사면 주랑의 아케이드와 검투사 숙소(쿠비쿨라)"
+      }
+    }
+  },
+  {
+    "kind": "viewpoint",
+    "id": "vp_ludus_302",
+    "source": {
+      "title": "Imperial Domitianic Brickwork & Drainage Conduits",
+      "description": "Imperial Domitianic Brickwork & Drainage Conduits"
+    },
+    "translations": {
+      "it": {
+        "title": "Muratura in laterizio di epoca domizianea e condotti di drenaggio"
+      },
+      "es": {
+        "title": "Obra de ladrillo de época de Domiciano y conductos de drenaje"
+      },
+      "fr": {
+        "title": "Maçonnerie en brique de l’époque de Domitien et conduits de drainage"
+      },
+      "de": {
+        "title": "Ziegelmauerwerk aus der Zeit Domitians und Entwässerungskanäle"
+      },
+      "pt": {
+        "title": "Alvenaria de tijolo da época de Domiciano e condutas de drenagem"
+      },
+      "ja": {
+        "title": "ドミティアヌス時代のレンガ造りと排水路"
+      },
+      "ko": {
+        "title": "도미티아누스 시대의 벽돌 구조와 배수로"
+      }
+    }
+  },
+  {
+    "kind": "viewpoint",
+    "id": "vp_ludus_303",
+    "source": {
+      "title": "The Cryptoporticus Tunnel to the Colosseum Underground",
+      "description": "The Cryptoporticus Tunnel to the Colosseum Underground"
+    },
+    "translations": {
+      "it": {
+        "title": "Il criptoportico verso i sotterranei del Colosseo"
+      },
+      "es": {
+        "title": "El criptopórtico hacia los subterráneos del Coliseo"
+      },
+      "fr": {
+        "title": "Le cryptoportique vers les souterrains du Colisée"
+      },
+      "de": {
+        "title": "Der Kryptoportikus zum Untergeschoss des Kolosseums"
+      },
+      "pt": {
+        "title": "O criptopórtico para os subterrâneos do Coliseu"
+      },
+      "ja": {
+        "title": "コロッセオの地下に通じる屋根付き通路"
+      },
+      "ko": {
+        "title": "콜로세움 지하로 이어지는 지붕 있는 통로"
+      }
+    }
+  },
+  {
+    "kind": "viewpoint",
+    "id": "vp_ludus_304",
+    "source": {
+      "title": "The Saniarium (Infirmary) & Spoliarium (Morgue) Wings",
+      "description": "The Saniarium (Infirmary) & Spoliarium (Morgue) Wings"
+    },
+    "translations": {
+      "it": {
+        "title": "Ali dell’infermeria e dello spoliarium"
+      },
+      "es": {
+        "title": "Alas de la enfermería y del spoliarium"
+      },
+      "fr": {
+        "title": "Ailes de l’infirmerie et du spoliarium"
+      },
+      "de": {
+        "title": "Flügel der Krankenstation und des Spoliariums"
+      },
+      "pt": {
+        "title": "Alas da enfermaria e do spoliarium"
+      },
+      "ja": {
+        "title": "治療所と遺体安置所の区画"
+      },
+      "ko": {
+        "title": "의무실과 시신 안치소 구역"
+      }
+    }
+  },
+  {
+    "kind": "viewpoint",
+    "id": "vp_tvr_400",
+    "source": {
+      "title": "Hadrian’s Gigantic Stylobate & Monolithic Colonnade",
+      "description": "Hadrian’s Gigantic Stylobate & Monolithic Colonnade"
+    },
+    "translations": {
+      "it": {
+        "title": "L’imponente stilobate adrianeo e il colonnato monolitico"
+      },
+      "es": {
+        "title": "El enorme estilóbato de Adriano y la columnata monolítica"
+      },
+      "fr": {
+        "title": "L’immense stylobate d’Hadrien et la colonnade monolithique"
+      },
+      "de": {
+        "title": "Hadrians gewaltiger Stylobat und die monolithische Kolonnade"
+      },
+      "pt": {
+        "title": "O gigantesco estilóbato de Adriano e a colunata monolítica"
+      },
+      "ja": {
+        "title": "ハドリアヌスの巨大な柱基壇と一枚石の列柱"
+      },
+      "ko": {
+        "title": "하드리아누스의 거대한 기둥 받침단과 단일 석재 열주"
+      }
+    }
+  },
+  {
+    "kind": "viewpoint",
+    "id": "vp_tvr_401",
+    "source": {
+      "title": "The Eastern Cella: Venus Felix & Mother of Rome",
+      "description": "The Eastern Cella: Venus Felix & Mother of Rome"
+    },
+    "translations": {
+      "it": {
+        "title": "Cella orientale: Venere Felice, madre di Roma"
+      },
+      "es": {
+        "title": "Cella oriental: Venus Felix, madre de Roma"
+      },
+      "fr": {
+        "title": "Cella orientale : Vénus Felix, mère de Rome"
+      },
+      "de": {
+        "title": "Östliche Cella: Venus Felix, Mutter Roms"
+      },
+      "pt": {
+        "title": "Cela oriental: Vénus Felix, mãe de Roma"
+      },
+      "ja": {
+        "title": "東の神室：ローマの母、ウェヌス・フェリクス"
+      },
+      "ko": {
+        "title": "동쪽 신실: 로마의 어머니 베누스 펠릭스"
+      }
+    }
+  },
+  {
+    "kind": "viewpoint",
+    "id": "vp_tvr_402",
+    "source": {
+      "title": "Maxentian Apse & Rhomboid Diamond Coffering",
+      "description": "Maxentian Apse & Rhomboid Diamond Coffering"
+    },
+    "translations": {
+      "it": {
+        "title": "Abside di epoca massenziana e cassettoni a losanga"
+      },
+      "es": {
+        "title": "Ábside de Majencio y artesonado de rombos"
+      },
+      "fr": {
+        "title": "Abside de Maxence et plafond à caissons en losange"
+      },
+      "de": {
+        "title": "Apsis aus der Zeit des Maxentius und rautenförmige Kassetten"
+      },
+      "pt": {
+        "title": "Abside de Maxêncio e caixotões em losango"
+      },
+      "ja": {
+        "title": "マクセンティウス時代の後陣とひし形の格間装飾"
+      },
+      "ko": {
+        "title": "막센티우스 시대의 후진과 마름모꼴 격자 장식"
+      }
+    }
+  },
+  {
+    "kind": "viewpoint",
+    "id": "vp_tvr_403",
+    "source": {
+      "title": "The Western Cella: Roma Aeterna & The Eternal City",
+      "description": "The Western Cella: Roma Aeterna & The Eternal City"
+    },
+    "translations": {
+      "it": {
+        "title": "Cella occidentale: Roma Aeterna e la Città Eterna"
+      },
+      "es": {
+        "title": "Cella occidental: Roma Aeterna y la Ciudad Eterna"
+      },
+      "fr": {
+        "title": "Cella occidentale : Roma Aeterna et la Ville éternelle"
+      },
+      "de": {
+        "title": "Westliche Cella: Roma Aeterna und die Ewige Stadt"
+      },
+      "pt": {
+        "title": "Cela ocidental: Roma Aeterna e a Cidade Eterna"
+      },
+      "ja": {
+        "title": "西の神室：ローマ・アエテルナと永遠の都"
+      },
+      "ko": {
+        "title": "서쪽 신실: 로마 아이테르나와 영원한 도시"
+      }
+    }
+  },
+  {
+    "kind": "viewpoint",
+    "id": "vp_tvr_404",
+    "source": {
+      "title": "Forum Belvedere: Grand Overlook of Via Sacra & Titus",
+      "description": "Forum Belvedere: Grand Overlook of Via Sacra & Titus"
+    },
+    "translations": {
+      "it": {
+        "title": "Belvedere sul Foro: vista sulla Via Sacra e sull’Arco di Tito"
+      },
+      "es": {
+        "title": "Mirador del Foro: vista de la Vía Sacra y el arco de Tito"
+      },
+      "fr": {
+        "title": "Belvédère du Forum : vue sur la Via Sacra et l’arc de Titus"
+      },
+      "de": {
+        "title": "Aussichtspunkt am Forum: Blick auf die Via Sacra und den Titusbogen"
+      },
+      "pt": {
+        "title": "Miradouro do Fórum: vista da Via Sacra e do Arco de Tito"
+      },
+      "ja": {
+        "title": "フォルムの展望台：ウィア・サクラとティトゥスの凱旋門を望む"
+      },
+      "ko": {
+        "title": "포룸 전망대: 비아 사크라와 티투스 개선문 전망"
+      }
+    }
+  },
+  {
+    "kind": "viewpoint",
+    "id": "vp_forum_500",
+    "source": {
+      "title": "The Arch of Titus & The Spoils of Jerusalem",
+      "description": "The Arch of Titus & The Spoils of Jerusalem"
+    },
+    "translations": {
+      "it": {
+        "title": "L’Arco di Tito e il bottino di Gerusalemme"
+      },
+      "es": {
+        "title": "El arco de Tito y el botín de Jerusalén"
+      },
+      "fr": {
+        "title": "L’arc de Titus et le butin de Jérusalem"
+      },
+      "de": {
+        "title": "Der Titusbogen und die Beute aus Jerusalem"
+      },
+      "pt": {
+        "title": "O Arco de Tito e os despojos de Jerusalém"
+      },
+      "ja": {
+        "title": "ティトゥスの凱旋門とエルサレムからの戦利品"
+      },
+      "ko": {
+        "title": "티투스 개선문과 예루살렘의 전리품"
+      }
+    }
+  },
+  {
+    "kind": "viewpoint",
+    "id": "vp_forum_501",
+    "source": {
+      "title": "The Basilica of Maxentius and Constantine",
+      "description": "The Basilica of Maxentius and Constantine"
+    },
+    "translations": {
+      "it": {
+        "title": "La Basilica di Massenzio e Costantino"
+      },
+      "es": {
+        "title": "Basílica de Majencio y Constantino"
+      },
+      "fr": {
+        "title": "Basilique de Maxence et de Constantin"
+      },
+      "de": {
+        "title": "Basilika des Maxentius und Konstantins"
+      },
+      "pt": {
+        "title": "Basílica de Maxêncio e Constantino"
+      },
+      "ja": {
+        "title": "マクセンティウスとコンスタンティヌスのバシリカ"
+      },
+      "ko": {
+        "title": "막센티우스와 콘스탄티누스의 바실리카"
+      }
+    }
+  },
+  {
+    "kind": "viewpoint",
+    "id": "vp_forum_502",
+    "source": {
+      "title": "Temple of Antoninus and Faustina (San Lorenzo in Miranda)",
+      "description": "Temple of Antoninus and Faustina (San Lorenzo in Miranda)"
+    },
+    "translations": {
+      "it": {
+        "title": "Tempio di Antonino e Faustina (San Lorenzo in Miranda)"
+      },
+      "es": {
+        "title": "Templo de Antonino y Faustina (San Lorenzo in Miranda)"
+      },
+      "fr": {
+        "title": "Temple d’Antonin et Faustine (San Lorenzo in Miranda)"
+      },
+      "de": {
+        "title": "Tempel des Antoninus und der Faustina (San Lorenzo in Miranda)"
+      },
+      "pt": {
+        "title": "Templo de Antonino e Faustina (San Lorenzo in Miranda)"
+      },
+      "ja": {
+        "title": "アントニヌスとファウスティナ神殿（サン・ロレンツォ・イン・ミランダ）"
+      },
+      "ko": {
+        "title": "안토니누스와 파우스티나 신전(산 로렌초 인 미란다)"
+      }
+    }
+  },
+  {
+    "kind": "viewpoint",
+    "id": "vp_forum_503",
+    "source": {
+      "title": "Temple of Vesta & The House of the Vestal Virgins (Atrium Vestae)",
+      "description": "Temple of Vesta & The House of the Vestal Virgins (Atrium Vestae)"
+    },
+    "translations": {
+      "it": {
+        "title": "Tempio di Vesta e Casa delle Vestali (Atrium Vestae)"
+      },
+      "es": {
+        "title": "Templo de Vesta y casa de las vestales (Atrium Vestae)"
+      },
+      "fr": {
+        "title": "Temple de Vesta et maison des Vestales (Atrium Vestae)"
+      },
+      "de": {
+        "title": "Vestatempel und Haus der Vestalinnen (Atrium Vestae)"
+      },
+      "pt": {
+        "title": "Templo de Vesta e Casa das Vestais (Atrium Vestae)"
+      },
+      "ja": {
+        "title": "ウェスタ神殿とウェスタの巫女の館（アトリウム・ウェスタエ）"
+      },
+      "ko": {
+        "title": "베스타 신전과 베스타 여사제의 집(아트리움 베스타이)"
+      }
+    }
+  },
+  {
+    "kind": "viewpoint",
+    "id": "vp_forum_504",
+    "source": {
+      "title": "Curia Julia: The Roman Senate House",
+      "description": "Curia Julia: The Roman Senate House"
+    },
+    "translations": {
+      "it": {
+        "title": "Curia Iulia: sede del Senato romano"
+      },
+      "es": {
+        "title": "Curia Julia: sede del Senado romano"
+      },
+      "fr": {
+        "title": "Curie Julia : siège du Sénat romain"
+      },
+      "de": {
+        "title": "Curia Iulia: Sitz des römischen Senats"
+      },
+      "pt": {
+        "title": "Cúria Júlia: sede do Senado romano"
+      },
+      "ja": {
+        "title": "クリア・ユリア：ローマ元老院の議事堂"
+      },
+      "ko": {
+        "title": "쿠리아 율리아: 로마 원로원 회의장"
+      }
+    }
+  },
+  {
+    "kind": "viewpoint",
+    "id": "vp_forum_505",
+    "source": {
+      "title": "The Rostra: The Imperial Speaker’s Platform",
+      "description": "The Rostra: The Imperial Speaker’s Platform"
+    },
+    "translations": {
+      "it": {
+        "title": "I Rostri: la tribuna degli oratori in età imperiale"
+      },
+      "es": {
+        "title": "Los Rostros: tribuna de oradores de época imperial"
+      },
+      "fr": {
+        "title": "Les Rostres : tribune des orateurs à l’époque impériale"
+      },
+      "de": {
+        "title": "Die Rostra: Rednertribüne der Kaiserzeit"
+      },
+      "pt": {
+        "title": "Os Rostros: tribuna de oradores da época imperial"
+      },
+      "ja": {
+        "title": "ロストラ：帝政期の演壇"
+      },
+      "ko": {
+        "title": "로스트라: 제정 시대의 연설대"
+      }
+    }
+  },
+  {
+    "kind": "viewpoint",
+    "id": "vp_forum_506",
+    "source": {
+      "title": "Temple of Saturn & The State Treasury (Aerarium)",
+      "description": "Temple of Saturn & The State Treasury (Aerarium)"
+    },
+    "translations": {
+      "it": {
+        "title": "Tempio di Saturno e tesoro dello Stato (Aerarium)"
+      },
+      "es": {
+        "title": "Templo de Saturno y tesoro público (Aerarium)"
+      },
+      "fr": {
+        "title": "Temple de Saturne et trésor public (Aerarium)"
+      },
+      "de": {
+        "title": "Saturntempel und Staatskasse (Aerarium)"
+      },
+      "pt": {
+        "title": "Templo de Saturno e tesouro do Estado (Aerarium)"
+      },
+      "ja": {
+        "title": "サトゥルヌス神殿と国庫（アエラリウム）"
+      },
+      "ko": {
+        "title": "사투르누스 신전과 국고(아이 라리움)"
+      }
+    }
+  }
+]

@@ -1,8 +1,12 @@
 import { Floor } from '../models/Floor.js';
+import { isObjectIdOrHexString } from 'mongoose';
 import { Viewpoint } from '../models/Viewpoint.js';
 import * as FloorDTO from '@dtos/floorDTO.js';
-import crypto from 'crypto';
-import { TourSyncManifest } from '../models/TourSyncManifest.js';
+import { bumpTourManifest } from '@utils/tourManifest.js';
+
+const floorFilter = (id: string) => isObjectIdOrHexString(id)
+  ? { $or: [{ floorId: id }, { _id: id }] }
+  : { floorId: id };
 
 export default class FloorRepository {
   private toDTO(doc: any, viewpointCount?: number): FloorDTO.Floor {
@@ -34,7 +38,7 @@ export default class FloorRepository {
 
   async Create(data: FloorDTO.CreateFloor): Promise<FloorDTO.Floor> {
     const created = await Floor.create(data);
-    await this.touchManifest();
+    await bumpTourManifest();
     return this.toDTO(created);
   }
 
@@ -65,7 +69,7 @@ export default class FloorRepository {
   }
 
   async GetByID(id: string): Promise<FloorDTO.Floor | null> {
-    const doc = await Floor.findOne({ $or: [{ floorId: id }, { _id: id }] }).lean().exec();
+    const doc = await Floor.findOne(floorFilter(id)).lean().exec();
     if (!doc) return null;
     const vpCount = await Viewpoint.countDocuments({ floorId: doc.floorId });
     return this.toDTO(doc, vpCount);
@@ -73,34 +77,25 @@ export default class FloorRepository {
 
   async Update(id: string, data: FloorDTO.UpdateFloor): Promise<FloorDTO.Floor | null> {
     const updated = await Floor.findOneAndUpdate(
-      { $or: [{ floorId: id }, { _id: id }] },
+      floorFilter(id),
       { $set: data },
       { new: true, runValidators: true }
     ).lean().exec();
 
     if (!updated) return null;
-    await this.touchManifest();
+    await bumpTourManifest();
     const vpCount = await Viewpoint.countDocuments({ floorId: updated.floorId });
     return this.toDTO(updated, vpCount);
   }
 
   async Remove(id: string): Promise<boolean> {
-    const res = await Floor.findOneAndDelete({ $or: [{ floorId: id }, { _id: id }] }).exec();
+    const res = await Floor.findOneAndDelete(floorFilter(id)).exec();
     if (res) {
-      await this.touchManifest();
+      await bumpTourManifest();
       return true;
     }
     return false;
   }
 
-  private async touchManifest(): Promise<void> {
-    try {
-      const current = await TourSyncManifest.findOne({ isCurrent: true });
-      if (current) {
-        current.contentHash = crypto.randomBytes(16).toString('hex');
-        current.updatedAt = new Date();
-        await current.save();
-      }
-    } catch (_) {}
-  }
+
 }

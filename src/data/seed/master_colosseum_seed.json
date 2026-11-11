@@ -15,21 +15,6 @@
       "ko"
     ]
   },
-  "parkConfig": {
-    "configKey": "archaeological_park_colosseum",
-    "centerCoordinates": {
-      "latitude": 41.89021,
-      "longitude": 12.492231
-    },
-    "boundaryRadiusMeters": 600.0,
-    "proximityThresholds": {
-      "colosseum": 120.0,
-      "romanForum": 100.0,
-      "archConstantine": 70.0,
-      "ludusMagnus": 80.0,
-      "templeVenusRome": 80.0
-    }
-  },
   "landmarks": [
     {
       "code": "colosseum",
@@ -173,25 +158,6 @@
         "widthMeters": 145.0,
         "heightMeters": 100.0
       },
-      "calibration": {
-        "rotationDegrees": -30.0,
-        "anchorX": 0.5,
-        "anchorY": 0.5
-      },
-      "display": {
-        "zIndex": 7,
-        "minZoom": 13.0,
-        "maxZoom": 21.0
-      },
-      "marker": {
-        "colorHex": "#8E24AA",
-        "category": "Ancient Temple",
-        "iconName": "temple_buddhist_rounded",
-        "labelOffsetY": -22
-      },
-      "isPublished": true
-    }
-  ],
       "calibration": {
         "rotationDegrees": -30.0,
         "anchorX": 0.5,

@@ -72,10 +72,15 @@ export default class AuthController {
     });
   };
 
+  CreateUser = async (req: Request, res: Response): Promise<void> => {
+    const user = await this.authService.CreateUser(req.user!, req.validatedBody);
+    ResponseHandler.send(res, HttpStatus.CREATED.code, { data: user });
+  };
+
   UpdateUserRole = async (req: Request, res: Response): Promise<void> => {
     const id = req.validatedParams.id;
     const { role } = req.validatedBody;
-    const updated = await this.authService.UpdateUserRole(id, role);
+    const updated = await this.authService.UpdateUserDetails(req.user!, id, { role });
     ResponseHandler.send(res, HttpStatus.OK.code, {
       data: updated,
       message: 'User role updated successfully',
@@ -85,7 +90,7 @@ export default class AuthController {
   UpdateUserDetails = async (req: Request, res: Response): Promise<void> => {
     const id = req.validatedParams.id;
     const data = req.validatedBody;
-    const updated = await this.authService.UpdateUserDetails(id, data);
+    const updated = await this.authService.UpdateUserDetails(req.user!, id, data);
     ResponseHandler.send(res, HttpStatus.OK.code, {
       data: updated,
       message: 'User details updated successfully',
@@ -94,7 +99,7 @@ export default class AuthController {
 
   RemoveUser = async (req: Request, res: Response): Promise<void> => {
     const id = req.validatedParams.id;
-    await this.authService.RemoveUser(id);
+    await this.authService.RemoveUser(req.user!, id);
     ResponseHandler.send(res, HttpStatus.OK.code, {
       message: 'User removed successfully',
     });

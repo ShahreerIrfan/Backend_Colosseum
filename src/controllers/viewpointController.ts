@@ -3,6 +3,7 @@ import ViewpointService from '@services/viewpointService.js';
 import ResponseHandler from '@utils/responseHandler.js';
 import { clearCachePattern } from '@utils/redisUtils.js';
 import { HttpConstants, MessageConstants } from '@constants/allConstant.js';
+import { AuthenticationError } from '@errors/concreteErrors.js';
 
 const HttpStatus = HttpConstants.statusCode;
 const Message = MessageConstants.responseMessage.viewpointController;
@@ -49,8 +50,10 @@ export default class ViewpointController {
   UpdateViewpoint = async (req: Request, res: Response): Promise<void> => {
     const id = req.validatedParams.id;
     const data = req.validatedBody;
-    const updated = await this.viewpointService.UpdateViewpoint(id, data);
+    if (!req.user) throw new AuthenticationError('Authentication is required.');
+    const updated = await this.viewpointService.UpdateViewpoint(id, data, req.user);
 
+    await clearCachePattern('viewpoint:*');
     await clearCachePattern('viewpoints:*');
     await clearCachePattern('sync:*');
     await clearCachePattern('tours:*');
@@ -64,6 +67,7 @@ export default class ViewpointController {
     const id = req.validatedParams.id;
     await this.viewpointService.RemoveViewpoint(id);
 
+    await clearCachePattern('viewpoint:*');
     await clearCachePattern('viewpoints:*');
     await clearCachePattern('sync:*');
     await clearCachePattern('tours:*');

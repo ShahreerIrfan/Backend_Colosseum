@@ -2,8 +2,8 @@ import { z } from 'zod';
 import { BaseQuerySchema } from './commonItemDTO.js';
 
 export const WaypointSchema = z.object({
-  latitude: z.number(),
-  longitude: z.number(),
+  latitude: z.number().min(-90).max(90),
+  longitude: z.number().min(-180).max(180),
 });
 
 export const PedestrianRouteSchema = z.object({
@@ -17,6 +17,12 @@ export const PedestrianRouteSchema = z.object({
   waypoints: z.array(WaypointSchema).min(2, 'Route requires at least 2 waypoints'),
   isAccessibleWheelchair: z.boolean().default(true),
   isPublished: z.boolean().default(true),
+  isOneWay: z.boolean().optional(),
+  instruction: z.string().trim().max(2000).optional(),
+  instructionTranslations: z.record(
+    z.string().regex(/^[a-z]{2,3}(-[a-zA-Z0-9]{2,8})*$/),
+    z.string().trim().min(1).max(2000),
+  ).optional(),
   created_at: z.date().optional(),
   updated_at: z.date().optional(),
 });
@@ -27,7 +33,10 @@ export const CreatePedestrianRouteSchema = PedestrianRouteSchema.omit({
   updated_at: true,
 });
 
-export const UpdatePedestrianRouteSchema = CreatePedestrianRouteSchema.partial();
+export const UpdatePedestrianRouteSchema = CreatePedestrianRouteSchema.extend({
+  isAccessibleWheelchair: z.boolean(),
+  isPublished: z.boolean(),
+}).partial();
 
 export const QueryPedestrianRouteSchema = BaseQuerySchema.extend({
   fromLandmarkCode: z.string().optional(),

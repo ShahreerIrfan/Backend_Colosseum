@@ -4,7 +4,7 @@ export interface IUserDocument extends Document {
   name: string;
   email: string;
   password: string;
-  role: 'SUPER_ADMIN' | 'ADMIN' | 'MODERATOR' | 'USER';
+  role: string;
   assignedFloorIds: string[];
   is_active: boolean;
   is_deleted: boolean;
@@ -20,7 +20,7 @@ const UserSchema = new Schema<IUserDocument>(
     password: { type: String, required: true },
     role: {
       type: String,
-      enum: ['SUPER_ADMIN', 'ADMIN', 'MODERATOR', 'USER'],
+      match: /^(SUPER_ADMIN|ADMIN|MODERATOR|USER|CUSTOM_[a-f0-9]{24})$/,
       default: 'USER',
     },
     assignedFloorIds: { type: [String], default: [] },

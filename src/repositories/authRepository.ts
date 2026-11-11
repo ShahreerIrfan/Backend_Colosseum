@@ -26,9 +26,9 @@ export default class AuthRepository {
     return this.mapToDTO(user);
   }
 
-  async Update(id: string, data: Partial<AuthDTO.User>): Promise<AuthDTO.User | null> {
+  async Update(id: string, data: Partial<AuthDTO.User>, expectedRole: string): Promise<AuthDTO.User | null> {
     const updated = await User.findOneAndUpdate(
-      { _id: id, is_deleted: false },
+      { _id: id, is_deleted: false, role: expectedRole },
       { $set: data },
       { new: true, runValidators: true }
     )
@@ -55,7 +55,7 @@ export default class AuthRepository {
     const skip = (page - 1) * limit;
 
     const [users, total] = await Promise.all([
-      User.find({ is_deleted: false }).skip(skip).limit(limit).sort({ created_at: -1 }).lean().exec(),
+      User.find({ is_deleted: false }).sort({ created_at: -1, _id: -1 }).skip(skip).limit(limit).lean().exec(),
       User.countDocuments({ is_deleted: false }).exec(),
     ]);
 
@@ -65,9 +65,9 @@ export default class AuthRepository {
     };
   }
 
-  async Remove(id: string): Promise<boolean> {
+  async Remove(id: string, expectedRole: string): Promise<boolean> {
     const res = await User.updateOne(
-      { _id: id, is_deleted: false },
+      { _id: id, is_deleted: false, role: expectedRole },
       { $set: { is_deleted: true, is_active: false, deleted_at: new Date() } }
     ).exec();
     return res.modifiedCount > 0;

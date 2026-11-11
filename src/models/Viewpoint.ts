@@ -5,9 +5,10 @@ const LocalizedContentSchema = new Schema<LocalizedContent>(
   {
     title: { type: String, required: true },
     description: { type: String, required: true },
-    audioUrl: { type: String, default: '' },
-    audioCloudinaryPublicId: { type: String, default: '' },
-    audioDuration: { type: String, default: '3 min' },
+    // Optional fields kept to read historical public audio previews.
+    audioUrl: String,
+    audioCloudinaryPublicId: String,
+    audioDuration: String,
   },
   { _id: false }
 );

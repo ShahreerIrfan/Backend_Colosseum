@@ -3,6 +3,7 @@ import ViewpointController from '@controllers/viewpointController.js';
 import { Validator } from '@middlewares/requestValidator.js';
 import authenticateToken from '@middlewares/authenticateToken.js';
 import { authorizeRole } from '@middlewares/authorizeRoles.js';
+import { managedRolePermission } from '@middlewares/requirePermission.js';
 import { cacheMiddleware } from '@middlewares/redisCache.js';
 import * as ViewpointDTO from '@dtos/viewpointDTO.js';
 import * as CommonItemDTO from '@dtos/commonItemDTO.js';
@@ -19,9 +20,9 @@ router
   )
   .post(
     authenticateToken,
-    authorizeRole.hasRole('SUPER_ADMIN', 'ADMIN', 'MODERATOR'),
+    managedRolePermission('Viewpoint Hotspots', 'Create', authorizeRole.hasRole('SUPER_ADMIN', 'ADMIN', 'MODERATOR')),
     Validator.body(ViewpointDTO.CreateViewpointSchema),
-    authorizeRole.requireFloorAssignment(),
+    managedRolePermission('Viewpoint Hotspots', 'Create', authorizeRole.requireFloorAssignment()),
     viewpointController.CreateViewpoint
   );
 
@@ -31,11 +32,10 @@ router
   .get(cacheMiddleware('viewpoint'), viewpointController.GetViewpointByID)
   .patch(
     authenticateToken,
-    authorizeRole.hasRole('SUPER_ADMIN', 'ADMIN', 'MODERATOR'),
+    managedRolePermission('Viewpoint Hotspots', 'Update', authorizeRole.hasRole('SUPER_ADMIN', 'ADMIN', 'MODERATOR')),
     Validator.body(ViewpointDTO.UpdateViewpointSchema),
-    authorizeRole.requireFloorAssignment(),
     viewpointController.UpdateViewpoint
   )
-  .delete(authenticateToken, authorizeRole.adminOnly, viewpointController.RemoveViewpoint);
+  .delete(authenticateToken, managedRolePermission('Viewpoint Hotspots', 'Delete', authorizeRole.adminOnly), viewpointController.RemoveViewpoint);
 
 export default router;

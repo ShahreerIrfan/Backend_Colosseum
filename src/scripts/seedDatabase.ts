@@ -5,6 +5,7 @@ import bcrypt from 'bcrypt';
 import { fileURLToPath } from 'node:url';
 import { connectDB, disconnectDB } from '@config/db.js';
 import { EnvConstant } from '@constants/allConstant.js';
+import { loadVisitorTranslations, syncVisitorTranslations } from './visitorTranslations.js';
 import {
   Floor,
   Viewpoint,
@@ -14,7 +15,6 @@ import {
   Ticket,
   TourSyncManifest,
   PedestrianRoute,
-  ParkConfig,
   User,
 } from '../models/index.js';
 
@@ -56,6 +56,7 @@ export const seedDatabase = async ({
 
   console.log(`📖 Loading seed data from: ${seedFilePath}`);
   const seedData = JSON.parse(fs.readFileSync(seedFilePath, 'utf-8'));
+  const visitorTranslations = await loadVisitorTranslations();
 
   // 1. Clear existing collections
   console.log('🧹 Purging existing collections...');
@@ -68,7 +69,6 @@ export const seedDatabase = async ({
     Ticket.deleteMany({}),
     TourSyncManifest.deleteMany({}),
     PedestrianRoute.deleteMany({}),
-    ParkConfig.deleteMany({}),
     User.deleteMany({ email: { $in: ['admin@colosseumtour.it', 'curator@colosseumtour.it'] } }),
   ]);
 
@@ -122,8 +122,6 @@ export const seedDatabase = async ({
       en: {
         title: vp.title,
         description: vp.description,
-        audioUrl: vp.audioUrl || '',
-        audioDuration: vp.audioDuration || '3 min',
       },
     },
     image: {
@@ -145,15 +143,11 @@ export const seedDatabase = async ({
     await PedestrianRoute.insertMany(seedData.pedestrianRoutes);
   }
 
-  // 7. Insert Park Configuration
-  if (seedData.parkConfig) {
-    console.log(`🧭 Seeding archaeological park configuration & proximity thresholds...`);
-    await ParkConfig.create(seedData.parkConfig);
-  }
-
   // 8. Insert Languages
   console.log(`🌐 Seeding ${seedData.languages.length} supported languages...`);
   await Language.insertMany(seedData.languages);
+  const translations = await syncVisitorTranslations(visitorTranslations, { apply: true });
+  console.log(`🌐 Added ${translations.written} translations for matching tour content.`);
 
   // 9. Insert Tickets
   console.log(`🎟️ Seeding ${seedData.tickets.length} demo access tickets...`);
@@ -182,7 +176,8 @@ export const seedDatabase = async ({
   ]);
 
   // 11. Create Initial TourSyncManifest
-  const contentHash = crypto.createHash('sha256').update(JSON.stringify(seedData)).digest('hex');
+  const contentHash = crypto.createHash('sha256')
+    .update(JSON.stringify({ seedData, visitorTranslations })).digest('hex');
 
   const manifest = {
     packageVersion: '1.0.0',

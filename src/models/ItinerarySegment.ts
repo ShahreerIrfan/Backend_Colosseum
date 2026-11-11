@@ -15,6 +15,7 @@ const ItinerarySegmentSchema = new Schema<IItinerarySegment>(
     fromId: { type: String, required: true },
     toId: { type: String, required: true },
     points: { type: [PointOffsetSchema], required: true },
+    coordinateSpace: { type: String, enum: ['gps'] },
     distanceMeters: { type: Number, default: 0.0 },
     walkingDurationSeconds: { type: Number, default: 0 },
     instruction: { type: String, default: '' },
@@ -22,6 +23,8 @@ const ItinerarySegmentSchema = new Schema<IItinerarySegment>(
   },
   { timestamps: true }
 );
+
+ItinerarySegmentSchema.index({ floorId: 1, fromId: 1, toId: 1 }, { unique: true });
 
 export const ItinerarySegment = mongoose.model<IItinerarySegment>(
   'ItinerarySegment',

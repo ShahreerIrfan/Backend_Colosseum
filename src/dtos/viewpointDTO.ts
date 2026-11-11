@@ -12,25 +12,45 @@ export const ViewpointSchema = z.object({
   description: z.string().default(''),
   normalizedX: z.number().default(0.5),
   normalizedY: z.number().default(0.5),
-  latitude: z.number().nullable().default(null),
-  longitude: z.number().nullable().default(null),
+  latitude: z.number().min(-90).max(90).nullable().default(null),
+  longitude: z.number().min(-180).max(180).nullable().default(null),
   imageAsset: z.string().default(''),
-  audioUrl: z.string().default(''),
-  audioDuration: z.string().default('3 min'),
+  narrationLanguage: z.string().optional(),
   isVisited: z.boolean().default(false),
-  triggerRadiusMeters: z.number().default(4.0),
-  targetGazeHeadingDegrees: z.number().nullable().default(null),
+  triggerRadiusMeters: z.number().positive().default(4.0),
+  targetGazeHeadingDegrees: z.number().min(0).max(360).nullable().default(null),
   isPublished: z.boolean().default(true),
   created_at: z.date().optional(),
   updated_at: z.date().optional(),
 });
 
 export const CreateViewpointSchema = ViewpointSchema.omit({
+  narrationLanguage: true,
   created_at: true,
   updated_at: true,
 });
 
-export const UpdateViewpointSchema = CreateViewpointSchema.partial();
+const fields = CreateViewpointSchema.shape;
+export const UpdateViewpointSchema = z.object({
+  ...fields,
+  order: fields.order.removeDefault(),
+  description: fields.description.removeDefault(),
+  normalizedX: fields.normalizedX.removeDefault(),
+  normalizedY: fields.normalizedY.removeDefault(),
+  latitude: fields.latitude.removeDefault(),
+  longitude: fields.longitude.removeDefault(),
+  imageAsset: fields.imageAsset.removeDefault(),
+  isVisited: fields.isVisited.removeDefault(),
+  triggerRadiusMeters: fields.triggerRadiusMeters.removeDefault(),
+  targetGazeHeadingDegrees: fields.targetGazeHeadingDegrees.removeDefault(),
+  isPublished: fields.isPublished.removeDefault(),
+}).partial().refine(
+  ({ latitude, longitude }) =>
+    (latitude === undefined && longitude === undefined) ||
+    (typeof latitude === 'number' && typeof longitude === 'number') ||
+    (latitude === null && longitude === null),
+  'Supply both Latitude and Longitude, or clear both.'
+);
 
 export const QueryViewpointSchema = BaseQuerySchema.extend({
   floorId: z.string().optional(),

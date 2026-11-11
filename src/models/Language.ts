@@ -6,6 +6,7 @@ const LanguageSchema = new Schema<ILanguage>(
     code: { type: String, required: true, unique: true, index: true }, // e.g. "en", "it"
     name: { type: String, required: true }, // English
     nativeName: { type: String, required: true }, // English / Italiano
+    ttsLocale: String,
     isAvailable: { type: Boolean, default: true },
     isDefault: { type: Boolean, default: false },
     displayOrder: { type: Number, default: 0 },

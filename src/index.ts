@@ -7,6 +7,7 @@ import { errorHandler } from '@middlewares/errorHandler.js';
 import router from '@routes/index.js';
 import { connectDB, disconnectDB } from '@config/db.js';
 import { connectRedis, disconnectRedis } from '@config/redis.js';
+import { ensureEnvAdminUser } from '@services/bootstrapAdmin.js';
 import { autoSeedIfEmpty } from './scripts/seedDatabase.js';
 
 const app = express();
@@ -59,6 +60,7 @@ const startServer = async (): Promise<void> => {
   try {
     await connectDB();
     await autoSeedIfEmpty();
+    await ensureEnvAdminUser();
     await connectRedis();
 
     server.listen(EnvConstant.PORT, '0.0.0.0', () => {

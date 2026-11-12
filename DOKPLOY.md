@@ -29,6 +29,7 @@ MONGODB_URI=mongodb://<user>:<password>@<dokploy-mongo-service>:27017/colosseum_
 MONGODB_DB_NAME=colosseum_db
 JWT_SECRET=<generate-a-long-random-secret>
 JWT_EXPIRES_IN=7d
+ADMIN_DEFAULT_NAME=Super Administrator
 ADMIN_DEFAULT_EMAIL=admin@colosseumtour.it
 ADMIN_DEFAULT_PASSWORD=<strong-password>
 CLOUDINARY_CLOUD_NAME=<your-cloud-name>
@@ -40,3 +41,4 @@ TOUR_CONTENT_VERSION=1.0.0
 ## 5. First Boot Notes
 - On first startup against an empty MongoDB database, `autoSeedIfEmpty()` automatically seeds landmarks, floors, viewpoints, itineraries, languages, translations, demo tickets, and default admin/moderator accounts.
 - Compiled production entrypoint is `node dist/index.js` running as the non-root `node` user.
+

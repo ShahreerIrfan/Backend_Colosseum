@@ -23,6 +23,7 @@ const EnvConstant = {
   // Authentication
   JWT_SECRET: process.env.JWT_SECRET || 'super_secret_jwt_key_colosseum_2026_change_in_prod',
   JWT_EXPIRES_IN: process.env.JWT_EXPIRES_IN || '7d',
+  ADMIN_DEFAULT_NAME: process.env.ADMIN_DEFAULT_NAME || 'Super Administrator',
   ADMIN_DEFAULT_EMAIL: process.env.ADMIN_DEFAULT_EMAIL || 'admin@colosseumtour.it',
   ADMIN_DEFAULT_PASSWORD: process.env.ADMIN_DEFAULT_PASSWORD || 'ChangeMeColosseum2026!',
 

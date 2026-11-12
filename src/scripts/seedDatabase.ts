@@ -5,6 +5,7 @@ import bcrypt from 'bcrypt';
 import { fileURLToPath } from 'node:url';
 import { connectDB, disconnectDB } from '@config/db.js';
 import { EnvConstant } from '@constants/allConstant.js';
+import { ensureEnvAdminUser } from '@services/bootstrapAdmin.js';
 import { loadVisitorTranslations, syncVisitorTranslations } from './visitorTranslations.js';
 import {
   Floor,
@@ -153,30 +154,23 @@ export const seedDatabase = async ({
   console.log(`🎟️ Seeding ${seedData.tickets.length} demo access tickets...`);
   await Ticket.insertMany(seedData.tickets);
 
-  // 10. Seed Staff Users (Super Admin & Moderator)
+  // 10. Seed Staff Users (Env Super Admin & Default Moderator)
   console.log(`👤 Seeding default staff accounts for CMS authentication...`);
-  const passwordHash = await bcrypt.hash(
-    EnvConstant.ADMIN_DEFAULT_PASSWORD || 'ChangeMeColosseum2026!',
-    10
-  );
-  await User.create([
-    {
-      name: 'Super Administrator',
-      email: EnvConstant.ADMIN_DEFAULT_EMAIL || 'admin@colosseumtour.it',
-      password: passwordHash,
-      role: 'SUPER_ADMIN',
-      assignedFloorIds: [],
-      is_active: true,
-    },
-    {
+  await ensureEnvAdminUser();
+  if (EnvConstant.ADMIN_DEFAULT_EMAIL.trim().toLowerCase() !== 'moderator@colosseumtour.it') {
+    const passwordHash = await bcrypt.hash(
+      EnvConstant.ADMIN_DEFAULT_PASSWORD || 'ChangeMeColosseum2026!',
+      10
+    );
+    await User.create({
       name: 'Content Moderator',
       email: 'moderator@colosseumtour.it',
       password: passwordHash,
       role: 'MODERATOR',
       assignedFloorIds: ['floor_underground', 'floor_1'],
       is_active: true,
-    },
-  ]);
+    });
+  }
 
   // 11. Create Initial TourSyncManifest
   const contentHash = crypto.createHash('sha256')

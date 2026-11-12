@@ -23,4 +23,15 @@ export const connectRedis = async (): Promise<void> => {
   }
 };
 
+export const disconnectRedis = async (): Promise<void> => {
+  try {
+    if (redisClient.isOpen) {
+      await redisClient.quit();
+      console.log('Redis connection closed.');
+    }
+  } catch {
+    // Ignore errors during shutdown
+  }
+};
+
 export default redisClient;

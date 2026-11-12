@@ -1,9 +1,16 @@
 node_modules
 dist
-npm-debug.log
+npm-debug.log*
 .env
 .env.*
 .git
+.gitignore
 coverage
+test
+src/test
+ai
+deploy.py
+deploy.sh
+*.md
 .DS_Store
 Thumbs.db

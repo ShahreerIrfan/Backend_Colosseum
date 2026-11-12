@@ -155,7 +155,10 @@ export const seedDatabase = async ({
 
   // 10. Seed Staff Users (Super Admin & Moderator)
   console.log(`👤 Seeding default staff accounts for CMS authentication...`);
-  const passwordHash = await bcrypt.hash('ChangeMeColosseum2026!', 10);
+  const passwordHash = await bcrypt.hash(
+    EnvConstant.ADMIN_DEFAULT_PASSWORD || 'ChangeMeColosseum2026!',
+    10
+  );
   await User.create([
     {
       name: 'Super Administrator',

@@ -7,7 +7,7 @@ export const connectDB = async (): Promise<typeof mongoose> => {
       dbName: EnvConstant.MONGODB_DB_NAME,
       minPoolSize: EnvConstant.MONGODB_MIN_POOL_SIZE,
       maxPoolSize: EnvConstant.MONGODB_MAX_POOL_SIZE,
-      serverSelectionTimeoutMS: 5000,
+      serverSelectionTimeoutMS: 10000,
     });
 
     console.log(

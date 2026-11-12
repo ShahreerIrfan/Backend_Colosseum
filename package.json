@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "type": "module",
   "scripts": {
-    "build": "tsc && tsc-alias && cp -r src/data dist/",
+    "build": "tsc && tsc-alias && node -e \"import('node:fs').then(fs => fs.cpSync('src/data', 'dist/data', { recursive: true }))\"",
     "start": "node dist/index.js",
     "dev": "tsx watch src/index.ts",
     "test": "vitest run",

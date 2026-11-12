@@ -6,11 +6,14 @@ import { EnvConstant } from '@constants/allConstant.js';
 import { errorHandler } from '@middlewares/errorHandler.js';
 import router from '@routes/index.js';
 import { connectDB, disconnectDB } from '@config/db.js';
-import { connectRedis } from '@config/redis.js';
+import { connectRedis, disconnectRedis } from '@config/redis.js';
 import { autoSeedIfEmpty } from './scripts/seedDatabase.js';
 
 const app = express();
 const server: Server = http.createServer(app);
+
+// Trust reverse proxy headers (e.g. Dokploy Traefik TLS termination)
+app.set('trust proxy', 1);
 
 // Middlewares
 app.use(
@@ -58,16 +61,16 @@ const startServer = async (): Promise<void> => {
     await autoSeedIfEmpty();
     await connectRedis();
 
-    server.listen(EnvConstant.PORT, () => {
+    server.listen(EnvConstant.PORT, '0.0.0.0', () => {
       console.log(`===============================================`);
       console.log(`🚀 Colosseum Backend running on port ${EnvConstant.PORT}`);
       console.log(`📡 Environment: ${EnvConstant.NODE_ENV}`);
-      console.log(`🔗 Base URL: http://localhost:${EnvConstant.PORT}`);
+      console.log(`🔗 Base URL: http://0.0.0.0:${EnvConstant.PORT}`);
       console.log(
-        `🩺 Health check: http://localhost:${EnvConstant.PORT}${EnvConstant.API_PREFIX}/health`
+        `🩺 Health check: http://127.0.0.1:${EnvConstant.PORT}${EnvConstant.API_PREFIX}/health`
       );
       console.log(
-        `📦 Tour Bundle: http://localhost:${EnvConstant.PORT}${EnvConstant.API_PREFIX}/sync/bundle`
+        `📦 Tour Bundle: http://127.0.0.1:${EnvConstant.PORT}${EnvConstant.API_PREFIX}/sync/bundle`
       );
       console.log(`===============================================`);
     });
@@ -79,8 +82,15 @@ const startServer = async (): Promise<void> => {
 
 const handleShutdown = async (signal: string): Promise<void> => {
   console.log(`\nReceived ${signal}. Shutting down gracefully...`);
+  const forceExitTimer = setTimeout(() => {
+    console.error('Forced shutdown after timeout.');
+    process.exit(1);
+  }, 10000);
+  forceExitTimer.unref();
+
   server.close(async () => {
-    await disconnectDB();
+    await Promise.all([disconnectDB(), disconnectRedis()]);
+    clearTimeout(forceExitTimer);
     console.log('Server closed. Process terminated.');
     process.exit(0);
   });

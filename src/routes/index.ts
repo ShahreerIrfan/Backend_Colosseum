@@ -1,4 +1,6 @@
 import express, { Router, Request, Response } from 'express';
+import mongoose from 'mongoose';
+import redisClient from '@config/redis.js';
 import authRoute from './authRoute.js';
 import managedRoleRoute from './managedRoleRoute.js';
 import landmarkRoute from './landmarkRoute.js';
@@ -37,10 +39,15 @@ router.use('/translations', contentTranslationRoute);
 
 // System health check
 router.get('/health', (_req: Request, res: Response) => {
-  res.status(200).json({
-    status: 'ok',
+  const isDbConnected = mongoose.connection.readyState === 1;
+  const statusCode = isDbConnected ? 200 : 503;
+
+  res.status(statusCode).json({
+    status: isDbConnected ? 'ok' : 'degraded',
     service: 'colosseum-backend',
     version: '1.0.0',
+    database: isDbConnected ? 'connected' : 'disconnected',
+    cache: redisClient.isOpen ? 'connected' : 'bypass',
     timestamp: new Date().toISOString(),
   });
 });

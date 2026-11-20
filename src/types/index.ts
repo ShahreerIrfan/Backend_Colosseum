@@ -182,6 +182,12 @@ export interface ILandmark {
   code: string;
   name: string;
   description?: string;
+  era?: string;
+  builders?: string;
+  historicalSummary?: string;
+  securityGuidelines?: string[];
+  levelHighlights?: string[];
+  audioIntroText?: string;
   assetPath: string;
   cloudinaryPublicId?: string;
   thumbnailUrl?: string;
@@ -200,6 +206,12 @@ export interface LandmarkOverlayDTO {
   id: string;
   name: string;
   description: string;
+  era?: string;
+  builders?: string;
+  historicalSummary?: string;
+  securityGuidelines?: string[];
+  levelHighlights?: string[];
+  audioIntroText?: string;
   assetPath: string;
   thumbnailUrl?: string;
   thumbnailPublicId?: string;

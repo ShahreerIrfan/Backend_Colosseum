@@ -7,6 +7,12 @@ const LandmarkSchema = new Schema<ILandmark>(
     code: { type: String, required: true, unique: true, index: true }, // e.g. "colosseum"
     name: { type: String, required: true },
     description: { type: String, default: '' },
+    era: { type: String, default: '' },
+    builders: { type: String, default: '' },
+    historicalSummary: { type: String, default: '' },
+    securityGuidelines: { type: [String], default: [] },
+    levelHighlights: { type: [String], default: [] },
+    audioIntroText: { type: String, default: '' },
     assetPath: { type: String, required: true },
     cloudinaryPublicId: { type: String, default: '' },
     thumbnailUrl: { type: String, default: '' },

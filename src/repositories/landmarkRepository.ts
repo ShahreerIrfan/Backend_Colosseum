@@ -8,6 +8,12 @@ export default class LandmarkRepository {
       code: data.code,
       name: data.name,
       description: data.description || '',
+      era: data.era || '',
+      builders: data.builders || '',
+      historicalSummary: data.historicalSummary || '',
+      securityGuidelines: data.securityGuidelines || [],
+      levelHighlights: data.levelHighlights || [],
+      audioIntroText: data.audioIntroText || '',
       assetPath: data.assetPath || '',
       cloudinaryPublicId: data.cloudinaryPublicId || '',
       thumbnailUrl: data.thumbnailUrl || '',
@@ -103,6 +109,12 @@ export default class LandmarkRepository {
     const updateData: Record<string, any> = {};
     if (data.name !== undefined) updateData.name = data.name;
     if (data.description !== undefined) updateData.description = data.description;
+    if (data.era !== undefined) updateData.era = data.era;
+    if (data.builders !== undefined) updateData.builders = data.builders;
+    if (data.historicalSummary !== undefined) updateData.historicalSummary = data.historicalSummary;
+    if (data.securityGuidelines !== undefined) updateData.securityGuidelines = data.securityGuidelines;
+    if (data.levelHighlights !== undefined) updateData.levelHighlights = data.levelHighlights;
+    if (data.audioIntroText !== undefined) updateData.audioIntroText = data.audioIntroText;
     if (data.assetPath !== undefined) updateData.assetPath = data.assetPath;
     if (data.cloudinaryPublicId !== undefined) updateData.cloudinaryPublicId = data.cloudinaryPublicId;
     if (data.thumbnailUrl !== undefined) updateData.thumbnailUrl = data.thumbnailUrl;
@@ -147,6 +159,12 @@ export default class LandmarkRepository {
       id: lm.code,
       name: lm.name,
       description: lm.description || '',
+      era: lm.era || '',
+      builders: lm.builders || '',
+      historicalSummary: lm.historicalSummary || '',
+      securityGuidelines: lm.securityGuidelines || [],
+      levelHighlights: lm.levelHighlights || [],
+      audioIntroText: lm.audioIntroText || '',
       assetPath: lm.assetPath,
       cloudinaryPublicId: lm.cloudinaryPublicId || '',
       thumbnailUrl: lm.thumbnailUrl || '',
@@ -178,6 +196,12 @@ export default class LandmarkRepository {
       code: lm.code,
       name: lm.name,
       description: lm.description || '',
+      era: lm.era || '',
+      builders: lm.builders || '',
+      historicalSummary: lm.historicalSummary || '',
+      securityGuidelines: lm.securityGuidelines || [],
+      levelHighlights: lm.levelHighlights || [],
+      audioIntroText: lm.audioIntroText || '',
       assetPath: lm.assetPath || '',
       cloudinaryPublicId: lm.cloudinaryPublicId || '',
       thumbnailUrl: lm.thumbnailUrl || '',

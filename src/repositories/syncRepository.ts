@@ -85,6 +85,12 @@ export default class SyncRepository {
       id: lm.code,
       name: translated?.title ?? lm.name,
       description: translated?.description ?? lm.description ?? '',
+      era: lm.era || '',
+      builders: lm.builders || '',
+      historicalSummary: lm.historicalSummary || '',
+      securityGuidelines: lm.securityGuidelines || [],
+      levelHighlights: lm.levelHighlights || [],
+      audioIntroText: lm.audioIntroText || '',
       assetPath: lm.assetPath,
       thumbnailUrl: lm.thumbnailUrl || '',
       center: {

@@ -33,10 +33,9 @@ export default class SyncService {
   }
 
   private async BuildOfflineTourBundle(languageCode: string, landmarkCode?: string) {
-    const [publishedLandmarks, floors, pedestrianRoutes] = await Promise.all([
+    const [publishedLandmarks, floors] = await Promise.all([
       this.syncRepository.GetActiveLandmarks(languageCode),
       this.syncRepository.GetAllFloors(landmarkCode),
-      this.syncRepository.GetAllPedestrianRoutes(languageCode, landmarkCode),
     ]);
     const publishedIds = new Set(publishedLandmarks.map((landmark) => landmark.id));
     const landmarks = landmarkCode
@@ -84,8 +83,7 @@ export default class SyncService {
     return {
       landmarks,
       floors: enrichedFloors,
-      pedestrianRoutes: pedestrianRoutes.filter((route) =>
-        publishedIds.has(route.fromLandmarkCode) && publishedIds.has(route.toLandmarkCode)),
+      pedestrianRoutes: [],
       syncedAt: new Date().toISOString(),
     };
   }

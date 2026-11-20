@@ -22,9 +22,6 @@ it('rebuilds a bundle after a revision change and excludes deleted landmarks and
   ]);
   vi.spyOn(repository, 'GetViewpointsByFloor').mockResolvedValue([]);
   vi.spyOn(repository, 'GetItinerariesByFloor').mockResolvedValue([]);
-  vi.spyOn(repository, 'GetAllPedestrianRoutes').mockResolvedValue([
-    { fromLandmarkCode: 'removed', toLandmarkCode: 'remaining' },
-  ]);
 
   const bundle = await new SyncService().GetOfflineTourBundle();
   expect(landmarks).toHaveBeenCalledTimes(2);

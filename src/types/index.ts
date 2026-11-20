@@ -90,6 +90,8 @@ export interface IFloor {
   mapAsset?: FloorMapAsset;
   isAccessibleForTier?: string[];
   isPublished: boolean;
+  elevationMeters?: number;
+  autoFloorDetectionEnabled?: boolean;
   createdAt?: Date;
   updatedAt?: Date;
 }

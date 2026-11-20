@@ -29,6 +29,8 @@ const FloorSchema = new Schema<IFloor>(
       default: ['general', 'arena_priority', 'full_access'],
     },
     isPublished: { type: Boolean, default: true },
+    elevationMeters: { type: Number, default: 0.0 },
+    autoFloorDetectionEnabled: { type: Boolean, default: true },
   },
   { timestamps: true }
 );

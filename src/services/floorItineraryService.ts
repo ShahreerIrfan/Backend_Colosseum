@@ -34,6 +34,8 @@ export async function listFloorItinerary(floorId: string) {
   ]);
   return {
     floorPublished: floor.isPublished === true,
+    elevationMeters: floor.elevationMeters ?? 0.0,
+    autoFloorDetectionEnabled: floor.autoFloorDetectionEnabled !== false,
     viewpoints: viewpoints.map((viewpoint) => ({
       id: viewpoint.viewpointId,
       title: (viewpoint.translations instanceof Map
@@ -45,7 +47,21 @@ export async function listFloorItinerary(floorId: string) {
       isPublished: viewpoint.isPublished === true,
     })),
     segments,
+    portals: floor.portals ?? [],
   };
+}
+
+export async function updateFloorPortals(floorId: string, portals: unknown[]) {
+  const floor = await Floor.findOneAndUpdate(
+    { floorId },
+    { $set: { portals } },
+    { new: true, runValidators: true }
+  ).lean();
+  if (!floor) throw new NotFoundError('Floor not found.');
+  await bumpTourManifest();
+  await clearCachePattern('floors:*');
+  await clearCachePattern('tour:*');
+  return floor.portals ?? [];
 }
 
 async function resolveEndpoints(floorId: string, fromId: string, toId: string, publishing: boolean) {

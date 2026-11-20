@@ -7,7 +7,7 @@ import {
   createSegment, floorItineraryParams, segmentParams, updateSegment,
 } from '@dtos/floorItineraryDTO.js';
 import {
-  createFloorConnection, deleteFloorConnection, listFloorItinerary, updateFloorConnection,
+  createFloorConnection, deleteFloorConnection, listFloorItinerary, updateFloorConnection, updateFloorPortals,
 } from '@services/floorItineraryService.js';
 
 const router = Router();
@@ -38,4 +38,12 @@ router.delete('/:floorId/:segmentId', requirePermission(resource, 'Delete'), Val
     res.sendStatus(204);
   },
 );
+router.put('/:floorId/portals', requirePermission(resource, 'Update'), Validator.params(floorItineraryParams),
+  async (req, res) => {
+    const { floorId } = req.validatedParams;
+    const portals = Array.isArray(req.body.portals) ? req.body.portals : (Array.isArray(req.body) ? req.body : []);
+    ResponseHandler.send(res, 200, { data: await updateFloorPortals(floorId, portals) });
+  },
+);
+
 export default router;

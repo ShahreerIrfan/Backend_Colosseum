@@ -77,6 +77,21 @@ export interface FloorMapAsset {
   cloudinaryPublicId?: string;
 }
 
+export interface IFloorPortal {
+  id: string;
+  name: string;
+  fromFloorId: string;
+  toFloorId: string;
+  fromViewpointId?: string;
+  toViewpointId?: string;
+  normalizedX: number;
+  normalizedY: number;
+  coordinates?: FloorCoordinates;
+  elevationDeltaMeters: number;
+  isAscending: boolean;
+  triggerRadiusMeters: number;
+}
+
 export interface IFloor {
   localizedText?: Record<string, { title: string }>;
   floorId: string;
@@ -92,6 +107,7 @@ export interface IFloor {
   isPublished: boolean;
   elevationMeters?: number;
   autoFloorDetectionEnabled?: boolean;
+  portals?: IFloorPortal[];
   createdAt?: Date;
   updatedAt?: Date;
 }

@@ -1,6 +1,27 @@
 import mongoose, { Schema } from 'mongoose';
 import { IFloor } from '../types/index.js';
 
+const FloorPortalSchema = new Schema(
+  {
+    id: { type: String, required: true },
+    name: { type: String, required: true },
+    fromFloorId: { type: String, required: true },
+    toFloorId: { type: String, required: true },
+    fromViewpointId: { type: String },
+    toViewpointId: { type: String },
+    normalizedX: { type: Number, required: true },
+    normalizedY: { type: Number, required: true },
+    coordinates: {
+      latitude: { type: Number },
+      longitude: { type: Number },
+    },
+    elevationDeltaMeters: { type: Number, default: 0.0 },
+    isAscending: { type: Boolean, default: true },
+    triggerRadiusMeters: { type: Number, default: 15.0 },
+  },
+  { _id: false }
+);
+
 const FloorSchema = new Schema<IFloor>(
   {
     localizedText: { type: Map, of: Schema.Types.Mixed },
@@ -31,6 +52,7 @@ const FloorSchema = new Schema<IFloor>(
     isPublished: { type: Boolean, default: true },
     elevationMeters: { type: Number, default: 0.0 },
     autoFloorDetectionEnabled: { type: Boolean, default: true },
+    portals: { type: [FloorPortalSchema], default: [] },
   },
   { timestamps: true }
 );

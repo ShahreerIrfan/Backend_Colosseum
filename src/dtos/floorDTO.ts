@@ -21,6 +21,21 @@ export const FloorMapAssetSchema = z.object({
   cloudinaryPublicId: z.string().optional(),
 });
 
+export const FloorPortalSchema = z.object({
+  id: z.string(),
+  name: z.string(),
+  fromFloorId: z.string(),
+  toFloorId: z.string(),
+  fromViewpointId: z.string().optional(),
+  toViewpointId: z.string().optional(),
+  normalizedX: z.number(),
+  normalizedY: z.number(),
+  coordinates: FloorCoordinatesSchema.optional(),
+  elevationDeltaMeters: z.number().default(0.0),
+  isAscending: z.boolean().default(true),
+  triggerRadiusMeters: z.number().default(15.0),
+});
+
 export const FloorSchema = z.object({
   id: z.string().optional(),
   floorId: z.string().min(1, 'Floor identifier slug is required'),
@@ -41,6 +56,9 @@ export const FloorSchema = z.object({
   }),
   isAccessibleForTier: z.array(z.string()).default(['general', 'arena_priority', 'full_access']),
   isPublished: z.boolean().default(true),
+  elevationMeters: z.number().default(0.0),
+  autoFloorDetectionEnabled: z.boolean().default(true),
+  portals: z.array(FloorPortalSchema).default([]),
   viewpointCount: z.number().optional(),
   created_at: z.date().optional(),
   updated_at: z.date().optional(),

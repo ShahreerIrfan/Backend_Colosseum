@@ -72,6 +72,9 @@ export default class SyncService {
           mapNorthOffsetDegrees: floor.calibration?.mapNorthOffsetDegrees ?? -20.0,
           mapAsset: floor.mapAsset?.assetId || 'level_1_map',
           mapAssetUrl: floor.mapAsset?.url || '',
+          elevationMeters: floor.elevationMeters ?? 0.0,
+          autoFloorDetectionEnabled: floor.autoFloorDetectionEnabled !== false,
+          portals: floor.portals || [],
           viewpoints,
           itinerary,
         };
@@ -128,6 +131,9 @@ export default class SyncService {
       mapNorthOffsetDegrees: floor.calibration?.mapNorthOffsetDegrees,
       mapAsset: floor.mapAsset?.assetId,
       mapAssetUrl: floor.mapAsset?.url || '',
+      elevationMeters: floor.elevationMeters ?? 0.0,
+      autoFloorDetectionEnabled: floor.autoFloorDetectionEnabled !== false,
+      portals: floor.portals || [],
       viewpoints,
       itinerary,
     };
